@@ -52,6 +52,30 @@
         "flutter"
       ]
     },
+    "agent-activity": {
+      "status": "complete",
+      "available": [
+        "react"
+      ]
+    },
+    "chat-panel": {
+      "status": "complete",
+      "available": [
+        "react"
+      ]
+    },
+    "diff-review": {
+      "status": "complete",
+      "available": [
+        "react"
+      ]
+    },
+    "prompt-box": {
+      "status": "complete",
+      "available": [
+        "react"
+      ]
+    },
     "avatar": {
       "status": "complete",
       "available": [
@@ -697,6 +721,10 @@
         "alert",
         "area-chart",
         "aspect-ratio",
+        "agent-activity",
+        "chat-panel",
+        "diff-review",
+        "prompt-box",
         "avatar",
         "badge",
         "bar-chart",
@@ -836,7 +864,12 @@
         "tooltip",
         "typography"
       ],
-      "missing": []
+      "missing": [
+        "agent-activity",
+        "chat-panel",
+        "diff-review",
+        "prompt-box"
+      ]
     },
     "angular": {
       "available": [
@@ -910,7 +943,12 @@
         "tooltip",
         "typography"
       ],
-      "missing": []
+      "missing": [
+        "agent-activity",
+        "chat-panel",
+        "diff-review",
+        "prompt-box"
+      ]
     },
     "react-native": {
       "available": [
@@ -983,6 +1021,10 @@
         "typography"
       ],
       "missing": [
+        "agent-activity",
+        "chat-panel",
+        "diff-review",
+        "prompt-box",
         "carousel",
         "drawer"
       ]
@@ -1058,6 +1100,10 @@
         "typography"
       ],
       "missing": [
+        "agent-activity",
+        "chat-panel",
+        "diff-review",
+        "prompt-box",
         "carousel",
         "drawer"
       ]

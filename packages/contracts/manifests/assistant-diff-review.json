@@ -1,0 +1,46 @@
+{
+  "id": "diff-review",
+  "name": "Diff Review",
+  "status": "complete",
+  "description": "AI code review panel with file-level accept/reject, per-file unified diff view, and summary stats for additions and deletions.",
+  "props": [],
+  "children": [],
+  "frameworks": {
+    "react": {
+      "status": "complete",
+      "files": [
+        "DiffReview.tsx",
+        "FileDiffCard.tsx",
+        "types.ts",
+        "index.ts"
+      ],
+      "entry": "index.ts",
+      "selector": "",
+      "exports": [
+        "DiffReview",
+        "FileDiffCard"
+      ],
+      "dependencies": [],
+      "registryDependencies": [],
+      "props": []
+    },
+    "vue": {
+      "status": "missing",
+      "props": []
+    },
+    "angular": {
+      "status": "missing",
+      "props": []
+    },
+    "react-native": {
+      "status": "missing",
+      "props": []
+    },
+    "flutter": {
+      "status": "missing",
+      "props": []
+    }
+  },
+  "category": "assistant",
+  "$schema": "../schemas/component-manifest.schema.json"
+}

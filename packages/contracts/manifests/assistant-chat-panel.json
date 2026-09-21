@@ -1,0 +1,50 @@
+{
+  "id": "chat-panel",
+  "name": "Chat Panel",
+  "category": "assistant",
+  "status": "complete",
+  "description": "Copilot-style assistant side panel with message list, tool call cards, model badge, and composer with send/stop states.",
+  "props": [],
+  "children": [],
+  "frameworks": {
+    "react": {
+      "status": "complete",
+      "files": [
+        "ChatPanel.tsx",
+        "ChatMessage.tsx",
+        "ChatComposer.tsx",
+        "ToolCallCard.tsx",
+        "types.ts",
+        "index.ts"
+      ],
+      "entry": "index.ts",
+      "selector": "",
+      "exports": [
+        "ChatPanel",
+        "ChatMessage",
+        "ChatComposer",
+        "ToolCallCard"
+      ],
+      "dependencies": [],
+      "registryDependencies": [],
+      "props": []
+    },
+    "vue": {
+      "status": "missing",
+      "props": []
+    },
+    "angular": {
+      "status": "missing",
+      "props": []
+    },
+    "react-native": {
+      "status": "missing",
+      "props": []
+    },
+    "flutter": {
+      "status": "missing",
+      "props": []
+    }
+  },
+  "$schema": "../schemas/component-manifest.schema.json"
+}

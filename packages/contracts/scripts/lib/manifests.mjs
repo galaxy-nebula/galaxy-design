@@ -25,6 +25,24 @@ const BLOCK_FRAMEWORK_DIRS = {
   flutter: 'packages/flutter/lib/blocks',
 };
 
+const ASSISTANT_FRAMEWORK_DIRS = {
+  react: 'packages/react/src/assistant',
+  vue: 'packages/vue/src/assistant',
+  angular: 'packages/angular/src/assistant',
+  'react-native': 'packages/react-native/src/assistant',
+  flutter: 'packages/flutter/lib/assistant',
+};
+
+function frameworkDirsFor(category) {
+  if (category === 'blocks' || category === 'mobile-blocks') {
+    return BLOCK_FRAMEWORK_DIRS;
+  }
+  if (category === 'assistant') {
+    return ASSISTANT_FRAMEWORK_DIRS;
+  }
+  return FRAMEWORK_DIRS;
+}
+
 function getComponentDir(framework, componentId) {
   const dirs =
     manifest.category === 'blocks' ? BLOCK_FRAMEWORK_DIRS : FRAMEWORK_DIRS;
@@ -63,8 +81,7 @@ function manifestDir(manifestDir) {
 }
 
 function componentPath(framework, componentId, file) {
-  const isBlock = manifest.category === 'blocks';
-  const rootDir = isBlock ? BLOCK_FRAMEWORK_DIRS[framework] : FRAMEWORK_DIRS[framework];
+  const rootDir = frameworkDirsFor(manifest.category)[framework];
   return resolve(repoRoot, rootDir, componentId, file);
 }
 
@@ -127,8 +144,7 @@ export function collectIssues(manifest) {
   );
 
   for (const [framework, impl] of implementedFrameworks) {
-    const isBlock = manifest.category === 'blocks';
-    const rootDir = isBlock ? BLOCK_FRAMEWORK_DIRS[framework] : FRAMEWORK_DIRS[framework];
+    const rootDir = frameworkDirsFor(manifest.category)[framework];
     const componentRoot = resolve(
       repoRoot,
       rootDir,
@@ -272,7 +288,7 @@ export function collectIssues(manifest) {
         );
         continue;
       }
-    const rootDir = manifest.category === 'blocks' ? BLOCK_FRAMEWORK_DIRS[framework] : FRAMEWORK_DIRS[framework];
+    const rootDir = frameworkDirsFor(manifest.category)[framework];
     const componentRoot = resolve(
       repoRoot,
       rootDir,

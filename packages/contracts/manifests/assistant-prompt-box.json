@@ -1,0 +1,44 @@
+{
+  "id": "prompt-box",
+  "name": "Prompt Box",
+  "category": "assistant",
+  "status": "complete",
+  "description": "Standalone assistant composer with auto-resizing textarea, attachments row, model pill, slash-command hints, and send/stop states.",
+  "props": [],
+  "children": [],
+  "frameworks": {
+    "react": {
+      "status": "complete",
+      "files": [
+        "PromptBox.tsx",
+        "types.ts",
+        "index.ts"
+      ],
+      "entry": "index.ts",
+      "selector": "",
+      "exports": [
+        "PromptBox"
+      ],
+      "dependencies": [],
+      "registryDependencies": [],
+      "props": []
+    },
+    "vue": {
+      "status": "missing",
+      "props": []
+    },
+    "angular": {
+      "status": "missing",
+      "props": []
+    },
+    "react-native": {
+      "status": "missing",
+      "props": []
+    },
+    "flutter": {
+      "status": "missing",
+      "props": []
+    }
+  },
+  "$schema": "../schemas/component-manifest.schema.json"
+}

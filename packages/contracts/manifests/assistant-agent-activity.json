@@ -1,0 +1,48 @@
+{
+  "id": "agent-activity",
+  "name": "Agent Activity",
+  "category": "assistant",
+  "status": "complete",
+  "description": "Codex-style agent progress panel with task checklist, status badges, progress bar, and timestamped tool call log.",
+  "props": [],
+  "children": [],
+  "frameworks": {
+    "react": {
+      "status": "complete",
+      "files": [
+        "AgentActivity.tsx",
+        "AgentTaskItem.tsx",
+        "ToolCallLog.tsx",
+        "types.ts",
+        "index.ts"
+      ],
+      "entry": "index.ts",
+      "selector": "",
+      "exports": [
+        "AgentActivity",
+        "AgentTaskItem",
+        "ToolCallLog"
+      ],
+      "dependencies": [],
+      "registryDependencies": [],
+      "props": []
+    },
+    "vue": {
+      "status": "missing",
+      "props": []
+    },
+    "angular": {
+      "status": "missing",
+      "props": []
+    },
+    "react-native": {
+      "status": "missing",
+      "props": []
+    },
+    "flutter": {
+      "status": "missing",
+      "props": []
+    }
+  },
+  "$schema": "../schemas/component-manifest.schema.json"
+}

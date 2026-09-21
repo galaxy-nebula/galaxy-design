@@ -58,15 +58,28 @@ const blockRoots = {
   'react-native': 'packages/react-native/src/blocks',
   flutter: 'packages/flutter/lib/blocks',
 };
-const BLOCK_CATEGORY = new Set(['blocks', 'mobile-blocks', 'block']);
+const assistantRoots = {
+  react: 'packages/react/src/assistant',
+  vue: 'packages/vue/src/assistant',
+  angular: 'packages/angular/src/assistant',
+  'react-native': 'packages/react-native/src/assistant',
+  flutter: 'packages/flutter/lib/assistant',
+};
+const BLOCK_CATEGORY = new Set(['blocks', 'mobile-blocks', 'block', 'assistant']);
 
 const sources = {};
 for (const framework of ['react', 'vue', 'angular', 'react-native', 'flutter']) {
   const registry = JSON.parse(readFileSync(join(generatedRoot, `registry-${framework}.json`), 'utf-8'));
   for (const [componentId, component] of Object.entries(registry.components)) {
     const isBlock = BLOCK_CATEGORY.has(component.category);
-    const root = isBlock ? join(repoRoot, blockRoots[framework]) : join(repoRoot, sourceRoots[framework]);
+    const isAssistant = component.category === 'assistant';
+    const root = isAssistant
+      ? join(repoRoot, assistantRoots[framework])
+      : isBlock
+        ? join(repoRoot, blockRoots[framework])
+        : join(repoRoot, sourceRoots[framework]);
     const componentDirName = isBlock ? componentId.replace(/-block$/, '') : componentId;
+    if (!Array.isArray(component.files) || component.files.length === 0) continue;
     for (const file of component.files) {
       const abs = join(root, componentDirName, file);
       if (!existsSync(abs)) continue;
