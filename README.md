@@ -1,124 +1,100 @@
-# Galaxy UI Source Workspace
+<div align="center">
 
-This repository is the source workspace for Galaxy UI component packages and shared implementations.
+# Galaxy UI
 
-It is not the same thing as the published CLI package. The copy-paste product surface lives in [`@galaxy-stack/nebula-cli`](https://github.com/galaxy-nebula/galaxy-design-cli), where users run `nebula init` and `nebula add` to fetch component source from the registry CDN and scaffold editable files into their apps.
+**67 components × 5 frameworks — copy-paste component library, shadcn-style**
 
-## Scope
+[![npm](https://img.shields.io/npm/v/@galaxy-stack/nebula-cli.svg)](https://www.npmjs.com/package/@galaxy-stack/nebula-cli)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/galaxy-nebula/galaxy-design.svg)](https://github.com/galaxy-nebula/galaxy-design/stargazers)
+[![MCP Registry](https://img.shields.io/badge/MCP_Registry-listed-blue)](https://registry.modelcontextprotocol.io)
 
-This workspace currently contains:
+[Docs](https://galaxy-nebula.vercel.app) · [CLI](https://github.com/galaxy-nebula/galaxy-design-cli) · [MCP Server](https://github.com/galaxy-nebula/nebula-mcp) · [Smithery](https://smithery.ai/servers/galaxy-stack/nebula-mcp)
 
-- source code for React, Vue, and Angular component packages
-- shared workspace dependencies and package metadata
-- framework-specific build, lint, and test configuration
-- source entries used by the custom `@galaxy-ui/source` export condition
+</div>
 
-It does not currently contain standalone published packages for Next.js or Nuxt.js.
+---
 
-- `nextjs` is a CLI/runtime target that maps to the React source package
-- `nuxtjs` is a CLI/runtime target that maps to the Vue source package
+Beautiful, accessible components for **Vue 3, React 18, Angular 20+, React Native, and Flutter** — built on Radix primitives with Tailwind CSS v3/v4 support, from web to mobile.
 
-## Workspace Structure
+Following the [shadcn/ui](https://ui.shadcn.com) philosophy: components are **copied into your project** and remain fully editable. No runtime lock-in.
 
-Key packages under `packages/`:
+## Framework Parity
 
-- `@galaxy-ui/react`
-- `@galaxy-ui/vue`
-- `@galaxy-ui/angular`
-- additional workspace packages such as React Native and Flutter as they evolve
+| Framework | Components | Styling | Notes |
+|---|---|---|---|
+| React 18+ | 69 | Radix UI + Tailwind CSS | Reference implementation |
+| Vue 3 | 69 | Radix Vue + Tailwind CSS | Full parity with React |
+| Angular 20+ | 69 | Radix NG + Tailwind CSS | Standalone components, ControlValueAccessor |
+| React Native | 67 | NativeWind | Custom date pickers, NativeWind classes |
+| Flutter | 69 | Material Design 3 | Galaxy-prefixed widgets |
 
-When the CLI reports support for Next.js or Nuxt.js, that support comes from framework-specific transforms on top of the React or Vue package sources in this workspace.
+**Web-only** (9 components): breadcrumb, command, combobox, dashboard-block, data-table, kbd, toolbar, resizable, scroll-area
 
-The root workspace uses Bun workspaces:
-
-```bash
-bun install
-```
-
-## Current Package Status
-
-### React
-
-`@galaxy-ui/react` is currently the most publish-ready package in this workspace.
-
-- root source entry exists at `packages/react/src/index.ts`
-- builds JavaScript and declarations
-- verifies with `npm run build` and `npm pack --dry-run`
-- still has internal typing debt, but current publish artifacts are generated successfully
-
-### Vue
-
-`@galaxy-ui/vue` now has a real library build pipeline.
-
-- root source entry exists at `packages/vue/src/index.ts`
-- builds with `vite build && vue-tsc -p tsconfig.build.json`
-- package manifest points at real `dist/*` artifacts
-- should be treated as a package with an actual build, not as source-only placeholder metadata
-
-### Angular
-
-`@galaxy-ui/angular` now has a real Angular library build pipeline.
-
-- root source entry exists at `packages/angular/src/index.ts`
-- builds with `ng build galaxy-ui-angular`
-- package manifest points at real Angular package artifacts in `dist/`
-- metadata is aligned to the `buikevin/galaxy-design` repository
-- some export-surface cleanup may still be needed, but this is no longer a fake or intentionally failing build story
-
-## Tailwind Support
-
-Do not treat this repository as locked to Tailwind CSS v3.
-
-- the workspace lockfile already includes Tailwind v4-era dependencies
-- component source should be evaluated against both v3 and v4 compatibility expectations
-- the CLI strategy is v4-first for new installs while preserving existing v3 projects
-
-## Development Commands
-
-From the repository root:
+## Quick Start
 
 ```bash
-bun install
-npm run lint
-npm run test
+# Detect your framework and scaffold
+npx @galaxy-stack/nebula-cli@latest init
+
+# Add components
+npx @galaxy-stack/nebula-cli@latest add button card dialog
+
+# With theme preset
+npx @galaxy-stack/nebula-cli@latest init --theme violet
 ```
 
-Package-specific examples:
+## AI-Native
 
-```bash
-cd packages/react && npm run build
-cd packages/react && npm pack --dry-run
-cd packages/vue && npm run build
-cd packages/angular && npm run build
+Galaxy UI ships with an **MCP server** and an **AI skill** so AI assistants (Claude, Cursor, Windsurf) can build with Galaxy components using real APIs instead of hallucinated ones.
+
+```json
+{
+  "mcpServers": {
+    "galaxy-ui": {
+      "command": "npx",
+      "args": ["-y", "@galaxy-stack/nebula-mcp"]
+    }
+  }
+}
 ```
 
-## Publish Readiness Policy
+### AI Skill
 
-Use this rule of thumb when working in this repo:
+The `galaxy-ui` skill (in `skills/`) teaches AI assistants the correct CLI workflow, framework-specific gotchas, and component patterns. Install it into Claude/Codex skills directory or reference it in your prompts.
 
-- if a package manifest claims `dist/index.js`, `dist/index.d.ts`, or equivalent Angular output, the workspace must be able to build and pack those files
-- package metadata, README status, and actual artifacts must move together
-- if a package is not meant to be publishable yet, do not advertise missing artifacts in its manifest
+## Project Structure
 
-## Relationship To The CLI
-
-The copy-paste user experience lives in `galaxy-design-cli`, not in this repository root.
-
-That means:
-
-- CLI docs should stay in the CLI repo/package
-- this README should describe the source workspace and package status
-- user-facing `init` and `add` behavior should be documented where the CLI is published
-
-## Near-Term Priorities
-
-- keep `@galaxy-ui/react` build and pack verification green
-- keep Vue and Angular build metadata aligned with actual emitted artifacts
-- add stronger publish verification and smoke import checks per package
-- continue normalizing docs and manifests around the real copy-paste product model
+```
+galaxy-nebula/
+├── galaxy-design       ← this repo (source workspace + MCP + skill)
+├── galaxy-design-cli   → @galaxy-stack/nebula-cli (npm, command: nebula)
+├── nebula-mcp          → @galaxy-stack/nebula-mcp (npm, MCP server)
+└── docs-galaxy-design  → docs site (VitePress, galaxy-nebula.vercel.app)
+```
 
 ## Repository
 
-- Homepage: `https://galaxy-nebula.vercel.app`
-- Repository: `https://github.com/galaxy-nebula/galaxy-design`
-- Issues: `https://github.com/galaxy-nebula/galaxy-design/issues`
+This is the **source workspace** for all Galaxy UI component implementations, manifests, and contracts. Components are copied into your project via the CLI — they belong to you after installation.
+
+| Directory | Contents |
+|---|---|
+| `packages/react/` | React components (67) |
+| `packages/vue/` | Vue components (69) |
+| `packages/angular/` | Angular components (69) |
+| `packages/react-native/` | React Native components (67) |
+| `packages/flutter/` | Flutter components (69) |
+| `packages/contracts/` | Canonical manifests, schemas, generated registries |
+| `skills/galaxy-ui/` | AI skill (SKILL.md + references) |
+
+## Links
+
+- **Docs**: https://galaxy-nebula.vercel.app
+- **CLI**: `npm install -g @galaxy-stack/nebula-cli`
+- **MCP**: `npx @galaxy-stack/nebula-mcp`
+- **Smithery**: https://smithery.ai/servers/galaxy-stack/nebula-mcp
+- **MCP Registry**: https://registry.modelcontextprotocol.io
+
+## License
+
+MIT © [Bùi Trọng Hiếu (kevinbui)](https://github.com/buikevin)
