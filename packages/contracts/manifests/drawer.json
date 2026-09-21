@@ -1,0 +1,72 @@
+{
+  "$schema": "../schemas/component-manifest.schema.json",
+  "id": "drawer",
+  "name": "Drawer",
+  "category": "overlay",
+  "status": "complete",
+  "description": "Mobile-first bottom sheet drawer.",
+  "props": [],
+  "children": [],
+  "frameworks": {
+    "react": {
+      "status": "complete",
+      "files": [
+        "Drawer.tsx",
+        "index.ts"
+      ],
+      "entry": "index.ts",
+      "exports": [
+        "Drawer",
+        "DrawerPortal",
+        "DrawerOverlay",
+        "DrawerTrigger",
+        "DrawerClose",
+        "DrawerContent",
+        "DrawerHeader",
+        "DrawerFooter",
+        "DrawerTitle",
+        "DrawerDescription"
+      ],
+      "dependencies": [],
+      "props": []
+    },
+    "vue": {
+      "status": "complete",
+      "files": [
+        "Drawer.vue",
+        "index.ts"
+      ],
+      "entry": "index.ts",
+      "exports": [
+        "Drawer"
+      ],
+      "dependencies": [],
+      "props": []
+    },
+    "angular": {
+      "status": "complete",
+      "files": [
+        "drawer.component.ts",
+        "index.ts"
+      ],
+      "entry": "index.ts",
+      "exports": [
+        "DrawerComponent"
+      ],
+      "dependencies": [],
+      "props": [],
+      "selector": "ui-drawer"
+    },
+    "react-native": {
+      "status": "missing",
+      "props": []
+    },
+    "flutter": {
+      "status": "missing",
+      "props": []
+    }
+  },
+  "notes": {
+    "mobile": "Mobile-first — native bottom sheet is recommended on mobile; web-only scaffold available."
+  }
+}
