@@ -1,0 +1,41 @@
+name: Visual Regression
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'packages/**'
+      - 'packages/visual-tests/**'
+
+permissions:
+  contents: read
+
+jobs:
+  visual-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install Playwright
+        working-directory: packages/visual-tests
+        run: npm install --no-audit --no-fund
+
+      - name: Run visual tests (compare against baselines)
+        working-directory: packages/visual-tests
+        env:
+          # baselines chụp từ production — CI so sánh trực tiếp
+          DOCS_URL: https://galaxy-nebula.vercel.app
+          PLAYWRIGHT_CHROMIUM_CHANNEL: chromium
+        run: npx playwright test --project=chromium
+
+      - name: Upload diff report
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: packages/visual-tests/playwright-report/
+          retention-days: 7

@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-const BASE = 'https://galaxy-design.vercel.app';
+const BASE = 'https://galaxy-nebula.vercel.app';
 
 const COMPONENTS = [
   'button', 'card', 'input', 'label', 'textarea', 'select',

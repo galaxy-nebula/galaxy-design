@@ -394,7 +394,7 @@ Galaxy UI CLI now supports **React Native** and **Flutter** with complete compon
 
 ### 🔗 Related Links
 
-- Documentation: https://galaxy-design.vercel.app
+- Documentation: https://galaxy-nebula.vercel.app
 - GitHub: https://github.com/buikevin/galaxy-design
 - npm: https://www.npmjs.com/package/galaxy-design
 

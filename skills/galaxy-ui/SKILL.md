@@ -14,7 +14,7 @@ Package registry: npm scope `@galaxy-stack`. CLI: `@galaxy-stack/nebula-cli` (co
 **Before writing any component code**, verify the real API:
 
 - Use the MCP tools (`get_component`, `get_component_source`) if the `nebula-mcp` server is connected
-- Otherwise check https://galaxy-design.vercel.app/components/<name>
+- Otherwise check https://galaxy-nebula.vercel.app/components/<name>
 
 Never guess props from shadcn/ui or other libraries — Galaxy has its own contracts (documented per component in the docs pages).
 

@@ -16,7 +16,7 @@ Creates `components.json`, scaffolds Tailwind (v4-first, preserves v3), configur
 npx @galaxy-stack/nebula-cli@latest add button input dialog
 npx @galaxy-stack/nebula-cli@latest add --all
 npx @galaxy-stack/nebula-cli@latest add data-table --overwrite   # backup to .galaxy/backups/
-npx @galaxy-stack/nebula-cli@latest add toast --registry-url https://galaxy-design.vercel.app/registry/<version>
+npx @galaxy-stack/nebula-cli@latest add toast --registry-url https://galaxy-nebula.vercel.app/registry/<version>
 ```
 
 - Auto-installs dependencies (date-fns, vue-sonner, radix packages...)

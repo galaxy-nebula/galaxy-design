@@ -27,5 +27,5 @@ export default defineConfig({
 });
 
 function BASE_URL(): string {
-  return process.env.DOCS_URL || 'https://galaxy-design.vercel.app';
+  return process.env.DOCS_URL || 'https://galaxy-nebula.vercel.app';
 }

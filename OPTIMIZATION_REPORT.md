@@ -120,11 +120,11 @@ autocomplete` wiring, re-subscribe khi items thay đổi; đồng thời sửa b
   untrack + gitignore). CLI sẵn sàng `npm publish` — người dùng thực hiện
   (cần npm credentials); docs deploy Vercel + smoke cũng thuộc người dùng.
 - **P1.4 CDN live (mới):** registry artifacts (7 JSON + **673 source files**)
-  đã serve tại `galaxy-design.vercel.app/registry/` qua docs repo; CLI có
+  đã serve tại `galaxy-nebula.vercel.app/registry/` qua docs repo; CLI có
   `--registry-url` / `GALAXY_REGISTRY_URL` — fetch manifest, verify digest
   (trust anchor `b351c8a1...` bundled trong CLI release), verify sha256 per
   source file, rồi mới install. E2E test pass: `add accordion
---registry-url https://galaxy-design.vercel.app/registry` fetch + verify +
+--registry-url https://galaxy-nebula.vercel.app/registry` fetch + verify +
   install, content khớp artifact 100%. GitHub pin vẫn là default; CDN là
   opt-in cho đến khi digest rotation flow hoàn thiện.
 - **P1.4 rotation flow CI (mới):** GitHub Actions workflow `registry-release.yml`

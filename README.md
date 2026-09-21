@@ -119,6 +119,6 @@ That means:
 
 ## Repository
 
-- Homepage: `https://galaxy-design.vercel.app`
+- Homepage: `https://galaxy-nebula.vercel.app`
 - Repository: `https://github.com/galaxy-nebula/galaxy-design`
 - Issues: `https://github.com/galaxy-nebula/galaxy-design/issues`
