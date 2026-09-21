@@ -1233,6 +1233,30 @@
       ],
       "manifestStatus": "complete"
     },
+    "carousel": {
+      "id": "carousel",
+      "name": "Carousel",
+      "type": "data-display",
+      "status": "complete",
+      "description": "Carousel component - embla-based with prev/next controls.",
+      "files": [
+        "Carousel.vue",
+        "index.ts"
+      ],
+      "entry": "index.ts",
+      "exports": [
+        "Carousel"
+      ],
+      "dependencies": [
+        "embla-carousel-vue"
+      ],
+      "devDependencies": [],
+      "peerDependencies": [],
+      "registryDependencies": [],
+      "category": "data-display",
+      "props": [],
+      "manifestStatus": "complete"
+    },
     "checkbox": {
       "id": "checkbox",
       "name": "checkbox",
@@ -1958,6 +1982,28 @@
           "default": "{}"
         }
       ],
+      "manifestStatus": "complete"
+    },
+    "drawer": {
+      "id": "drawer",
+      "name": "Drawer",
+      "type": "overlay",
+      "status": "complete",
+      "description": "Mobile-first bottom sheet drawer.",
+      "files": [
+        "Drawer.vue",
+        "index.ts"
+      ],
+      "entry": "index.ts",
+      "exports": [
+        "Drawer"
+      ],
+      "dependencies": [],
+      "devDependencies": [],
+      "peerDependencies": [],
+      "registryDependencies": [],
+      "category": "overlay",
+      "props": [],
       "manifestStatus": "complete"
     },
     "dropdown-menu": {

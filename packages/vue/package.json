@@ -50,12 +50,13 @@
     "vue": "^3.4.0"
   },
   "dependencies": {
+    "@internationalized/date": "^3.10.0",
     "@vueuse/core": "^10.9.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
-    "@internationalized/date": "^3.10.0",
     "date-fns": "^4.1.0",
     "echarts": "^5.5.1",
+    "embla-carousel-vue": "^8.6.0",
     "lucide-vue-next": "^0.460.0",
     "radix-vue": "^1.9.0",
     "tailwind-merge": "^2.5.0",

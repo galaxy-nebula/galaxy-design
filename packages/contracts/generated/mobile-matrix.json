@@ -9,7 +9,7 @@
   },
   "frameworks": {
     "react": {
-      "available": 67,
+      "available": 69,
       "components": {
         "accordion": "available",
         "alert": "available",
@@ -24,6 +24,7 @@
         "calendar": "available",
         "calendar-range": "available",
         "card": "available",
+        "carousel": "available",
         "checkbox": "available",
         "collapsible": "available",
         "combobox": "available",
@@ -36,6 +37,7 @@
         "date-time-picker": "available",
         "dialog": "available",
         "donut-chart": "available",
+        "drawer": "available",
         "dropdown-menu": "available",
         "empty": "available",
         "form": "available",
@@ -80,11 +82,11 @@
         "typography": "available"
       },
       "summary": {
-        "available": 67
+        "available": 69
       }
     },
     "vue": {
-      "available": 67,
+      "available": 69,
       "components": {
         "accordion": "available",
         "alert": "available",
@@ -99,6 +101,7 @@
         "calendar": "available",
         "calendar-range": "available",
         "card": "available",
+        "carousel": "available",
         "checkbox": "available",
         "collapsible": "available",
         "combobox": "available",
@@ -111,6 +114,7 @@
         "date-time-picker": "available",
         "dialog": "available",
         "donut-chart": "available",
+        "drawer": "available",
         "dropdown-menu": "available",
         "empty": "available",
         "form": "available",
@@ -155,11 +159,11 @@
         "typography": "available"
       },
       "summary": {
-        "available": 67
+        "available": 69
       }
     },
     "angular": {
-      "available": 67,
+      "available": 69,
       "components": {
         "accordion": "available",
         "alert": "available",
@@ -174,6 +178,7 @@
         "calendar": "available",
         "calendar-range": "available",
         "card": "available",
+        "carousel": "available",
         "checkbox": "available",
         "collapsible": "available",
         "combobox": "available",
@@ -186,6 +191,7 @@
         "date-time-picker": "available",
         "dialog": "available",
         "donut-chart": "available",
+        "drawer": "available",
         "dropdown-menu": "available",
         "empty": "available",
         "form": "available",
@@ -230,7 +236,7 @@
         "typography": "available"
       },
       "summary": {
-        "available": 67
+        "available": 69
       }
     },
     "react-native": {
@@ -249,6 +255,7 @@
         "calendar": "available",
         "calendar-range": "available",
         "card": "available",
+        "carousel": "needs-port",
         "checkbox": "available",
         "collapsible": "available",
         "combobox": "available",
@@ -261,6 +268,7 @@
         "date-time-picker": "available",
         "dialog": "available",
         "donut-chart": "available",
+        "drawer": "needs-port",
         "dropdown-menu": "available",
         "empty": "available",
         "form": "available",
@@ -305,7 +313,8 @@
         "typography": "available"
       },
       "summary": {
-        "available": 67
+        "available": 67,
+        "needs-port": 2
       }
     },
     "flutter": {
@@ -324,6 +333,7 @@
         "calendar": "available",
         "calendar-range": "available",
         "card": "available",
+        "carousel": "needs-port",
         "checkbox": "available",
         "collapsible": "available",
         "combobox": "available",
@@ -336,6 +346,7 @@
         "date-time-picker": "available",
         "dialog": "available",
         "donut-chart": "available",
+        "drawer": "needs-port",
         "dropdown-menu": "available",
         "empty": "available",
         "form": "available",
@@ -380,7 +391,8 @@
         "typography": "available"
       },
       "summary": {
-        "available": 67
+        "available": 67,
+        "needs-port": 2
       }
     }
   }

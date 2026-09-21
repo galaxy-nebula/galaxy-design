@@ -132,6 +132,14 @@
         "flutter"
       ]
     },
+    "carousel": {
+      "status": "complete",
+      "available": [
+        "react",
+        "vue",
+        "angular"
+      ]
+    },
     "checkbox": {
       "status": "complete",
       "available": [
@@ -250,6 +258,14 @@
         "angular",
         "react-native",
         "flutter"
+      ]
+    },
+    "drawer": {
+      "status": "complete",
+      "available": [
+        "react",
+        "vue",
+        "angular"
       ]
     },
     "dropdown-menu": {
@@ -689,6 +705,7 @@
         "calendar-range",
         "calendar",
         "card",
+        "carousel",
         "checkbox",
         "collapsible",
         "combobox",
@@ -701,6 +718,7 @@
         "date-time-picker",
         "dialog",
         "donut-chart",
+        "drawer",
         "dropdown-menu",
         "empty",
         "form",
@@ -761,6 +779,7 @@
         "calendar-range",
         "calendar",
         "card",
+        "carousel",
         "checkbox",
         "collapsible",
         "combobox",
@@ -773,6 +792,7 @@
         "date-time-picker",
         "dialog",
         "donut-chart",
+        "drawer",
         "dropdown-menu",
         "empty",
         "form",
@@ -833,6 +853,7 @@
         "calendar-range",
         "calendar",
         "card",
+        "carousel",
         "checkbox",
         "collapsible",
         "combobox",
@@ -845,6 +866,7 @@
         "date-time-picker",
         "dialog",
         "donut-chart",
+        "drawer",
         "dropdown-menu",
         "empty",
         "form",
@@ -960,7 +982,10 @@
         "tooltip",
         "typography"
       ],
-      "missing": []
+      "missing": [
+        "carousel",
+        "drawer"
+      ]
     },
     "flutter": {
       "available": [
@@ -1032,7 +1057,10 @@
         "tooltip",
         "typography"
       ],
-      "missing": []
+      "missing": [
+        "carousel",
+        "drawer"
+      ]
     }
   }
 }

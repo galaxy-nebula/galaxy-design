@@ -2444,6 +2444,20 @@
       ],
       "children": []
     },
+    "carousel": {
+      "name": "Carousel",
+      "type": "data-display",
+      "description": "Carousel component - embla-based with prev/next controls.",
+      "category": "data-display",
+      "status": "complete",
+      "frameworks": [
+        "react",
+        "vue",
+        "angular"
+      ],
+      "props": [],
+      "children": []
+    },
     "checkbox": {
       "name": "checkbox",
       "type": "other",
@@ -4213,6 +4227,20 @@
           "description": "Padding inside the chart container."
         }
       ],
+      "children": []
+    },
+    "drawer": {
+      "name": "Drawer",
+      "type": "overlay",
+      "description": "Mobile-first bottom sheet drawer.",
+      "category": "overlay",
+      "status": "complete",
+      "frameworks": [
+        "react",
+        "vue",
+        "angular"
+      ],
+      "props": [],
       "children": []
     },
     "dropdown-menu": {

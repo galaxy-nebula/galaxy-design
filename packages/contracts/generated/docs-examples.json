@@ -1841,6 +1841,36 @@
         }
       ]
     },
+    "carousel": {
+      "id": "carousel",
+      "name": "Carousel",
+      "category": "data-display",
+      "status": "complete",
+      "description": "Carousel component - embla-based with prev/next controls.",
+      "codeExamples": {
+        "react": {
+          "status": "complete",
+          "install": "npx galaxy-design@latest add carousel",
+          "import": "import { Carousel } from '@/components/ui/carousel'",
+          "usage": "<Carousel>Content</Carousel>"
+        },
+        "vue": {
+          "status": "complete",
+          "install": "npx galaxy-design@latest add carousel",
+          "import": "import { Carousel } from '@/components/ui/carousel/index'",
+          "usage": "<Carousel>Content</Carousel>"
+        },
+        "angular": {
+          "status": "complete",
+          "install": "npx galaxy-design@latest add carousel",
+          "import": "import { CarouselComponent } from '@/components/ui/carousel/index'",
+          "usage": "<ui-carousel>Content</ui-carousel>"
+        },
+        "react-native": null,
+        "flutter": null
+      },
+      "props": []
+    },
     "checkbox": {
       "id": "checkbox",
       "name": "checkbox",
@@ -3250,6 +3280,36 @@
           ]
         }
       ]
+    },
+    "drawer": {
+      "id": "drawer",
+      "name": "Drawer",
+      "category": "overlay",
+      "status": "complete",
+      "description": "Mobile-first bottom sheet drawer.",
+      "codeExamples": {
+        "react": {
+          "status": "complete",
+          "install": "npx galaxy-design@latest add drawer",
+          "import": "import { Drawer } from '@/components/ui/drawer'",
+          "usage": "<Drawer>Content</Drawer>"
+        },
+        "vue": {
+          "status": "complete",
+          "install": "npx galaxy-design@latest add drawer",
+          "import": "import { Drawer } from '@/components/ui/drawer/index'",
+          "usage": "<Drawer>Content</Drawer>"
+        },
+        "angular": {
+          "status": "complete",
+          "install": "npx galaxy-design@latest add drawer",
+          "import": "import { DrawerComponent } from '@/components/ui/drawer/index'",
+          "usage": "<ui-drawer>Content</ui-drawer>"
+        },
+        "react-native": null,
+        "flutter": null
+      },
+      "props": []
     },
     "dropdown-menu": {
       "id": "dropdown-menu",

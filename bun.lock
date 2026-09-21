@@ -97,17 +97,6 @@
         "@swc/helpers": "~0.5.11",
       },
     },
-    "packages/mcp-server": {
-      "name": "@galaxy-ui/mcp-server",
-      "version": "0.1.0",
-      "bin": {
-        "galaxy-ui-mcp": "./dist/index.js",
-      },
-      "dependencies": {
-        "@modelcontextprotocol/sdk": "^1.0.0",
-        "zod": "^3.23.0",
-      },
-    },
     "packages/react": {
       "name": "@galaxy-ui/react",
       "version": "0.0.1",
@@ -145,6 +134,7 @@
         "date-fns": "^4.1.0",
         "echarts": "^5.5.1",
         "echarts-for-react": "^3.0.2",
+        "embla-carousel-react": "^8.6.0",
         "lucide-react": "^0.460.0",
         "react-day-picker": "^9.11.1",
         "react-hook-form": "^7.53.1",
@@ -217,11 +207,13 @@
       "name": "@galaxy-ui/vue",
       "version": "0.0.1",
       "dependencies": {
+        "@internationalized/date": "^3.10.0",
         "@vueuse/core": "^10.9.0",
         "class-variance-authority": "^0.7.0",
         "clsx": "^2.1.1",
         "date-fns": "^4.1.0",
         "echarts": "^5.5.1",
+        "embla-carousel-vue": "^8.6.0",
         "lucide-vue-next": "^0.460.0",
         "radix-vue": "^1.9.0",
         "tailwind-merge": "^2.5.0",
@@ -679,8 +671,6 @@
     "@galaxy-ui/angular": ["@galaxy-ui/angular@workspace:packages/angular"],
 
     "@galaxy-ui/contracts": ["@galaxy-ui/contracts@workspace:packages/contracts"],
-
-    "@galaxy-ui/mcp-server": ["@galaxy-ui/mcp-server@workspace:packages/mcp-server"],
 
     "@galaxy-ui/react": ["@galaxy-ui/react@workspace:packages/react"],
 
@@ -2005,6 +1995,14 @@
     "ejs": ["ejs@3.1.10", "", { "dependencies": { "jake": "^10.8.5" }, "bin": { "ejs": "bin/cli.js" } }, "sha512-UeJmFfOrAQS8OJWPZ4qtgHyWExa088/MtK5UEyoJGFH67cDEXkZSviOiKRCZ4Xij0zxI3JECgYs3oKx+AizQBA=="],
 
     "electron-to-chromium": ["electron-to-chromium@1.5.245", "", {}, "sha512-rdmGfW47ZhL/oWEJAY4qxRtdly2B98ooTJ0pdEI4jhVLZ6tNf8fPtov2wS1IRKwFJT92le3x4Knxiwzl7cPPpQ=="],
+
+    "embla-carousel": ["embla-carousel@8.6.0", "", {}, "sha512-SjWyZBHJPbqxHOzckOfo8lHisEaJWmwd23XppYFYVh10bU66/Pn5tkVkbkCMZVdbUE5eTCI2nD8OyIP4Z+uwkA=="],
+
+    "embla-carousel-react": ["embla-carousel-react@8.6.0", "", { "dependencies": { "embla-carousel": "8.6.0", "embla-carousel-reactive-utils": "8.6.0" }, "peerDependencies": { "react": "^16.8.0 || ^17.0.1 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc" } }, "sha512-0/PjqU7geVmo6F734pmPqpyHqiM99olvyecY7zdweCw+6tKEXnrE90pBiBbMMU8s5tICemzpQ3hi5EpxzGW+JA=="],
+
+    "embla-carousel-reactive-utils": ["embla-carousel-reactive-utils@8.6.0", "", { "peerDependencies": { "embla-carousel": "8.6.0" } }, "sha512-fMVUDUEx0/uIEDM0Mz3dHznDhfX+znCCDCeIophYb1QGVM7YThSWX+wz11zlYwWFOr74b4QLGg0hrGPJeG2s4A=="],
+
+    "embla-carousel-vue": ["embla-carousel-vue@8.6.0", "", { "dependencies": { "embla-carousel": "8.6.0", "embla-carousel-reactive-utils": "8.6.0" }, "peerDependencies": { "vue": "^3.2.37" } }, "sha512-v8UO5UsyLocZnu/LbfQA7Dn2QHuZKurJY93VUmZYP//QRWoCWOsionmvLLAlibkET3pGPs7++03VhJKbWD7vhQ=="],
 
     "emittery": ["emittery@0.13.1", "", {}, "sha512-DeWwawk6r5yR9jFgnDKYt4sLS0LmHJJi3ZOnb5/JdbYwj3nW+FxQnHIjhBKz8YLC7oRNPVM9NQ47I3CVx34eqQ=="],
 

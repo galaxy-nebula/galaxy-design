@@ -1,0 +1,68 @@
+{
+  "$schema": "../schemas/component-manifest.schema.json",
+  "id": "carousel",
+  "name": "Carousel",
+  "category": "data-display",
+  "status": "complete",
+  "description": "Carousel component - embla-based with prev/next controls.",
+  "props": [],
+  "children": [],
+  "frameworks": {
+    "react": {
+      "status": "complete",
+      "files": [
+        "Carousel.tsx",
+        "index.ts"
+      ],
+      "entry": "index.ts",
+      "exports": [
+        "Carousel",
+        "CarouselContent",
+        "CarouselItem",
+        "CarouselPrevious",
+        "CarouselNext"
+      ],
+      "dependencies": [
+        "embla-carousel-react"
+      ],
+      "props": []
+    },
+    "vue": {
+      "status": "complete",
+      "files": [
+        "Carousel.vue",
+        "index.ts"
+      ],
+      "entry": "index.ts",
+      "exports": [
+        "Carousel"
+      ],
+      "dependencies": [
+        "embla-carousel-vue"
+      ],
+      "props": []
+    },
+    "angular": {
+      "status": "complete",
+      "files": [
+        "carousel.component.ts",
+        "index.ts"
+      ],
+      "entry": "index.ts",
+      "exports": [
+        "CarouselComponent"
+      ],
+      "dependencies": [],
+      "props": [],
+      "selector": "ui-carousel"
+    },
+    "react-native": {
+      "status": "missing",
+      "props": []
+    },
+    "flutter": {
+      "status": "missing",
+      "props": []
+    }
+  }
+}

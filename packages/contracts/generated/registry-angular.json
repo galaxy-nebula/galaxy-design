@@ -1018,6 +1018,29 @@
       "selector": "ui-card",
       "manifestStatus": "complete"
     },
+    "carousel": {
+      "id": "carousel",
+      "name": "Carousel",
+      "type": "data-display",
+      "status": "complete",
+      "description": "Carousel component - embla-based with prev/next controls.",
+      "files": [
+        "carousel.component.ts",
+        "index.ts"
+      ],
+      "entry": "index.ts",
+      "exports": [
+        "CarouselComponent"
+      ],
+      "dependencies": [],
+      "devDependencies": [],
+      "peerDependencies": [],
+      "registryDependencies": [],
+      "category": "data-display",
+      "props": [],
+      "selector": "ui-carousel",
+      "manifestStatus": "complete"
+    },
     "checkbox": {
       "id": "checkbox",
       "name": "checkbox",
@@ -1696,6 +1719,29 @@
         }
       ],
       "selector": "ui-donut-chart",
+      "manifestStatus": "complete"
+    },
+    "drawer": {
+      "id": "drawer",
+      "name": "Drawer",
+      "type": "overlay",
+      "status": "complete",
+      "description": "Mobile-first bottom sheet drawer.",
+      "files": [
+        "drawer.component.ts",
+        "index.ts"
+      ],
+      "entry": "index.ts",
+      "exports": [
+        "DrawerComponent"
+      ],
+      "dependencies": [],
+      "devDependencies": [],
+      "peerDependencies": [],
+      "registryDependencies": [],
+      "category": "overlay",
+      "props": [],
+      "selector": "ui-drawer",
       "manifestStatus": "complete"
     },
     "dropdown-menu": {
