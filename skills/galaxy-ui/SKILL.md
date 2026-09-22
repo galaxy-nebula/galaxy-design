@@ -5,7 +5,7 @@ description: Guide for building UIs with Galaxy UI components across React, Vue,
 
 # Galaxy UI
 
-Galaxy UI is a multi-framework component library (67 components × 5 frameworks: React, Vue, Angular, React Native, Flutter) built on the shadcn philosophy: components are copied into the user's project and remain fully editable.
+Galaxy UI is a multi-framework component library (73 React components, 69 Vue/Angular, 67 mobile per framework) built on the shadcn philosophy: components are copied into the user's project and remain fully editable.
 
 Package registry: npm scope `@galaxy-stack`. CLI: `@galaxy-stack/nebula-cli` (command: `nebula`).
 
@@ -33,9 +33,10 @@ Never guess props from shadcn/ui or other libraries — Galaxy has its own contr
 - Feedback: `alert`, `toast`, `progress`, `spinner`, `skeleton`, `badge`
 - Dates: `calendar`, `calendar-range`, `date-picker`, `date-range-picker`, `date-time-picker`, `time-picker`
 - Layout: `card`, `separator`, `tabs`, `accordion`, `collapsible`, `resizable`, `scroll-area`, `aspect-ratio`, `toolbar`
-- Blocks (composite pages): `login-block`, `pricing-block`, `dashboard-block`, `sidebar`, `chat-ui`
+- Blocks (composite pages): `login-block`, `pricing-block`, `dashboard-block`, `sidebar`, `chat-ui`, `authentication`, `email`, `featured`
+- Assistant UI (React phase 1, for editor webviews/panels): `chat-panel`, `agent-activity`, `diff-review`, `prompt-box` — see https://galaxy-nebula.vercel.app/assistant/overview
 
-Web-only components (not on mobile): `breadcrumb`, `command`, `combobox`, `dashboard-block`, `data-table`, `kbd`, `toolbar`, `resizable`, `scroll-area`.
+Web-only components (not on mobile): `breadcrumb`, `command`, `combobox`, `dashboard-block`, `data-table`, `kbd`, `toolbar`, `resizable`, `scroll-area` — plus all four `assistant-*` components.
 
 ## Critical framework notes
 

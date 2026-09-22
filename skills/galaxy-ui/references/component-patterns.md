@@ -33,3 +33,14 @@ Mount `<Toaster />` once (App root), fire with `toast('message')` imported from 
 ## Blocks
 
 Login/pricing/dashboard blocks are composite pages — install with `nebula add login-block` and customize. Dashboard block = sidebar + stat cards + table.
+
+## Assistant UI (React, phase 1)
+
+Assistant components power AI-native surfaces (VSCode webviews, sidebars, agent panels). All four live in `@/components/assistant/<name>/` and are stateless/dumb — state lives in the host app:
+
+- `ChatPanel` — message list + tool-call cards + composer. Props: `messages`, `model`, `onSendMessage`, `onStop`, `busy` via `messages.some(m => m.streaming)`.
+- `AgentActivity` — task checklist + progress + tool log. Props: `tasks` (`pending|running|completed|error`), `toolEvents`, `status`, `elapsedLabel`.
+- `DiffReview` — accept/reject per file, unified diff lines with `+`/`-` prefixes. Props: `files` (`DiffFile[]`), `onAccept`, `onReject`, `onAcceptAll`, `onRejectAll`.
+- `PromptBox` — standalone composer with auto-resize, slash commands, attachments, model pill.
+
+Install with `nebula add chat-panel` etc. Docs: https://galaxy-nebula.vercel.app/assistant/overview
