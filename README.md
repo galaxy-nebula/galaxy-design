@@ -70,7 +70,7 @@ galaxy-nebula/
 ├── galaxy-design       ← this repo (source workspace + MCP + skill)
 ├── galaxy-design-cli   → @galaxy-stack/nebula-cli (npm, command: nebula)
 ├── nebula-mcp          → @galaxy-stack/nebula-mcp (npm, MCP server)
-└── docs-galaxy-design  → docs site (VitePress, galaxy-nebula.vercel.app)
+└── docs-nebula  → docs site (VitePress, galaxy-nebula.vercel.app)
 ```
 
 ## Repository
