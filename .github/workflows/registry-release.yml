@@ -20,12 +20,12 @@ jobs:
         with:
           repository: galaxy-nebula/galaxy-design-cli
           path: galaxy-design-cli
-          token: ${{ secrets.REGISTRY_SYNC_TOKEN }}
+          token: ${{ secrets.REGISTRY_SYNC_TOKEN || github.token }}
       - uses: actions/checkout@v4
         with:
           repository: galaxy-nebula/docs-nebula
           path: docs-nebula
-          token: ${{ secrets.REGISTRY_SYNC_TOKEN }}
+          token: ${{ secrets.REGISTRY_SYNC_TOKEN || github.token }}
 
       - uses: actions/setup-node@v4
         with:
