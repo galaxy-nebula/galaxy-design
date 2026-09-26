@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Fixed
+
+- **Corrupted component sources**: `Carousel.tsx`, `Drawer.tsx`, `Sidebar.tsx`
+  (react) and several react-native/angular files had generator **shell-script
+  text appended** after the component code, which broke `tsc` (TS1434). The
+  trailing junk was removed from the source and the built registry/MCP copies.
+- Removed an unused `import * as React from 'react'` from `Badge.tsx` and the
+  pricing block; under `noUnusedLocals` it failed consumers with TS6133.
+
 ---
 
 ## [Unreleased]

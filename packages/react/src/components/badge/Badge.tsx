@@ -4,7 +4,6 @@
  * @desc Badge component - Displays a badge or a component that looks like a badge
  */
 
-import * as React from 'react';
 import { cn } from '@/lib/utils';
 import { badgeVariants, type BadgeProps } from './variants';
 

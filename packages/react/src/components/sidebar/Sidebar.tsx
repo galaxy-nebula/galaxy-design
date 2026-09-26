@@ -155,13 +155,3 @@ export {
   SidebarFooter, SidebarGroup, SidebarGroupLabel, SidebarMenu, SidebarMenuItem,
   SidebarMenuButton, useSidebar,
 }
-EOF
-
-cat > /Users/buitronghieu/Desktop/Project/galaxy/galaxy-design/packages/react/src/components/sidebar/index.ts <<'IDX'
-export {
-  SidebarProvider, Sidebar, SidebarTrigger, SidebarHeader, SidebarContent,
-  SidebarFooter, SidebarGroup, SidebarGroupLabel, SidebarMenu, SidebarMenuItem,
-  SidebarMenuButton, useSidebar,
-}
-IDX
-echo sidebar-react-done

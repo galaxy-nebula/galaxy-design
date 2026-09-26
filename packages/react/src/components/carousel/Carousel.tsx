@@ -180,10 +180,3 @@ const CarouselNext = React.forwardRef<HTMLButtonElement, React.HTMLAttributes<HT
 CarouselNext.displayName = 'CarouselNext'
 
 export { type CarouselStateProps, type CarouselProps, Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext }
-EOF
-
-cat > packages/react/src/components/carousel/index.ts <<'IDX'
-export { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from './Carousel';
-export type { CarouselProps } from './Carousel';
-IDX
-echo carousel-react-done

@@ -93,12 +93,3 @@ export {
   Drawer, DrawerPortal, DrawerOverlay, DrawerTrigger, DrawerClose,
   DrawerContent, DrawerHeader, DrawerFooter, DrawerTitle, DrawerDescription,
 }
-EOF
-
-cat > packages/react/src/components/drawer/index.ts <<'IDX'
-export {
-  Drawer, DrawerPortal, DrawerOverlay, DrawerTrigger, DrawerClose,
-  DrawerContent, DrawerHeader, DrawerFooter, DrawerTitle, DrawerDescription,
-}
-IDX
-echo drawer-react-done
