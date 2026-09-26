@@ -281,33 +281,6 @@
         "date_time_picker.dart",
         "index.dart"
       ],
-      "entry": "index.ts",
-      "exports": [
-        "GalaxyDateTimePicker"
-      ],
-      "dependencies": [],
-      "props": []
-    },
-    "RN": {
-      "status": "complete",
-      "files": [
-        "DateTimePicker.tsx",
-        "index.ts"
-      ],
-      "entry": "index.ts",
-      "exports": [
-        "DateTimePicker",
-        "DateTimePickerProps"
-      ],
-      "dependencies": [],
-      "props": []
-    },
-    "F": {
-      "status": "complete",
-      "files": [
-        "date_time_picker.dart",
-        "index.dart"
-      ],
       "entry": "index.dart",
       "exports": [
         "GalaxyDateTimePicker"

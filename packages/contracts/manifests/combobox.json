@@ -136,13 +136,13 @@
       "props": []
     },
     "react-native": {
-      "status": "web-only",
+      "status": "missing",
       "notes": "Mobile uses native picker instead of combobox.",
       "webOnly": true,
       "props": []
     },
     "flutter": {
-      "status": "web-only",
+      "status": "missing",
       "notes": "Flutter has DropdownButton built-in.",
       "webOnly": true,
       "props": []

@@ -55,13 +55,13 @@
       "props": []
     },
     "react-native": {
-      "status": "web-only",
+      "status": "missing",
       "notes": "Mobile uses native tab navigation instead of dashboard block.",
       "webOnly": true,
       "props": []
     },
     "flutter": {
-      "status": "web-only",
+      "status": "missing",
       "notes": "Flutter uses BottomNavigationBar + Scaffold instead.",
       "webOnly": true,
       "props": []

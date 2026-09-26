@@ -64,39 +64,12 @@
       "props": []
     },
     "flutter": {
-      "status": "complete",
+      "status": "missing",
       "files": [
         "otp_input.dart",
         "index.dart"
       ],
       "entry": "index.ts",
-      "exports": [
-        "GalaxyOTPInput"
-      ],
-      "dependencies": [],
-      "props": []
-    },
-    "RN": {
-      "status": "complete",
-      "files": [
-        "OTPInput.tsx",
-        "index.ts"
-      ],
-      "entry": "index.ts",
-      "exports": [
-        "OTPInput",
-        "OTPInputProps"
-      ],
-      "dependencies": [],
-      "props": []
-    },
-    "F": {
-      "status": "complete",
-      "files": [
-        "otp_input.dart",
-        "index.dart"
-      ],
-      "entry": "index.dart",
       "exports": [
         "GalaxyOTPInput"
       ],

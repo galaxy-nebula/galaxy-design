@@ -74,13 +74,13 @@
       "selector": "ui-resizable-panel-group"
     },
     "react-native": {
-      "status": "web-only",
+      "status": "missing",
       "notes": "Not present in the CLI registry for this framework.",
       "webOnly": true,
       "props": []
     },
     "flutter": {
-      "status": "web-only",
+      "status": "missing",
       "notes": "Not present in the CLI registry for this framework.",
       "webOnly": true,
       "props": []

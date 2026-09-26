@@ -51,7 +51,7 @@
       "props": []
     },
     "react-native": {
-      "status": "complete",
+      "status": "missing",
       "files": [
         "PricingBlock.tsx",
         "index.ts"
@@ -66,41 +66,12 @@
       "props": []
     },
     "flutter": {
-      "status": "complete",
+      "status": "missing",
       "files": [
         "pricing_block.dart",
         "index.dart"
       ],
       "entry": "index.ts",
-      "exports": [
-        "GalaxyPricingBlock",
-        "GalaxyPricingTier"
-      ],
-      "dependencies": [],
-      "props": []
-    },
-    "RN": {
-      "status": "complete",
-      "files": [
-        "PricingBlock.tsx",
-        "index.ts"
-      ],
-      "entry": "index.ts",
-      "exports": [
-        "PricingBlock",
-        "PricingBlockProps",
-        "PricingTier"
-      ],
-      "dependencies": [],
-      "props": []
-    },
-    "F": {
-      "status": "complete",
-      "files": [
-        "pricing_block.dart",
-        "index.dart"
-      ],
-      "entry": "index.dart",
       "exports": [
         "GalaxyPricingBlock",
         "GalaxyPricingTier"

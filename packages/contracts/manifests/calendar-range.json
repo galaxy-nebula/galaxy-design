@@ -536,40 +536,12 @@
       "props": []
     },
     "flutter": {
-      "status": "complete",
+      "status": "missing",
       "files": [
         "calendar_range.dart",
         "index.dart"
       ],
       "entry": "index.ts",
-      "exports": [
-        "GalaxyCalendarRange"
-      ],
-      "dependencies": [],
-      "props": []
-    },
-    "RN": {
-      "status": "complete",
-      "files": [
-        "CalendarRange.tsx",
-        "index.ts"
-      ],
-      "entry": "index.ts",
-      "exports": [
-        "CalendarRange",
-        "CalendarRangeProps",
-        "CalendarRangeValue"
-      ],
-      "dependencies": [],
-      "props": []
-    },
-    "F": {
-      "status": "complete",
-      "files": [
-        "calendar_range.dart",
-        "index.dart"
-      ],
-      "entry": "index.dart",
       "exports": [
         "GalaxyCalendarRange"
       ],

@@ -27,7 +27,10 @@
         "DrawerTitle",
         "DrawerDescription"
       ],
-      "dependencies": [],
+      "dependencies": [
+        "vaul",
+        "vaul-vue"
+      ],
       "props": []
     },
     "vue": {
@@ -40,7 +43,10 @@
       "exports": [
         "Drawer"
       ],
-      "dependencies": [],
+      "dependencies": [
+        "vaul",
+        "vaul-vue"
+      ],
       "props": []
     },
     "angular": {

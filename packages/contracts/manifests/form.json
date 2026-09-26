@@ -145,7 +145,7 @@
       "selector": "[uiForm]"
     },
     "react-native": {
-      "status": "complete",
+      "status": "missing",
       "files": [
         "Form.tsx",
         "index.ts"
@@ -161,42 +161,12 @@
       "props": []
     },
     "flutter": {
-      "status": "complete",
+      "status": "missing",
       "files": [
         "form.dart",
         "index.dart"
       ],
       "entry": "index.ts",
-      "exports": [
-        "GalaxyForm",
-        "GalaxyFormItem"
-      ],
-      "dependencies": [],
-      "props": []
-    },
-    "RN": {
-      "status": "complete",
-      "files": [
-        "Form.tsx",
-        "index.ts"
-      ],
-      "entry": "index.ts",
-      "exports": [
-        "Form",
-        "FormItem",
-        "FormLabel",
-        "FormDescription"
-      ],
-      "dependencies": [],
-      "props": []
-    },
-    "F": {
-      "status": "complete",
-      "files": [
-        "form.dart",
-        "index.dart"
-      ],
-      "entry": "index.dart",
       "exports": [
         "GalaxyForm",
         "GalaxyFormItem"

@@ -52,13 +52,13 @@
       "props": []
     },
     "react-native": {
-      "status": "web-only",
+      "status": "missing",
       "notes": "Mobile uses FlatList instead of table.",
       "webOnly": true,
       "props": []
     },
     "flutter": {
-      "status": "web-only",
+      "status": "missing",
       "notes": "Flutter has DataTable built-in.",
       "webOnly": true,
       "props": []

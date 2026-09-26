@@ -196,13 +196,13 @@
       ]
     },
     "react-native": {
-      "status": "web-only",
+      "status": "missing",
       "notes": "No mobile toolbar implementation yet.",
       "webOnly": true,
       "props": []
     },
     "flutter": {
-      "status": "web-only",
+      "status": "missing",
       "notes": "No Flutter toolbar implementation yet.",
       "webOnly": true,
       "props": []

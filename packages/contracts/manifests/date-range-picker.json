@@ -274,7 +274,7 @@
       "props": []
     },
     "react-native": {
-      "status": "complete",
+      "status": "missing",
       "files": [
         "DateRangePicker.tsx",
         "index.ts"
@@ -288,39 +288,12 @@
       "props": []
     },
     "flutter": {
-      "status": "complete",
+      "status": "missing",
       "files": [
         "date_range_picker.dart",
         "index.dart"
       ],
       "entry": "index.ts",
-      "exports": [
-        "GalaxyDateRangePicker"
-      ],
-      "dependencies": [],
-      "props": []
-    },
-    "RN": {
-      "status": "complete",
-      "files": [
-        "DateRangePicker.tsx",
-        "index.ts"
-      ],
-      "entry": "index.ts",
-      "exports": [
-        "DateRangePicker",
-        "DateRangePickerProps"
-      ],
-      "dependencies": [],
-      "props": []
-    },
-    "F": {
-      "status": "complete",
-      "files": [
-        "date_range_picker.dart",
-        "index.dart"
-      ],
-      "entry": "index.dart",
       "exports": [
         "GalaxyDateRangePicker"
       ],

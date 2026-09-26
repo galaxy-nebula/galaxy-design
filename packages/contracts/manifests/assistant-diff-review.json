@@ -7,7 +7,7 @@
   "children": [],
   "frameworks": {
     "react": {
-      "status": "complete",
+      "status": "missing",
       "files": [
         "DiffReview.tsx",
         "FileDiffCard.tsx",

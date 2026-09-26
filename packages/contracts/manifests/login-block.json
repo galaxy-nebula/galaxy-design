@@ -50,7 +50,7 @@
       "props": []
     },
     "react-native": {
-      "status": "complete",
+      "status": "missing",
       "files": [
         "LoginBlock.tsx",
         "index.ts"
@@ -64,39 +64,12 @@
       "props": []
     },
     "flutter": {
-      "status": "complete",
+      "status": "missing",
       "files": [
         "login_block.dart",
         "index.dart"
       ],
       "entry": "index.ts",
-      "exports": [
-        "GalaxyLoginBlock"
-      ],
-      "dependencies": [],
-      "props": []
-    },
-    "RN": {
-      "status": "complete",
-      "files": [
-        "LoginBlock.tsx",
-        "index.ts"
-      ],
-      "entry": "index.ts",
-      "exports": [
-        "LoginBlock",
-        "LoginBlockProps"
-      ],
-      "dependencies": [],
-      "props": []
-    },
-    "F": {
-      "status": "complete",
-      "files": [
-        "login_block.dart",
-        "index.dart"
-      ],
-      "entry": "index.dart",
       "exports": [
         "GalaxyLoginBlock"
       ],

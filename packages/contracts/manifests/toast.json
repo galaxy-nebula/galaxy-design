@@ -10,10 +10,19 @@
   "frameworks": {
     "react": {
       "status": "partial",
-      "files": ["Toast.tsx", "toast-helper.ts", "index.ts"],
+      "files": [
+        "Toast.tsx",
+        "toast-helper.ts",
+        "index.ts"
+      ],
       "entry": "index.ts",
-      "exports": ["Toaster", "toast"],
-      "dependencies": ["sonner"],
+      "exports": [
+        "Toaster",
+        "toast"
+      ],
+      "dependencies": [
+        "sonner"
+      ],
       "notes": "Sonner-backed wrapper; `Toaster` renders and `toast()` triggers. Subpart anatomy (Title/Description/Viewport) is delegated to Sonner.",
       "props": [
         {
@@ -141,10 +150,18 @@
     },
     "vue": {
       "status": "partial",
-      "files": ["toast.vue", "index.ts"],
+      "files": [
+        "toast.vue",
+        "index.ts"
+      ],
       "entry": "index.ts",
-      "exports": ["Toaster", "toast"],
-      "dependencies": ["vue-sonner"],
+      "exports": [
+        "Toaster",
+        "toast"
+      ],
+      "dependencies": [
+        "vue-sonner"
+      ],
       "notes": "Sonner-backed wrapper re-exported from vue-sonner.",
       "props": [
         {
@@ -272,11 +289,19 @@
     },
     "angular": {
       "status": "partial",
-      "files": ["toast.component.ts", "index.ts"],
+      "files": [
+        "toast.component.ts",
+        "index.ts"
+      ],
       "entry": "index.ts",
       "selector": "ui-toast",
-      "exports": ["ToastComponent", "toast"],
-      "dependencies": ["ngx-sonner"],
+      "exports": [
+        "ToastComponent",
+        "toast"
+      ],
+      "dependencies": [
+        "ngx-sonner"
+      ],
       "notes": "Sonner-backed wrapper; `toast` is re-exported from ngx-sonner.",
       "props": [
         {
@@ -305,9 +330,14 @@
     },
     "react-native": {
       "status": "complete",
-      "files": ["Toast.tsx", "index.ts"],
+      "files": [
+        "Toast.tsx",
+        "index.ts"
+      ],
       "entry": "index.ts",
-      "exports": ["Toast"],
+      "exports": [
+        "Toast"
+      ],
       "dependencies": [],
       "devDependencies": [],
       "peerDependencies": [],
@@ -317,10 +347,16 @@
     },
     "flutter": {
       "status": "complete",
-      "files": ["toast.dart"],
-      "exports": ["GalaxyToast", "GalaxyToastVariant"],
+      "files": [
+        "toast.dart"
+      ],
+      "exports": [
+        "GalaxyToast",
+        "GalaxyToastVariant"
+      ],
       "dependencies": [],
-      "notes": "SnackBar wrapper with Galaxy UI styling and variant colors."
+      "notes": "SnackBar wrapper with Galaxy UI styling and variant colors.",
+      "props": []
     }
   },
   "a11y": {
