@@ -6,12 +6,26 @@ on:
     paths:
       - 'packages/contracts/manifests/**'
       - 'packages/contracts/scripts/**'
+  workflow_dispatch:
 
 jobs:
   build-registry:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      # The two sibling repos receive the generated artifacts. A PAT is
+      # required: the default GITHUB_TOKEN cannot push to other repositories.
+      - uses: actions/checkout@v4
+        with:
+          repository: galaxy-nebula/galaxy-design-cli
+          path: galaxy-design-cli
+          token: ${{ secrets.REGISTRY_SYNC_TOKEN }}
+      - uses: actions/checkout@v4
+        with:
+          repository: galaxy-nebula/docs-nebula
+          path: docs-nebula
+          token: ${{ secrets.REGISTRY_SYNC_TOKEN }}
 
       - uses: actions/setup-node@v4
         with:
@@ -40,20 +54,20 @@ jobs:
             const commit=execSync('git rev-parse HEAD',{encoding:'utf8'}).trim().slice(0,12);
             console.log(p.version+'+'+commit);
           ")
-          mkdir -p ../docs-galaxy-desgin/public/registry
-          cp -r packages/contracts/dist/registry/$VERSION ../docs-galaxy-desgin/public/registry/$VERSION
-          cp packages/contracts/dist/registry/latest-manifest.json ../docs-galaxy-desgin/public/registry/latest-manifest.json
+          mkdir -p docs-nebula/public/registry
+          cp -r packages/contracts/dist/registry/$VERSION docs-nebula/public/registry/$VERSION
+          cp packages/contracts/dist/registry/latest-manifest.json docs-nebula/public/registry/latest-manifest.json
 
       - name: Update CLI digest
         run: |
-          cd ../galaxy-design-cli
+          cd galaxy-design-cli
           node scripts/update-registry-digest.mjs
 
       - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          cd ../docs-galaxy-desgin
+          cd docs-nebula
           git add public/registry/
           git diff --cached --quiet || git commit -m "chore: update registry artifacts for $GITHUB_SHA"
           git push origin main
