@@ -1141,9 +1141,7 @@
       "description": "Codex-style agent progress panel with task checklist, status badges, progress bar, and timestamped tool call log.",
       "category": "assistant",
       "status": "complete",
-      "frameworks": [
-        "react"
-      ],
+      "frameworks": [],
       "props": [],
       "children": []
     },
@@ -1153,9 +1151,7 @@
       "description": "Copilot-style assistant side panel with message list, tool call cards, model badge, and composer with send/stop states.",
       "category": "assistant",
       "status": "complete",
-      "frameworks": [
-        "react"
-      ],
+      "frameworks": [],
       "props": [],
       "children": []
     },
@@ -1165,9 +1161,7 @@
       "description": "AI code review panel with file-level accept/reject, per-file unified diff view, and summary stats for additions and deletions.",
       "category": "assistant",
       "status": "complete",
-      "frameworks": [
-        "react"
-      ],
+      "frameworks": [],
       "props": [],
       "children": []
     },
@@ -1177,9 +1171,7 @@
       "description": "Standalone assistant composer with auto-resizing textarea, attachments row, model pill, slash-command hints, and send/stop states.",
       "category": "assistant",
       "status": "complete",
-      "frameworks": [
-        "react"
-      ],
+      "frameworks": [],
       "props": [],
       "children": []
     },
@@ -1920,9 +1912,7 @@
       "frameworks": [
         "react",
         "vue",
-        "angular",
-        "react-native",
-        "flutter"
+        "angular"
       ],
       "props": [
         {
@@ -2139,8 +2129,7 @@
         "react",
         "vue",
         "angular",
-        "react-native",
-        "flutter"
+        "react-native"
       ],
       "props": [
         {
@@ -2970,9 +2959,7 @@
       "frameworks": [
         "react",
         "vue",
-        "angular",
-        "react-native",
-        "flutter"
+        "angular"
       ],
       "props": [
         {
@@ -3061,9 +3048,7 @@
       "frameworks": [
         "react",
         "vue",
-        "angular",
-        "react-native",
-        "flutter"
+        "angular"
       ],
       "props": [
         {
@@ -3310,9 +3295,7 @@
       "frameworks": [
         "react",
         "vue",
-        "angular",
-        "react-native",
-        "flutter"
+        "angular"
       ],
       "props": [],
       "children": []
@@ -3326,9 +3309,7 @@
       "frameworks": [
         "react",
         "vue",
-        "angular",
-        "react-native",
-        "flutter"
+        "angular"
       ],
       "props": [],
       "children": []
@@ -3494,9 +3475,7 @@
       "frameworks": [
         "react",
         "vue",
-        "angular",
-        "react-native",
-        "flutter"
+        "angular"
       ],
       "props": [
         {
@@ -4659,9 +4638,7 @@
       "frameworks": [
         "react",
         "vue",
-        "angular",
-        "react-native",
-        "flutter"
+        "angular"
       ],
       "props": [
         {
@@ -5635,9 +5612,7 @@
       "frameworks": [
         "react",
         "vue",
-        "angular",
-        "react-native",
-        "flutter"
+        "angular"
       ],
       "props": [
         {
@@ -6264,9 +6239,7 @@
       "frameworks": [
         "react",
         "vue",
-        "angular",
-        "react-native",
-        "flutter"
+        "angular"
       ],
       "props": [],
       "children": []
@@ -7034,8 +7007,7 @@
         "react",
         "vue",
         "angular",
-        "react-native",
-        "flutter"
+        "react-native"
       ],
       "props": [],
       "children": []
@@ -7731,9 +7703,7 @@
       "frameworks": [
         "react",
         "vue",
-        "angular",
-        "react-native",
-        "flutter"
+        "angular"
       ],
       "props": [],
       "children": []
@@ -8482,9 +8452,7 @@
       "frameworks": [
         "react",
         "vue",
-        "angular",
-        "react-native",
-        "flutter"
+        "angular"
       ],
       "props": [],
       "children": []
@@ -8808,9 +8776,7 @@
       "frameworks": [
         "react",
         "vue",
-        "angular",
-        "react-native",
-        "flutter"
+        "angular"
       ],
       "props": [
         {
@@ -10792,8 +10758,7 @@
         "react",
         "vue",
         "angular",
-        "react-native",
-        "flutter"
+        "react-native"
       ],
       "props": [
         {
@@ -12042,9 +12007,7 @@
       "frameworks": [
         "react",
         "vue",
-        "angular",
-        "react-native",
-        "flutter"
+        "angular"
       ],
       "props": [],
       "children": []

@@ -1248,7 +1248,9 @@
         "Carousel"
       ],
       "dependencies": [
-        "embla-carousel-vue"
+        "embla-carousel-vue",
+        "lucide-react",
+        "lucide-vue-next"
       ],
       "devDependencies": [],
       "peerDependencies": [],
@@ -1998,7 +2000,10 @@
       "exports": [
         "Drawer"
       ],
-      "dependencies": [],
+      "dependencies": [
+        "vaul",
+        "vaul-vue"
+      ],
       "devDependencies": [],
       "peerDependencies": [],
       "registryDependencies": [],
