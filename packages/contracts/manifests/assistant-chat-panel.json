@@ -4,11 +4,105 @@
   "category": "assistant",
   "status": "complete",
   "description": "Copilot-style assistant side panel with message list, tool call cards, model badge, and composer with send/stop states.",
-  "props": [],
+  "props": [
+    {
+      "name": "messages",
+      "type": {
+        "kind": "array",
+        "of": {
+          "kind": "custom",
+          "name": "AssistantChatMessage[]"
+        }
+      },
+      "description": "Required. Conversation turns with id, role, content and optional timestamp, toolCalls and streaming flag. Example: messages={[{ id: \"1\", role: \"user\", content: \"Hi\" }]}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "title",
+      "type": {
+        "kind": "primitive",
+        "name": "string"
+      },
+      "default": "Assistant",
+      "description": "Header label of the panel. Example: title=\"Copilot\"",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "model",
+      "type": {
+        "kind": "primitive",
+        "name": "string"
+      },
+      "description": "Model badge shown next to the title. Example: model=\"gpt-5\"",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "placeholder",
+      "type": {
+        "kind": "primitive",
+        "name": "string"
+      },
+      "description": "Placeholder text of the composer input. Example: placeholder=\"Ask anything\"",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "disabled",
+      "type": {
+        "kind": "primitive",
+        "name": "boolean"
+      },
+      "default": false,
+      "description": "Disable the composer while the panel is read-only. Example: disabled={!connected}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "onSendMessage",
+      "type": {
+        "kind": "function",
+        "signature": "(content: string) => void"
+      },
+      "description": "Called with the trimmed composer text when the user sends. Example: onSendMessage={(text) => send(text)}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "onStop",
+      "type": {
+        "kind": "function",
+        "signature": "() => void"
+      },
+      "description": "Called when the user stops a streaming answer. Example: onStop={abort}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "className",
+      "type": {
+        "kind": "primitive",
+        "name": "string"
+      },
+      "description": "CSS class names for the panel. Example: className=\"h-[600px]\"",
+      "frameworks": [
+        "react"
+      ]
+    }
+  ],
   "children": [],
   "frameworks": {
     "react": {
-      "status": "missing",
+      "status": "complete",
       "files": [
         "ChatPanel.tsx",
         "ChatMessage.tsx",
@@ -27,7 +121,77 @@
       ],
       "dependencies": [],
       "registryDependencies": [],
-      "props": []
+      "props": [
+        {
+          "name": "messages",
+          "type": {
+            "kind": "array",
+            "of": {
+              "kind": "custom",
+              "name": "AssistantChatMessage[]"
+            }
+          },
+          "description": "Required. Conversation turns with id, role, content and optional timestamp, toolCalls and streaming flag. Example: messages={[{ id: \"1\", role: \"user\", content: \"Hi\" }]}"
+        },
+        {
+          "name": "title",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "default": "Assistant",
+          "description": "Header label of the panel. Example: title=\"Copilot\""
+        },
+        {
+          "name": "model",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "description": "Model badge shown next to the title. Example: model=\"gpt-5\""
+        },
+        {
+          "name": "placeholder",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "description": "Placeholder text of the composer input. Example: placeholder=\"Ask anything\""
+        },
+        {
+          "name": "disabled",
+          "type": {
+            "kind": "primitive",
+            "name": "boolean"
+          },
+          "default": false,
+          "description": "Disable the composer while the panel is read-only. Example: disabled={!connected}"
+        },
+        {
+          "name": "onSendMessage",
+          "type": {
+            "kind": "function",
+            "signature": "(content: string) => void"
+          },
+          "description": "Called with the trimmed composer text when the user sends. Example: onSendMessage={(text) => send(text)}"
+        },
+        {
+          "name": "onStop",
+          "type": {
+            "kind": "function",
+            "signature": "() => void"
+          },
+          "description": "Called when the user stops a streaming answer. Example: onStop={abort}"
+        },
+        {
+          "name": "className",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "description": "CSS class names for the panel. Example: className=\"h-[600px]\""
+        }
+      ]
     },
     "vue": {
       "status": "missing",

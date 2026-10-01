@@ -4,7 +4,7 @@
   "name": "table",
   "category": "other",
   "status": "complete",
-  "description": "table",
+  "description": "Semantic markup for tabular data, composed of header, body, footer, rows and cells.",
   "props": [
     {
       "name": "className",

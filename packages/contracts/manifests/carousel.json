@@ -5,7 +5,84 @@
   "category": "data-display",
   "status": "complete",
   "description": "Carousel component - embla-based with prev/next controls.",
-  "props": [],
+  "props": [
+    {
+      "name": "opts",
+      "type": {
+        "kind": "custom",
+        "name": "EmblaOptionsType"
+      },
+      "description": "Embla options that drive the swipe behaviour, for example loop, align, dragFree or containScroll. Example: opts={{ loop: true, align: \"start\" }}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "plugins",
+      "type": {
+        "kind": "custom",
+        "name": "EmblaPluginType[]"
+      },
+      "description": "Embla plugins such as autoplay or wheel gestures. Example: plugins={[Autoplay()]}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "orientation",
+      "type": {
+        "kind": "union",
+        "values": [
+          {
+            "kind": "literal",
+            "value": "horizontal"
+          },
+          {
+            "kind": "literal",
+            "value": "vertical"
+          }
+        ]
+      },
+      "default": "horizontal",
+      "description": "Scroll axis of the slide track; keyboard arrows follow it. Example: orientation=\"vertical\"",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "setApi",
+      "type": {
+        "kind": "function",
+        "signature": "(api: CarouselApi) => void"
+      },
+      "description": "Receives the Embla API so the caller can scroll programmatically. Example: setApi={setApi}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "className",
+      "type": {
+        "kind": "primitive",
+        "name": "string"
+      },
+      "description": "CSS class names for the carousel viewport wrapper. Example: className=\"max-w-xl\"",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "children",
+      "type": {
+        "kind": "custom",
+        "name": "ReactNode"
+      },
+      "description": "Required. CarouselContent, CarouselItem and the prev/next controls. Example: <CarouselContent />",
+      "frameworks": [
+        "react"
+      ]
+    }
+  ],
   "children": [],
   "frameworks": {
     "react": {
@@ -27,7 +104,66 @@
         "lucide-react",
         "lucide-vue-next"
       ],
-      "props": []
+      "props": [
+        {
+          "name": "opts",
+          "type": {
+            "kind": "custom",
+            "name": "EmblaOptionsType"
+          },
+          "description": "Embla options that drive the swipe behaviour, for example loop, align, dragFree or containScroll. Example: opts={{ loop: true, align: \"start\" }}"
+        },
+        {
+          "name": "plugins",
+          "type": {
+            "kind": "custom",
+            "name": "EmblaPluginType[]"
+          },
+          "description": "Embla plugins such as autoplay or wheel gestures. Example: plugins={[Autoplay()]}"
+        },
+        {
+          "name": "orientation",
+          "type": {
+            "kind": "union",
+            "values": [
+              {
+                "kind": "literal",
+                "value": "horizontal"
+              },
+              {
+                "kind": "literal",
+                "value": "vertical"
+              }
+            ]
+          },
+          "default": "horizontal",
+          "description": "Scroll axis of the slide track; keyboard arrows follow it. Example: orientation=\"vertical\""
+        },
+        {
+          "name": "setApi",
+          "type": {
+            "kind": "function",
+            "signature": "(api: CarouselApi) => void"
+          },
+          "description": "Receives the Embla API so the caller can scroll programmatically. Example: setApi={setApi}"
+        },
+        {
+          "name": "className",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "description": "CSS class names for the carousel viewport wrapper. Example: className=\"max-w-xl\""
+        },
+        {
+          "name": "children",
+          "type": {
+            "kind": "custom",
+            "name": "ReactNode"
+          },
+          "description": "Required. CarouselContent, CarouselItem and the prev/next controls. Example: <CarouselContent />"
+        }
+      ]
     },
     "vue": {
       "status": "complete",

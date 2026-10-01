@@ -4,7 +4,7 @@
   "name": "checkbox",
   "category": "other",
   "status": "complete",
-  "description": "checkbox",
+  "description": "Square control for toggling a single boolean option, with an indeterminate state for parent rows.",
   "props": [
     {
       "name": "checked",

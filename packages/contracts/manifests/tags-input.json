@@ -4,7 +4,7 @@
   "name": "tags-input",
   "category": "other",
   "status": "complete",
-  "description": "tags-input",
+  "description": "Field that collects free-form values as removable chips, for labels, tags and recipients.",
   "props": [
     {
       "name": "value",

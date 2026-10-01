@@ -4,7 +4,7 @@
   "name": "kbd",
   "category": "other",
   "status": "complete",
-  "description": "kbd",
+  "description": "Inline key cap that renders a keyboard shortcut inside text or menus.",
   "props": [
     {
       "name": "size",

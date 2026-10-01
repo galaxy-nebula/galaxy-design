@@ -4,7 +4,7 @@
   "name": "bar-chart",
   "category": "other",
   "status": "complete",
-  "description": "bar-chart",
+  "description": "Chart that compares values across categories with bars, for monthly revenue, counts or rankings.",
   "props": [
     {
       "name": "data",

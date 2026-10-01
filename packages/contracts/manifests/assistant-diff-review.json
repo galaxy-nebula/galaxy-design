@@ -3,11 +3,81 @@
   "name": "Diff Review",
   "status": "complete",
   "description": "AI code review panel with file-level accept/reject, per-file unified diff view, and summary stats for additions and deletions.",
-  "props": [],
+  "props": [
+    {
+      "name": "files",
+      "type": {
+        "kind": "array",
+        "of": {
+          "kind": "custom",
+          "name": "DiffFile[]"
+        }
+      },
+      "description": "Required. Changed files with path, additions, deletions, unified diff lines and a pending, accepted or rejected status. Example: files={[{ path: \"a.ts\", additions: 2, deletions: 1, lines: [], status: \"pending\" }]}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "onAccept",
+      "type": {
+        "kind": "function",
+        "signature": "(path: string) => void"
+      },
+      "description": "Called with the file path when one diff is accepted. Example: onAccept={(path) => accept(path)}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "onReject",
+      "type": {
+        "kind": "function",
+        "signature": "(path: string) => void"
+      },
+      "description": "Called with the file path when one diff is rejected. Example: onReject={(path) => reject(path)}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "onAcceptAll",
+      "type": {
+        "kind": "function",
+        "signature": "() => void"
+      },
+      "description": "Called by the Accept all button. Example: onAcceptAll={acceptEverything}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "onRejectAll",
+      "type": {
+        "kind": "function",
+        "signature": "() => void"
+      },
+      "description": "Called by the Reject all button. Example: onRejectAll={rejectEverything}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "className",
+      "type": {
+        "kind": "primitive",
+        "name": "string"
+      },
+      "description": "CSS class names for the review card. Example: className=\"max-w-2xl\"",
+      "frameworks": [
+        "react"
+      ]
+    }
+  ],
   "children": [],
   "frameworks": {
     "react": {
-      "status": "missing",
+      "status": "complete",
       "files": [
         "DiffReview.tsx",
         "FileDiffCard.tsx",
@@ -22,7 +92,59 @@
       ],
       "dependencies": [],
       "registryDependencies": [],
-      "props": []
+      "props": [
+        {
+          "name": "files",
+          "type": {
+            "kind": "array",
+            "of": {
+              "kind": "custom",
+              "name": "DiffFile[]"
+            }
+          },
+          "description": "Required. Changed files with path, additions, deletions, unified diff lines and a pending, accepted or rejected status. Example: files={[{ path: \"a.ts\", additions: 2, deletions: 1, lines: [], status: \"pending\" }]}"
+        },
+        {
+          "name": "onAccept",
+          "type": {
+            "kind": "function",
+            "signature": "(path: string) => void"
+          },
+          "description": "Called with the file path when one diff is accepted. Example: onAccept={(path) => accept(path)}"
+        },
+        {
+          "name": "onReject",
+          "type": {
+            "kind": "function",
+            "signature": "(path: string) => void"
+          },
+          "description": "Called with the file path when one diff is rejected. Example: onReject={(path) => reject(path)}"
+        },
+        {
+          "name": "onAcceptAll",
+          "type": {
+            "kind": "function",
+            "signature": "() => void"
+          },
+          "description": "Called by the Accept all button. Example: onAcceptAll={acceptEverything}"
+        },
+        {
+          "name": "onRejectAll",
+          "type": {
+            "kind": "function",
+            "signature": "() => void"
+          },
+          "description": "Called by the Reject all button. Example: onRejectAll={rejectEverything}"
+        },
+        {
+          "name": "className",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "description": "CSS class names for the review card. Example: className=\"max-w-2xl\""
+        }
+      ]
     },
     "vue": {
       "status": "missing",

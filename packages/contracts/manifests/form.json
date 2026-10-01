@@ -4,7 +4,7 @@
   "name": "form",
   "category": "other",
   "status": "complete",
-  "description": "form",
+  "description": "Validation and field context provider built on react-hook-form, wiring labels, descriptions and error messages together.",
   "props": [
     {
       "name": "children",

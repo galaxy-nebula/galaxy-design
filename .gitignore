@@ -46,3 +46,7 @@ Thumbs.db
 .angular
 .vercel
 .galaxy/
+
+# Playwright output from the visual-regression suite
+packages/visual-tests/test-results/
+packages/visual-tests/playwright-report/

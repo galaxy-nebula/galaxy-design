@@ -4,7 +4,7 @@
   "name": "tabs",
   "category": "other",
   "status": "complete",
-  "description": "tabs",
+  "description": "Layered panels where one is visible at a time and a tab list switches between them.",
   "props": [
     {
       "name": "value",

@@ -4,7 +4,7 @@
   "name": "calendar-range",
   "category": "other",
   "status": "complete",
-  "description": "calendar-range",
+  "description": "Two-month grid in a popover for selecting a start and end date in one interaction.",
   "props": [
     {
       "name": "selected",

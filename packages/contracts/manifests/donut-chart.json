@@ -4,7 +4,7 @@
   "name": "donut-chart",
   "category": "other",
   "status": "complete",
-  "description": "donut-chart",
+  "description": "Ring chart that shows how parts make up a whole, with the total in the middle.",
   "props": [
     {
       "name": "data",

@@ -10,7 +10,7 @@
       "name": "accordion",
       "type": "other",
       "status": "complete",
-      "description": "accordion",
+      "description": "Vertically stacked headings that expand one at a time to reveal sections of content in long forms or FAQs.",
       "files": [
         "accordion.dart"
       ],
@@ -55,7 +55,7 @@
       "name": "alert-dialog",
       "type": "other",
       "status": "complete",
-      "description": "alert-dialog",
+      "description": "Blocking modal that interrupts the user to confirm an irreversible action such as a delete before it happens.",
       "files": [
         "alert_dialog.dart"
       ],
@@ -145,7 +145,7 @@
       "name": "alert",
       "type": "other",
       "status": "complete",
-      "description": "alert",
+      "description": "Inline callout that draws attention to an important message or a destructive warning inside a page.",
       "files": [
         "alert.dart"
       ],
@@ -205,7 +205,7 @@
       "name": "area-chart",
       "type": "other",
       "status": "complete",
-      "description": "area-chart",
+      "description": "Filled line chart that shows how one or more series accumulate over time.",
       "files": [
         "area_chart.dart",
         "types.dart",
@@ -385,7 +385,7 @@
       "name": "aspect-ratio",
       "type": "other",
       "status": "complete",
-      "description": "aspect-ratio",
+      "description": "Wrapper that keeps media or any other child at a fixed width-to-height ratio while the layout resizes.",
       "files": [
         "aspect_ratio.dart"
       ],
@@ -424,7 +424,7 @@
       "name": "avatar",
       "type": "other",
       "status": "complete",
-      "description": "avatar",
+      "description": "Circular user image that falls back to initials or an icon when the picture is missing.",
       "files": [
         "avatar.dart"
       ],
@@ -506,7 +506,7 @@
       "name": "badge",
       "type": "other",
       "status": "complete",
-      "description": "badge",
+      "description": "Small status label that marks an item with a count, category or state beside a title or inside a list.",
       "files": [
         "badge.dart"
       ],
@@ -582,7 +582,7 @@
       "name": "bar-chart",
       "type": "other",
       "status": "complete",
-      "description": "bar-chart",
+      "description": "Chart that compares values across categories with bars, for monthly revenue, counts or rankings.",
       "files": [
         "bar_chart.dart",
         "types.dart",
@@ -832,7 +832,7 @@
       "name": "Calendar",
       "type": "form",
       "status": "complete",
-      "description": "Full-featured date picker with month navigation and selection.",
+      "description": "Month grid for picking a single day, a date range or several days, with controlled month navigation.",
       "files": [
         "calendar.dart",
         "index.dart"
@@ -854,7 +854,7 @@
       "name": "card",
       "type": "other",
       "status": "complete",
-      "description": "card",
+      "description": "Bordered surface that groups related content such as a title, description, media and actions.",
       "files": [
         "card.dart"
       ],
@@ -907,7 +907,7 @@
       "name": "checkbox",
       "type": "other",
       "status": "complete",
-      "description": "checkbox",
+      "description": "Square control for toggling a single boolean option, with an indeterminate state for parent rows.",
       "files": [
         "checkbox.dart"
       ],
@@ -963,7 +963,7 @@
       "name": "collapsible",
       "type": "other",
       "status": "complete",
-      "description": "collapsible",
+      "description": "Single section that the user can expand or collapse to hide secondary content on demand.",
       "files": [
         "collapsible.dart"
       ],
@@ -1020,7 +1020,7 @@
       "name": "context-menu",
       "type": "other",
       "status": "complete",
-      "description": "context-menu",
+      "description": "Menu opened by right-click or the context-menu key, offering actions on the element under the pointer.",
       "files": [
         "context_menu.dart"
       ],
@@ -1148,7 +1148,7 @@
       "name": "date-time-picker",
       "type": "other",
       "status": "complete",
-      "description": "date-time-picker",
+      "description": "Timestamp field that pairs a month grid with hour and minute lists so a date and time are chosen in one flow.",
       "files": [
         "date_time_picker.dart",
         "index.dart"
@@ -1226,7 +1226,7 @@
       "name": "donut-chart",
       "type": "other",
       "status": "complete",
-      "description": "donut-chart",
+      "description": "Ring chart that shows how parts make up a whole, with the total in the middle.",
       "files": [
         "donut_chart.dart",
         "types.dart",
@@ -1379,7 +1379,7 @@
       "name": "dropdown-menu",
       "type": "other",
       "status": "complete",
-      "description": "dropdown-menu",
+      "description": "Menu of actions or options revealed by a trigger button, for row actions and toolbar overflow.",
       "files": [
         "dropdown_menu.dart"
       ],
@@ -1430,7 +1430,7 @@
       "name": "empty",
       "type": "other",
       "status": "complete",
-      "description": "empty",
+      "description": "Placeholder block shown when a list, grid or search has no data yet, with an icon, message and optional action.",
       "files": [
         "empty.dart"
       ],
@@ -1683,7 +1683,7 @@
       "name": "hover-card",
       "type": "other",
       "status": "complete",
-      "description": "hover-card",
+      "description": "Rich preview that appears when the pointer rests on a link or avatar, without requiring a click.",
       "files": [
         "hover_card.dart"
       ],
@@ -1747,7 +1747,7 @@
       "name": "input",
       "type": "other",
       "status": "complete",
-      "description": "input",
+      "description": "Single-line text field for short free-form values such as names, emails and search terms.",
       "files": [
         "input.dart"
       ],
@@ -1854,7 +1854,7 @@
       "name": "label",
       "type": "other",
       "status": "complete",
-      "description": "label",
+      "description": "Accessible caption bound to a form control through htmlFor, so clicking the text focuses the field.",
       "files": [
         "label.dart"
       ],
@@ -1910,7 +1910,7 @@
       "name": "line-chart",
       "type": "other",
       "status": "complete",
-      "description": "line-chart",
+      "description": "Chart that plots one or more series as connected points to show trends over time.",
       "files": [
         "line_chart.dart",
         "types.dart",
@@ -2088,7 +2088,7 @@
       "name": "menubar",
       "type": "other",
       "status": "complete",
-      "description": "menubar",
+      "description": "Horizontal bar of application menus, each opening a dropdown of commands.",
       "files": [
         "menubar.dart"
       ],
@@ -2123,7 +2123,7 @@
       "name": "mixed-chart",
       "type": "other",
       "status": "complete",
-      "description": "mixed-chart",
+      "description": "Combined chart that overlays bars, lines or areas so two measures with different scales can be compared.",
       "files": [
         "mixed_chart.dart",
         "types.dart",
@@ -2265,7 +2265,7 @@
       "name": "navigation-menu",
       "type": "other",
       "status": "complete",
-      "description": "navigation-menu",
+      "description": "Site navigation with rich dropdown panels for content-heavy menus and mega menus.",
       "files": [
         "navigation_menu.dart"
       ],
@@ -2339,7 +2339,7 @@
       "name": "pagination",
       "type": "other",
       "status": "complete",
-      "description": "pagination",
+      "description": "Page controls with previous, next and numbered pages for long lists and tables.",
       "files": [
         "pagination.dart"
       ],
@@ -2435,7 +2435,7 @@
       "name": "pie-chart",
       "type": "other",
       "status": "complete",
-      "description": "pie-chart",
+      "description": "Circular chart that splits a total into proportional slices for share-of-whole comparisons.",
       "files": [
         "pie_chart.dart",
         "types.dart",
@@ -2588,7 +2588,7 @@
       "name": "popover",
       "type": "other",
       "status": "complete",
-      "description": "popover",
+      "description": "Floating panel anchored to a trigger that holds rich content such as forms, filters or menus.",
       "files": [
         "popover.dart"
       ],
@@ -2643,7 +2643,7 @@
       "name": "progress",
       "type": "other",
       "status": "complete",
-      "description": "progress",
+      "description": "Bar that reports how far a determinate task has advanced toward completion.",
       "files": [
         "progress.dart"
       ],
@@ -2699,7 +2699,7 @@
       "name": "radar-chart",
       "type": "other",
       "status": "complete",
-      "description": "radar-chart",
+      "description": "Spider chart that compares several measures of one or more entities across axes.",
       "files": [
         "radar_chart.dart",
         "types.dart",
@@ -2835,7 +2835,7 @@
       "name": "radio-group",
       "type": "other",
       "status": "complete",
-      "description": "radio-group",
+      "description": "Set of mutually exclusive options where exactly one can be selected at a time.",
       "files": [
         "radio_group.dart"
       ],
@@ -2896,7 +2896,7 @@
       "name": "scatter-chart",
       "type": "other",
       "status": "complete",
-      "description": "scatter-chart",
+      "description": "Chart that plots individual points on two axes to reveal correlation, clusters and outliers.",
       "files": [
         "scatter_chart.dart",
         "types.dart",
@@ -3114,7 +3114,7 @@
       "name": "separator",
       "type": "other",
       "status": "complete",
-      "description": "separator",
+      "description": "Thin divider that visually groups content, horizontally or vertically.",
       "files": [
         "separator.dart"
       ],
@@ -3188,7 +3188,7 @@
       "name": "sheet",
       "type": "other",
       "status": "complete",
-      "description": "sheet",
+      "description": "Overlay layer for secondary tasks such as details, filters or preferences, opened from any edge of the screen.",
       "files": [
         "sheet.dart"
       ],
@@ -3223,7 +3223,7 @@
       "name": "skeleton",
       "type": "other",
       "status": "complete",
-      "description": "skeleton",
+      "description": "Placeholder shapes that stand in for content while data loads, keeping the layout stable.",
       "files": [
         "skeleton.dart"
       ],
@@ -3289,7 +3289,7 @@
       "name": "slider",
       "type": "other",
       "status": "complete",
-      "description": "slider",
+      "description": "Track with a draggable thumb for choosing a number or range within fixed bounds.",
       "files": [
         "slider.dart"
       ],
@@ -3371,7 +3371,7 @@
       "name": "spinner",
       "type": "other",
       "status": "complete",
-      "description": "spinner",
+      "description": "Animated indicator shown while a request is in flight and no content is available yet.",
       "files": [
         "spinner.dart"
       ],
@@ -3436,7 +3436,7 @@
       "name": "switch",
       "type": "other",
       "status": "complete",
-      "description": "switch",
+      "description": "Toggle for turning a single setting on or off, applied immediately without a save step.",
       "files": [
         "switch.dart"
       ],
@@ -3508,7 +3508,7 @@
       "name": "table",
       "type": "other",
       "status": "complete",
-      "description": "table",
+      "description": "Semantic markup for tabular data, composed of header, body, footer, rows and cells.",
       "files": [
         "table.dart"
       ],
@@ -3572,7 +3572,7 @@
       "name": "tabs",
       "type": "other",
       "status": "complete",
-      "description": "tabs",
+      "description": "Layered panels where one is visible at a time and a tab list switches between them.",
       "files": [
         "tabs.dart"
       ],
@@ -3625,7 +3625,7 @@
       "name": "textarea",
       "type": "other",
       "status": "complete",
-      "description": "textarea",
+      "description": "Multi-line text field for longer free-form input such as descriptions and comments.",
       "files": [
         "textarea.dart"
       ],
@@ -3782,7 +3782,7 @@
       "name": "toggle-group",
       "type": "other",
       "status": "complete",
-      "description": "toggle-group",
+      "description": "Row of related buttons where one or several can be pressed, for view switchers and formatting bars.",
       "files": [
         "toggle_group.dart"
       ],
@@ -3882,7 +3882,7 @@
       "name": "toggle",
       "type": "other",
       "status": "complete",
-      "description": "toggle",
+      "description": "Two-state button that stays pressed until it is pressed again, for bold, bookmark or mute actions.",
       "files": [
         "toggle.dart"
       ],
@@ -3980,7 +3980,7 @@
       "name": "tooltip",
       "type": "other",
       "status": "complete",
-      "description": "tooltip",
+      "description": "Short hint that appears on hover or keyboard focus to explain an icon or control.",
       "files": [
         "tooltip.dart"
       ],
@@ -4067,7 +4067,7 @@
       "name": "typography",
       "type": "other",
       "status": "complete",
-      "description": "typography",
+      "description": "Text primitive that applies heading, paragraph, list or code styles consistently across a page.",
       "files": [
         "typography.dart"
       ],

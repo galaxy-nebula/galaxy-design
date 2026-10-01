@@ -4,7 +4,7 @@
   "name": "toggle-group",
   "category": "other",
   "status": "complete",
-  "description": "toggle-group",
+  "description": "Row of related buttons where one or several can be pressed, for view switchers and formatting bars.",
   "props": [
     {
       "name": "type",

@@ -4,7 +4,7 @@
   "name": "radio-group",
   "category": "other",
   "status": "complete",
-  "description": "radio-group",
+  "description": "Set of mutually exclusive options where exactly one can be selected at a time.",
   "props": [
     {
       "name": "value",

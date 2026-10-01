@@ -4,7 +4,7 @@
   "name": "progress",
   "category": "other",
   "status": "complete",
-  "description": "progress",
+  "description": "Bar that reports how far a determinate task has advanced toward completion.",
   "props": [
     {
       "name": "value",

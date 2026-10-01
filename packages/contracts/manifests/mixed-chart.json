@@ -4,7 +4,7 @@
   "name": "mixed-chart",
   "category": "other",
   "status": "complete",
-  "description": "mixed-chart",
+  "description": "Combined chart that overlays bars, lines or areas so two measures with different scales can be compared.",
   "props": [
     {
       "name": "data",

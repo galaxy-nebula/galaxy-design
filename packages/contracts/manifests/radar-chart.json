@@ -4,7 +4,7 @@
   "name": "radar-chart",
   "category": "other",
   "status": "complete",
-  "description": "radar-chart",
+  "description": "Spider chart that compares several measures of one or more entities across axes.",
   "props": [
     {
       "name": "data",

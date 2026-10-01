@@ -10,7 +10,7 @@
       "name": "accordion",
       "type": "other",
       "status": "complete",
-      "description": "accordion",
+      "description": "Vertically stacked headings that expand one at a time to reveal sections of content in long forms or FAQs.",
       "files": [
         "Accordion.tsx",
         "index.ts"
@@ -170,7 +170,7 @@
       "name": "alert-dialog",
       "type": "other",
       "status": "complete",
-      "description": "alert-dialog",
+      "description": "Blocking modal that interrupts the user to confirm an irreversible action such as a delete before it happens.",
       "files": [
         "AlertDialog.tsx",
         "index.ts"
@@ -241,7 +241,7 @@
       "name": "alert",
       "type": "other",
       "status": "complete",
-      "description": "alert",
+      "description": "Inline callout that draws attention to an important message or a destructive warning inside a page.",
       "files": [
         "Alert.tsx",
         "index.ts"
@@ -306,7 +306,7 @@
       "name": "area-chart",
       "type": "other",
       "status": "complete",
-      "description": "area-chart",
+      "description": "Filled line chart that shows how one or more series accumulate over time.",
       "files": [
         "AreaChart.tsx",
         "types.ts",
@@ -542,7 +542,7 @@
       "name": "aspect-ratio",
       "type": "other",
       "status": "complete",
-      "description": "aspect-ratio",
+      "description": "Wrapper that keeps media or any other child at a fixed width-to-height ratio while the layout resizes.",
       "files": [
         "AspectRatio.tsx",
         "index.ts"
@@ -596,7 +596,7 @@
       "name": "avatar",
       "type": "other",
       "status": "complete",
-      "description": "avatar",
+      "description": "Circular user image that falls back to initials or an icon when the picture is missing.",
       "files": [
         "Avatar.tsx",
         "index.ts"
@@ -699,7 +699,7 @@
       "name": "badge",
       "type": "other",
       "status": "complete",
-      "description": "badge",
+      "description": "Small status label that marks an item with a count, category or state beside a title or inside a list.",
       "files": [
         "Badge.tsx",
         "index.ts"
@@ -770,7 +770,7 @@
       "name": "bar-chart",
       "type": "other",
       "status": "complete",
-      "description": "bar-chart",
+      "description": "Chart that compares values across categories with bars, for monthly revenue, counts or rankings.",
       "files": [
         "BarChart.tsx",
         "types.ts",
@@ -1071,7 +1071,7 @@
       "name": "calendar-range",
       "type": "other",
       "status": "complete",
-      "description": "calendar-range",
+      "description": "Two-month grid in a popover for selecting a start and end date in one interaction.",
       "files": [
         "CalendarRange.tsx",
         "index.ts"
@@ -1095,7 +1095,7 @@
       "name": "Calendar",
       "type": "form",
       "status": "complete",
-      "description": "Full-featured date picker with month navigation and selection.",
+      "description": "Month grid for picking a single day, a date range or several days, with controlled month navigation.",
       "files": [
         "Calendar.tsx",
         "index.ts"
@@ -1117,7 +1117,7 @@
       "name": "card",
       "type": "other",
       "status": "complete",
-      "description": "card",
+      "description": "Bordered surface that groups related content such as a title, description, media and actions.",
       "files": [
         "Card.tsx",
         "index.ts"
@@ -1165,7 +1165,7 @@
       "name": "checkbox",
       "type": "other",
       "status": "complete",
-      "description": "checkbox",
+      "description": "Square control for toggling a single boolean option, with an indeterminate state for parent rows.",
       "files": [
         "Checkbox.tsx",
         "index.ts"
@@ -1243,7 +1243,7 @@
       "name": "collapsible",
       "type": "other",
       "status": "complete",
-      "description": "collapsible",
+      "description": "Single section that the user can expand or collapse to hide secondary content on demand.",
       "files": [
         "Collapsible.tsx",
         "index.ts"
@@ -1315,7 +1315,7 @@
       "name": "context-menu",
       "type": "other",
       "status": "complete",
-      "description": "context-menu",
+      "description": "Menu opened by right-click or the context-menu key, offering actions on the element under the pointer.",
       "files": [
         "ContextMenu.tsx",
         "index.ts"
@@ -1510,7 +1510,7 @@
       "name": "date-time-picker",
       "type": "other",
       "status": "complete",
-      "description": "date-time-picker",
+      "description": "Timestamp field that pairs a month grid with hour and minute lists so a date and time are chosen in one flow.",
       "files": [
         "DateTimePicker.tsx",
         "index.ts"
@@ -1600,7 +1600,7 @@
       "name": "donut-chart",
       "type": "other",
       "status": "complete",
-      "description": "donut-chart",
+      "description": "Ring chart that shows how parts make up a whole, with the total in the middle.",
       "files": [
         "DonutChart.tsx",
         "types.ts",
@@ -1804,7 +1804,7 @@
       "name": "dropdown-menu",
       "type": "other",
       "status": "complete",
-      "description": "dropdown-menu",
+      "description": "Menu of actions or options revealed by a trigger button, for row actions and toolbar overflow.",
       "files": [
         "DropdownMenu.tsx",
         "index.ts"
@@ -1906,7 +1906,7 @@
       "name": "empty",
       "type": "other",
       "status": "complete",
-      "description": "empty",
+      "description": "Placeholder block shown when a list, grid or search has no data yet, with an icon, message and optional action.",
       "files": [
         "Empty.tsx",
         "index.ts"
@@ -2200,7 +2200,7 @@
       "name": "hover-card",
       "type": "other",
       "status": "complete",
-      "description": "hover-card",
+      "description": "Rich preview that appears when the pointer rests on a link or avatar, without requiring a click.",
       "files": [
         "HoverCard.tsx",
         "index.ts"
@@ -2281,7 +2281,7 @@
       "name": "input",
       "type": "other",
       "status": "complete",
-      "description": "input",
+      "description": "Single-line text field for short free-form values such as names, emails and search terms.",
       "files": [
         "Input.tsx",
         "index.ts"
@@ -2404,7 +2404,7 @@
       "name": "label",
       "type": "other",
       "status": "complete",
-      "description": "label",
+      "description": "Accessible caption bound to a form control through htmlFor, so clicking the text focuses the field.",
       "files": [
         "Label.tsx",
         "index.ts"
@@ -2456,7 +2456,7 @@
       "name": "line-chart",
       "type": "other",
       "status": "complete",
-      "description": "line-chart",
+      "description": "Chart that plots one or more series as connected points to show trends over time.",
       "files": [
         "LineChart.tsx",
         "types.ts",
@@ -2692,7 +2692,7 @@
       "name": "menubar",
       "type": "other",
       "status": "complete",
-      "description": "menubar",
+      "description": "Horizontal bar of application menus, each opening a dropdown of commands.",
       "files": [
         "Menubar.tsx",
         "index.ts"
@@ -2803,7 +2803,7 @@
       "name": "mixed-chart",
       "type": "other",
       "status": "complete",
-      "description": "mixed-chart",
+      "description": "Combined chart that overlays bars, lines or areas so two measures with different scales can be compared.",
       "files": [
         "MixedChart.tsx",
         "types.ts",
@@ -2976,7 +2976,7 @@
       "name": "navigation-menu",
       "type": "other",
       "status": "complete",
-      "description": "navigation-menu",
+      "description": "Site navigation with rich dropdown panels for content-heavy menus and mega menus.",
       "files": [
         "NavigationMenu.tsx",
         "index.ts"
@@ -3095,7 +3095,7 @@
       "name": "pagination",
       "type": "other",
       "status": "complete",
-      "description": "pagination",
+      "description": "Page controls with previous, next and numbered pages for long lists and tables.",
       "files": [
         "Pagination.tsx",
         "index.ts"
@@ -3206,7 +3206,7 @@
       "name": "pie-chart",
       "type": "other",
       "status": "complete",
-      "description": "pie-chart",
+      "description": "Circular chart that splits a total into proportional slices for share-of-whole comparisons.",
       "files": [
         "PieChart.tsx",
         "types.ts",
@@ -3410,7 +3410,7 @@
       "name": "popover",
       "type": "other",
       "status": "complete",
-      "description": "popover",
+      "description": "Floating panel anchored to a trigger that holds rich content such as forms, filters or menus.",
       "files": [
         "Popover.tsx",
         "index.ts"
@@ -3481,7 +3481,7 @@
       "name": "progress",
       "type": "other",
       "status": "complete",
-      "description": "progress",
+      "description": "Bar that reports how far a determinate task has advanced toward completion.",
       "files": [
         "Progress.tsx",
         "index.ts"
@@ -3543,7 +3543,7 @@
       "name": "radar-chart",
       "type": "other",
       "status": "complete",
-      "description": "radar-chart",
+      "description": "Spider chart that compares several measures of one or more entities across axes.",
       "files": [
         "RadarChart.tsx",
         "types.ts",
@@ -3742,7 +3742,7 @@
       "name": "radio-group",
       "type": "other",
       "status": "complete",
-      "description": "radio-group",
+      "description": "Set of mutually exclusive options where exactly one can be selected at a time.",
       "files": [
         "RadioGroup.tsx",
         "index.ts"
@@ -3813,7 +3813,7 @@
       "name": "scatter-chart",
       "type": "other",
       "status": "complete",
-      "description": "scatter-chart",
+      "description": "Chart that plots individual points on two axes to reveal correlation, clusters and outliers.",
       "files": [
         "ScatterChart.tsx",
         "types.ts",
@@ -4058,7 +4058,7 @@
       "name": "separator",
       "type": "other",
       "status": "complete",
-      "description": "separator",
+      "description": "Thin divider that visually groups content, horizontally or vertically.",
       "files": [
         "Separator.tsx",
         "index.ts"
@@ -4120,7 +4120,7 @@
       "name": "sheet",
       "type": "other",
       "status": "complete",
-      "description": "sheet",
+      "description": "Overlay layer for secondary tasks such as details, filters or preferences, opened from any edge of the screen.",
       "files": [
         "Sheet.tsx",
         "index.ts"
@@ -4191,7 +4191,7 @@
       "name": "skeleton",
       "type": "other",
       "status": "complete",
-      "description": "skeleton",
+      "description": "Placeholder shapes that stand in for content while data loads, keeping the layout stable.",
       "files": [
         "Skeleton.tsx",
         "index.ts"
@@ -4251,7 +4251,7 @@
       "name": "slider",
       "type": "other",
       "status": "complete",
-      "description": "slider",
+      "description": "Track with a draggable thumb for choosing a number or range within fixed bounds.",
       "files": [
         "Slider.tsx",
         "index.ts"
@@ -4423,7 +4423,7 @@
       "name": "spinner",
       "type": "other",
       "status": "complete",
-      "description": "spinner",
+      "description": "Animated indicator shown while a request is in flight and no content is available yet.",
       "files": [
         "Spinner.tsx",
         "index.ts"
@@ -4497,7 +4497,7 @@
       "name": "switch",
       "type": "other",
       "status": "complete",
-      "description": "switch",
+      "description": "Toggle for turning a single setting on or off, applied immediately without a save step.",
       "files": [
         "Switch.tsx",
         "index.ts"
@@ -4567,7 +4567,7 @@
       "name": "table",
       "type": "other",
       "status": "complete",
-      "description": "table",
+      "description": "Semantic markup for tabular data, composed of header, body, footer, rows and cells.",
       "files": [
         "Table.tsx",
         "index.ts"
@@ -4617,7 +4617,7 @@
       "name": "tabs",
       "type": "other",
       "status": "complete",
-      "description": "tabs",
+      "description": "Layered panels where one is visible at a time and a tab list switches between them.",
       "files": [
         "Tabs.tsx",
         "index.ts"
@@ -4734,7 +4734,7 @@
       "name": "tags-input",
       "type": "other",
       "status": "complete",
-      "description": "tags-input",
+      "description": "Field that collects free-form values as removable chips, for labels, tags and recipients.",
       "files": [
         "TagsInput.tsx",
         "index.ts"
@@ -4757,7 +4757,7 @@
       "name": "textarea",
       "type": "other",
       "status": "complete",
-      "description": "textarea",
+      "description": "Multi-line text field for longer free-form input such as descriptions and comments.",
       "files": [
         "Textarea.tsx",
         "index.ts"
@@ -4929,7 +4929,7 @@
       "name": "toggle-group",
       "type": "other",
       "status": "complete",
-      "description": "toggle-group",
+      "description": "Row of related buttons where one or several can be pressed, for view switchers and formatting bars.",
       "files": [
         "ToggleGroup.tsx",
         "index.ts"
@@ -5145,7 +5145,7 @@
       "name": "toggle",
       "type": "other",
       "status": "complete",
-      "description": "toggle",
+      "description": "Two-state button that stays pressed until it is pressed again, for bold, bookmark or mute actions.",
       "files": [
         "Toggle.tsx",
         "index.ts"
@@ -5265,7 +5265,7 @@
       "name": "tooltip",
       "type": "other",
       "status": "complete",
-      "description": "tooltip",
+      "description": "Short hint that appears on hover or keyboard focus to explain an icon or control.",
       "files": [
         "Tooltip.tsx",
         "index.ts"
@@ -5347,7 +5347,7 @@
       "name": "typography",
       "type": "other",
       "status": "complete",
-      "description": "typography",
+      "description": "Text primitive that applies heading, paragraph, list or code styles consistently across a page.",
       "files": [
         "Typography.tsx",
         "index.ts"

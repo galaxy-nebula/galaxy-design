@@ -4,11 +4,120 @@
   "category": "assistant",
   "status": "complete",
   "description": "Standalone assistant composer with auto-resizing textarea, attachments row, model pill, slash-command hints, and send/stop states.",
-  "props": [],
+  "props": [
+    {
+      "name": "onSubmit",
+      "type": {
+        "kind": "function",
+        "signature": "(content: string) => void"
+      },
+      "description": "Called with the trimmed prompt when the user presses Enter or Send. Example: onSubmit={(text) => run(text)}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "placeholder",
+      "type": {
+        "kind": "primitive",
+        "name": "string"
+      },
+      "default": "Type a message…",
+      "description": "Placeholder of the auto-growing textarea. Example: placeholder=\"Describe the change\"",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "model",
+      "type": {
+        "kind": "primitive",
+        "name": "string"
+      },
+      "description": "Model badge shown in the footer. Example: model=\"gpt-5\"",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "disabled",
+      "type": {
+        "kind": "primitive",
+        "name": "boolean"
+      },
+      "default": false,
+      "description": "Disable the textarea and the send button. Example: disabled={busy}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "busy",
+      "type": {
+        "kind": "primitive",
+        "name": "boolean"
+      },
+      "default": false,
+      "description": "Turn the send button into Stop while a request is in flight. Example: busy={isStreaming}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "attachments",
+      "type": {
+        "kind": "array",
+        "of": {
+          "kind": "custom",
+          "name": "PromptAttachment[]"
+        }
+      },
+      "description": "Chips rendered above the textarea: id, name and optional size. Example: attachments={[{ id: \"1\", name: \"spec.pdf\" }]}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "commands",
+      "type": {
+        "kind": "array",
+        "of": {
+          "kind": "custom",
+          "name": "SlashCommand[]"
+        }
+      },
+      "description": "Slash commands offered while the prompt starts with \"/\". Example: commands={[{ name: \"review\", description: \"Review a diff\" }]}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "onStop",
+      "type": {
+        "kind": "function",
+        "signature": "() => void"
+      },
+      "description": "Called when the user stops the running request. Example: onStop={abort}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "className",
+      "type": {
+        "kind": "primitive",
+        "name": "string"
+      },
+      "description": "CSS class names for the prompt card. Example: className=\"max-w-xl\"",
+      "frameworks": [
+        "react"
+      ]
+    }
+  ],
   "children": [],
   "frameworks": {
     "react": {
-      "status": "missing",
+      "status": "complete",
       "files": [
         "PromptBox.tsx",
         "types.ts",
@@ -21,7 +130,89 @@
       ],
       "dependencies": [],
       "registryDependencies": [],
-      "props": []
+      "props": [
+        {
+          "name": "onSubmit",
+          "type": {
+            "kind": "function",
+            "signature": "(content: string) => void"
+          },
+          "description": "Called with the trimmed prompt when the user presses Enter or Send. Example: onSubmit={(text) => run(text)}"
+        },
+        {
+          "name": "placeholder",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "default": "Type a message…",
+          "description": "Placeholder of the auto-growing textarea. Example: placeholder=\"Describe the change\""
+        },
+        {
+          "name": "model",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "description": "Model badge shown in the footer. Example: model=\"gpt-5\""
+        },
+        {
+          "name": "disabled",
+          "type": {
+            "kind": "primitive",
+            "name": "boolean"
+          },
+          "default": false,
+          "description": "Disable the textarea and the send button. Example: disabled={busy}"
+        },
+        {
+          "name": "busy",
+          "type": {
+            "kind": "primitive",
+            "name": "boolean"
+          },
+          "default": false,
+          "description": "Turn the send button into Stop while a request is in flight. Example: busy={isStreaming}"
+        },
+        {
+          "name": "attachments",
+          "type": {
+            "kind": "array",
+            "of": {
+              "kind": "custom",
+              "name": "PromptAttachment[]"
+            }
+          },
+          "description": "Chips rendered above the textarea: id, name and optional size. Example: attachments={[{ id: \"1\", name: \"spec.pdf\" }]}"
+        },
+        {
+          "name": "commands",
+          "type": {
+            "kind": "array",
+            "of": {
+              "kind": "custom",
+              "name": "SlashCommand[]"
+            }
+          },
+          "description": "Slash commands offered while the prompt starts with \"/\". Example: commands={[{ name: \"review\", description: \"Review a diff\" }]}"
+        },
+        {
+          "name": "onStop",
+          "type": {
+            "kind": "function",
+            "signature": "() => void"
+          },
+          "description": "Called when the user stops the running request. Example: onStop={abort}"
+        },
+        {
+          "name": "className",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "description": "CSS class names for the prompt card. Example: className=\"max-w-xl\""
+        }
+      ]
     },
     "vue": {
       "status": "missing",

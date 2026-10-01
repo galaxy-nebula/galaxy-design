@@ -4,7 +4,7 @@
   "name": "label",
   "category": "other",
   "status": "complete",
-  "description": "label",
+  "description": "Accessible caption bound to a form control through htmlFor, so clicking the text focuses the field.",
   "props": [
     {
       "name": "htmlFor",

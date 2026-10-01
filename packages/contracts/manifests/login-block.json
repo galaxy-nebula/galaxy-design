@@ -6,7 +6,66 @@
   "type": "block",
   "status": "complete",
   "description": "Full login page with email/password form, remember me, and social auth.",
-  "props": [],
+  "props": [
+    {
+      "name": "title",
+      "type": {
+        "kind": "primitive",
+        "name": "string"
+      },
+      "default": "Welcome back",
+      "description": "Heading above the form. Example: title=\"Sign in\"",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "subtitle",
+      "type": {
+        "kind": "primitive",
+        "name": "string"
+      },
+      "default": "Enter your email to sign in to your account",
+      "description": "Supporting line under the heading. Example: subtitle=\"Use your work email\"",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "onSubmit",
+      "type": {
+        "kind": "function",
+        "signature": "(data: { email: string; password: string; remember: boolean }) => void"
+      },
+      "description": "Called with the collected credentials when the form is submitted. Example: onSubmit={({ email, password }) => signIn(email, password)}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "showSocial",
+      "type": {
+        "kind": "primitive",
+        "name": "boolean"
+      },
+      "default": true,
+      "description": "Render the \"Or continue with\" social sign-in section. Example: showSocial={false}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "className",
+      "type": {
+        "kind": "primitive",
+        "name": "string"
+      },
+      "description": "CSS class names for the full-page wrapper. Example: className=\"bg-card\"",
+      "frameworks": [
+        "react"
+      ]
+    }
+  ],
   "children": [],
   "frameworks": {
     "react": {
@@ -20,7 +79,51 @@
         "LoginBlock"
       ],
       "dependencies": [],
-      "props": []
+      "props": [
+        {
+          "name": "title",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "default": "Welcome back",
+          "description": "Heading above the form. Example: title=\"Sign in\""
+        },
+        {
+          "name": "subtitle",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "default": "Enter your email to sign in to your account",
+          "description": "Supporting line under the heading. Example: subtitle=\"Use your work email\""
+        },
+        {
+          "name": "onSubmit",
+          "type": {
+            "kind": "function",
+            "signature": "(data: { email: string; password: string; remember: boolean }) => void"
+          },
+          "description": "Called with the collected credentials when the form is submitted. Example: onSubmit={({ email, password }) => signIn(email, password)}"
+        },
+        {
+          "name": "showSocial",
+          "type": {
+            "kind": "primitive",
+            "name": "boolean"
+          },
+          "default": true,
+          "description": "Render the \"Or continue with\" social sign-in section. Example: showSocial={false}"
+        },
+        {
+          "name": "className",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "description": "CSS class names for the full-page wrapper. Example: className=\"bg-card\""
+        }
+      ]
     },
     "vue": {
       "status": "complete",

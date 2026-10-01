@@ -4,7 +4,7 @@
   "name": "pie-chart",
   "category": "other",
   "status": "complete",
-  "description": "pie-chart",
+  "description": "Circular chart that splits a total into proportional slices for share-of-whole comparisons.",
   "props": [
     {
       "name": "data",

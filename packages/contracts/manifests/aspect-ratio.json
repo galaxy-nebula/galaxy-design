@@ -4,7 +4,7 @@
   "name": "aspect-ratio",
   "category": "other",
   "status": "complete",
-  "description": "aspect-ratio",
+  "description": "Wrapper that keeps media or any other child at a fixed width-to-height ratio while the layout resizes.",
   "props": [
     {
       "name": "ratio",

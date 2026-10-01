@@ -4,7 +4,7 @@
   "name": "slider",
   "category": "other",
   "status": "complete",
-  "description": "slider",
+  "description": "Track with a draggable thumb for choosing a number or range within fixed bounds.",
   "props": [
     {
       "name": "asChild",

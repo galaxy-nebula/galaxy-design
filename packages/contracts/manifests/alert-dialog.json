@@ -4,7 +4,7 @@
   "name": "alert-dialog",
   "category": "other",
   "status": "complete",
-  "description": "alert-dialog",
+  "description": "Blocking modal that interrupts the user to confirm an irreversible action such as a delete before it happens.",
   "props": [
     {
       "name": "open",

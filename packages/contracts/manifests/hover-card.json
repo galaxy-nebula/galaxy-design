@@ -4,7 +4,7 @@
   "name": "hover-card",
   "category": "other",
   "status": "complete",
-  "description": "hover-card",
+  "description": "Rich preview that appears when the pointer rests on a link or avatar, without requiring a click.",
   "props": [
     {
       "name": "open",

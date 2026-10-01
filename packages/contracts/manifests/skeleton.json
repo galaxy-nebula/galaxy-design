@@ -4,7 +4,7 @@
   "name": "skeleton",
   "category": "other",
   "status": "complete",
-  "description": "skeleton",
+  "description": "Placeholder shapes that stand in for content while data loads, keeping the layout stable.",
   "props": [
     {
       "name": "variant",

@@ -4,7 +4,7 @@
   "name": "dropdown-menu",
   "category": "other",
   "status": "complete",
-  "description": "dropdown-menu",
+  "description": "Menu of actions or options revealed by a trigger button, for row actions and toolbar overflow.",
   "props": [
     {
       "name": "open",

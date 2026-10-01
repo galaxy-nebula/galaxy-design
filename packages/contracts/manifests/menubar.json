@@ -4,7 +4,7 @@
   "name": "menubar",
   "category": "other",
   "status": "complete",
-  "description": "menubar",
+  "description": "Horizontal bar of application menus, each opening a dropdown of commands.",
   "props": [
     {
       "name": "value",

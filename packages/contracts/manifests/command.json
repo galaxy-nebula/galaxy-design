@@ -4,7 +4,7 @@
   "name": "command",
   "category": "other",
   "status": "complete",
-  "description": "command",
+  "description": "Keyboard-first palette for searching and running actions without leaving the keyboard.",
   "props": [
     {
       "name": "value",

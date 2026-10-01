@@ -4,8 +4,271 @@
   "name": "Drawer",
   "category": "overlay",
   "status": "complete",
-  "description": "Mobile-first bottom sheet drawer.",
-  "props": [],
+  "description": "Sheet that slides in from the side (or from the bottom on mobile) so a panel of details or actions opens without leaving the page.",
+  "props": [
+    {
+      "name": "open",
+      "type": {
+        "kind": "primitive",
+        "name": "boolean"
+      },
+      "description": "Controlled open state of the sheet. Example: open={open}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "defaultOpen",
+      "type": {
+        "kind": "primitive",
+        "name": "boolean"
+      },
+      "default": false,
+      "description": "Open the drawer on first render, skipping the enter animation. Example: defaultOpen",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "onOpenChange",
+      "type": {
+        "kind": "function",
+        "signature": "(open: boolean) => void"
+      },
+      "description": "Called when the drawer opens or closes, including swipe and overlay dismissals. Example: onOpenChange={setOpen}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "direction",
+      "type": {
+        "kind": "union",
+        "values": [
+          {
+            "kind": "literal",
+            "value": "top"
+          },
+          {
+            "kind": "literal",
+            "value": "bottom"
+          },
+          {
+            "kind": "literal",
+            "value": "left"
+          },
+          {
+            "kind": "literal",
+            "value": "right"
+          }
+        ]
+      },
+      "default": "bottom",
+      "description": "Edge the panel slides in from, and the side it is dragged towards to dismiss. Example: direction=\"right\"",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "modal",
+      "type": {
+        "kind": "primitive",
+        "name": "boolean"
+      },
+      "default": true,
+      "description": "Block interaction with the page behind the drawer. Example: modal={false}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "dismissible",
+      "type": {
+        "kind": "primitive",
+        "name": "boolean"
+      },
+      "default": true,
+      "description": "Allow drag, outside click and Escape to close the drawer. Example: dismissible={false}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "shouldScaleBackground",
+      "type": {
+        "kind": "primitive",
+        "name": "boolean"
+      },
+      "default": true,
+      "description": "Scale the page behind the drawer while it is open. Example: shouldScaleBackground={false}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "snapPoints",
+      "type": {
+        "kind": "array",
+        "of": {
+          "kind": "custom",
+          "name": "number | string"
+        }
+      },
+      "description": "Detent heights the drawer can rest at, from least to most visible. Example: snapPoints={[0.3, 0.6, 1]}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "activeSnapPoint",
+      "type": {
+        "kind": "custom",
+        "name": "number | string | null"
+      },
+      "description": "Controlled resting snap point. Example: activeSnapPoint={0.6}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "setActiveSnapPoint",
+      "type": {
+        "kind": "function",
+        "signature": "(snapPoint: number | string | null) => void"
+      },
+      "description": "Called when the drawer settles on another snap point. Example: setActiveSnapPoint={setSnap}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "closeThreshold",
+      "type": {
+        "kind": "primitive",
+        "name": "number"
+      },
+      "default": 0.25,
+      "description": "Fraction of the drawer height the user must drag before it closes. Example: closeThreshold={0.5}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "handleOnly",
+      "type": {
+        "kind": "primitive",
+        "name": "boolean"
+      },
+      "default": false,
+      "description": "Only the drag handle can move the drawer, not its content. Example: handleOnly",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "nested",
+      "type": {
+        "kind": "primitive",
+        "name": "boolean"
+      },
+      "default": false,
+      "description": "Mark the drawer as opened from another drawer so the parent stays mounted. Example: nested",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "fixed",
+      "type": {
+        "kind": "primitive",
+        "name": "boolean"
+      },
+      "default": false,
+      "description": "Keep the drawer height fixed and scroll its content when the keyboard opens. Example: fixed",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "scrollLockTimeout",
+      "type": {
+        "kind": "primitive",
+        "name": "number"
+      },
+      "default": 500,
+      "description": "Milliseconds the drawer ignores drags after its content was scrolled. Example: scrollLockTimeout={1000}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "repositionInputs",
+      "type": {
+        "kind": "primitive",
+        "name": "boolean"
+      },
+      "default": true,
+      "description": "Move focused inputs above the on-screen keyboard instead of scrolling them into view. Example: repositionInputs={false}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "container",
+      "type": {
+        "kind": "custom",
+        "name": "HTMLElement | null"
+      },
+      "description": "Element the drawer portal is rendered into. Example: container={portalRef.current}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "onDrag",
+      "type": {
+        "kind": "function",
+        "signature": "(event: PointerEvent, percentageDragged: number) => void"
+      },
+      "description": "Called continuously while the user drags the drawer. Example: onDrag={(_, p) => setProgress(p)}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "onClose",
+      "type": {
+        "kind": "function",
+        "signature": "() => void"
+      },
+      "description": "Called after the drawer finished closing. Example: onClose={resetForm}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "className",
+      "type": {
+        "kind": "primitive",
+        "name": "string"
+      },
+      "description": "CSS class names for the drawer content. Example: className=\"max-h-[80vh]\"",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "children",
+      "type": {
+        "kind": "custom",
+        "name": "ReactNode"
+      },
+      "description": "Required. DrawerTrigger, DrawerContent and the header/footer parts. Example: <DrawerContent />",
+      "frameworks": [
+        "react"
+      ]
+    }
+  ],
   "children": [],
   "frameworks": {
     "react": {
@@ -31,7 +294,207 @@
         "vaul",
         "vaul-vue"
       ],
-      "props": []
+      "props": [
+        {
+          "name": "open",
+          "type": {
+            "kind": "primitive",
+            "name": "boolean"
+          },
+          "description": "Controlled open state of the sheet. Example: open={open}"
+        },
+        {
+          "name": "defaultOpen",
+          "type": {
+            "kind": "primitive",
+            "name": "boolean"
+          },
+          "default": false,
+          "description": "Open the drawer on first render, skipping the enter animation. Example: defaultOpen"
+        },
+        {
+          "name": "onOpenChange",
+          "type": {
+            "kind": "function",
+            "signature": "(open: boolean) => void"
+          },
+          "description": "Called when the drawer opens or closes, including swipe and overlay dismissals. Example: onOpenChange={setOpen}"
+        },
+        {
+          "name": "direction",
+          "type": {
+            "kind": "union",
+            "values": [
+              {
+                "kind": "literal",
+                "value": "top"
+              },
+              {
+                "kind": "literal",
+                "value": "bottom"
+              },
+              {
+                "kind": "literal",
+                "value": "left"
+              },
+              {
+                "kind": "literal",
+                "value": "right"
+              }
+            ]
+          },
+          "default": "bottom",
+          "description": "Edge the panel slides in from, and the side it is dragged towards to dismiss. Example: direction=\"right\""
+        },
+        {
+          "name": "modal",
+          "type": {
+            "kind": "primitive",
+            "name": "boolean"
+          },
+          "default": true,
+          "description": "Block interaction with the page behind the drawer. Example: modal={false}"
+        },
+        {
+          "name": "dismissible",
+          "type": {
+            "kind": "primitive",
+            "name": "boolean"
+          },
+          "default": true,
+          "description": "Allow drag, outside click and Escape to close the drawer. Example: dismissible={false}"
+        },
+        {
+          "name": "shouldScaleBackground",
+          "type": {
+            "kind": "primitive",
+            "name": "boolean"
+          },
+          "default": true,
+          "description": "Scale the page behind the drawer while it is open. Example: shouldScaleBackground={false}"
+        },
+        {
+          "name": "snapPoints",
+          "type": {
+            "kind": "array",
+            "of": {
+              "kind": "custom",
+              "name": "number | string"
+            }
+          },
+          "description": "Detent heights the drawer can rest at, from least to most visible. Example: snapPoints={[0.3, 0.6, 1]}"
+        },
+        {
+          "name": "activeSnapPoint",
+          "type": {
+            "kind": "custom",
+            "name": "number | string | null"
+          },
+          "description": "Controlled resting snap point. Example: activeSnapPoint={0.6}"
+        },
+        {
+          "name": "setActiveSnapPoint",
+          "type": {
+            "kind": "function",
+            "signature": "(snapPoint: number | string | null) => void"
+          },
+          "description": "Called when the drawer settles on another snap point. Example: setActiveSnapPoint={setSnap}"
+        },
+        {
+          "name": "closeThreshold",
+          "type": {
+            "kind": "primitive",
+            "name": "number"
+          },
+          "default": 0.25,
+          "description": "Fraction of the drawer height the user must drag before it closes. Example: closeThreshold={0.5}"
+        },
+        {
+          "name": "handleOnly",
+          "type": {
+            "kind": "primitive",
+            "name": "boolean"
+          },
+          "default": false,
+          "description": "Only the drag handle can move the drawer, not its content. Example: handleOnly"
+        },
+        {
+          "name": "nested",
+          "type": {
+            "kind": "primitive",
+            "name": "boolean"
+          },
+          "default": false,
+          "description": "Mark the drawer as opened from another drawer so the parent stays mounted. Example: nested"
+        },
+        {
+          "name": "fixed",
+          "type": {
+            "kind": "primitive",
+            "name": "boolean"
+          },
+          "default": false,
+          "description": "Keep the drawer height fixed and scroll its content when the keyboard opens. Example: fixed"
+        },
+        {
+          "name": "scrollLockTimeout",
+          "type": {
+            "kind": "primitive",
+            "name": "number"
+          },
+          "default": 500,
+          "description": "Milliseconds the drawer ignores drags after its content was scrolled. Example: scrollLockTimeout={1000}"
+        },
+        {
+          "name": "repositionInputs",
+          "type": {
+            "kind": "primitive",
+            "name": "boolean"
+          },
+          "default": true,
+          "description": "Move focused inputs above the on-screen keyboard instead of scrolling them into view. Example: repositionInputs={false}"
+        },
+        {
+          "name": "container",
+          "type": {
+            "kind": "custom",
+            "name": "HTMLElement | null"
+          },
+          "description": "Element the drawer portal is rendered into. Example: container={portalRef.current}"
+        },
+        {
+          "name": "onDrag",
+          "type": {
+            "kind": "function",
+            "signature": "(event: PointerEvent, percentageDragged: number) => void"
+          },
+          "description": "Called continuously while the user drags the drawer. Example: onDrag={(_, p) => setProgress(p)}"
+        },
+        {
+          "name": "onClose",
+          "type": {
+            "kind": "function",
+            "signature": "() => void"
+          },
+          "description": "Called after the drawer finished closing. Example: onClose={resetForm}"
+        },
+        {
+          "name": "className",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "description": "CSS class names for the drawer content. Example: className=\"max-h-[80vh]\""
+        },
+        {
+          "name": "children",
+          "type": {
+            "kind": "custom",
+            "name": "ReactNode"
+          },
+          "description": "Required. DrawerTrigger, DrawerContent and the header/footer parts. Example: <DrawerContent />"
+        }
+      ]
     },
     "vue": {
       "status": "complete",

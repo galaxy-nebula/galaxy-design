@@ -4,7 +4,7 @@
   "name": "context-menu",
   "category": "other",
   "status": "complete",
-  "description": "context-menu",
+  "description": "Menu opened by right-click or the context-menu key, offering actions on the element under the pointer.",
   "props": [
     {
       "name": "modal",

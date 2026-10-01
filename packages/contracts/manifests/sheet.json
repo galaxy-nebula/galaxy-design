@@ -4,7 +4,7 @@
   "name": "sheet",
   "category": "other",
   "status": "complete",
-  "description": "sheet",
+  "description": "Overlay layer for secondary tasks such as details, filters or preferences, opened from any edge of the screen.",
   "props": [
     {
       "name": "open",

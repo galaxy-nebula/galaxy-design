@@ -4,7 +4,7 @@
   "name": "textarea",
   "category": "other",
   "status": "complete",
-  "description": "textarea",
+  "description": "Multi-line text field for longer free-form input such as descriptions and comments.",
   "props": [
     {
       "name": "value",

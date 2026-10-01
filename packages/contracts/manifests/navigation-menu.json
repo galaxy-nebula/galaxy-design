@@ -4,7 +4,7 @@
   "name": "navigation-menu",
   "category": "other",
   "status": "complete",
-  "description": "navigation-menu",
+  "description": "Site navigation with rich dropdown panels for content-heavy menus and mega menus.",
   "props": [
     {
       "name": "value",

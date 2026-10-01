@@ -4,7 +4,7 @@
   "name": "area-chart",
   "category": "other",
   "status": "complete",
-  "description": "area-chart",
+  "description": "Filled line chart that shows how one or more series accumulate over time.",
   "props": [
     {
       "name": "data",

@@ -4,8 +4,278 @@
   "name": "Calendar",
   "category": "form",
   "status": "complete",
-  "description": "Full-featured date picker with month navigation and selection.",
-  "props": [],
+  "description": "Month grid for picking a single day, a date range or several days, with controlled month navigation.",
+  "props": [
+    {
+      "name": "mode",
+      "type": {
+        "kind": "union",
+        "values": [
+          {
+            "kind": "literal",
+            "value": "single"
+          },
+          {
+            "kind": "literal",
+            "value": "multiple"
+          },
+          {
+            "kind": "literal",
+            "value": "range"
+          },
+          {
+            "kind": "literal",
+            "value": "default"
+          }
+        ]
+      },
+      "description": "Selection mode: single picks one day, range a start/end pair, multiple several days. Required when the calendar tracks a selection. Example: mode=\"single\"",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "selected",
+      "type": {
+        "kind": "custom",
+        "name": "Date | Date[] | DateRange | undefined"
+      },
+      "description": "Controlled selection, matching the shape implied by mode. Example: selected={date}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "onSelect",
+      "type": {
+        "kind": "function",
+        "signature": "(date: Date | Date[] | DateRange | undefined) => void"
+      },
+      "description": "Called with the new selection when the user picks a day. Example: onSelect={setDate}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "month",
+      "type": {
+        "kind": "custom",
+        "name": "Date"
+      },
+      "description": "Controlled month displayed in the grid. Example: month={new Date(2026, 0, 1)}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "onMonthChange",
+      "type": {
+        "kind": "function",
+        "signature": "(month: Date) => void"
+      },
+      "description": "Called when the user navigates to another month. Example: onMonthChange={setMonth}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "defaultMonth",
+      "type": {
+        "kind": "custom",
+        "name": "Date"
+      },
+      "description": "Month shown on first render when the month is uncontrolled. Example: defaultMonth={new Date()}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "numberOfMonths",
+      "type": {
+        "kind": "primitive",
+        "name": "number"
+      },
+      "default": 1,
+      "description": "Number of months rendered side by side. Example: numberOfMonths={2}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "showOutsideDays",
+      "type": {
+        "kind": "primitive",
+        "name": "boolean"
+      },
+      "default": true,
+      "description": "Render the trailing and leading days that belong to the neighbouring months. Example: showOutsideDays={false}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "disabled",
+      "type": {
+        "kind": "custom",
+        "name": "Matcher | Matcher[]"
+      },
+      "description": "Dates the user cannot select, for example weekends or dates before today. Example: disabled={{ before: new Date() }}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "fromDate",
+      "type": {
+        "kind": "custom",
+        "name": "Date"
+      },
+      "description": "Earliest selectable date. Example: fromDate={new Date(2026, 0, 1)}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "toDate",
+      "type": {
+        "kind": "custom",
+        "name": "Date"
+      },
+      "description": "Latest selectable date. Example: toDate={new Date(2026, 11, 31)}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "hidden",
+      "type": {
+        "kind": "custom",
+        "name": "Matcher | Matcher[]"
+      },
+      "description": "Dates removed from the grid entirely. Example: hidden={{ dayOfWeek: [0, 6] }}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "modifiers",
+      "type": {
+        "kind": "custom",
+        "name": "Record<string, Matcher | Matcher[]>"
+      },
+      "description": "Named date sets used for custom styling. Example: modifiers={{ booked: bookedDays }}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "captionLayout",
+      "type": {
+        "kind": "union",
+        "values": [
+          {
+            "kind": "literal",
+            "value": "label"
+          },
+          {
+            "kind": "literal",
+            "value": "dropdown"
+          },
+          {
+            "kind": "literal",
+            "value": "dropdown-months"
+          },
+          {
+            "kind": "literal",
+            "value": "dropdown-years"
+          }
+        ]
+      },
+      "default": "label",
+      "description": "Caption style: a static label or month/year dropdowns. Example: captionLayout=\"dropdown\"",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "weekStartsOn",
+      "type": {
+        "kind": "primitive",
+        "name": "number"
+      },
+      "description": "Index of the first day of the week, 0 = Sunday. Example: weekStartsOn={1}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "fixedWeeks",
+      "type": {
+        "kind": "primitive",
+        "name": "boolean"
+      },
+      "default": false,
+      "description": "Always render six weeks so the calendar height never jumps. Example: fixedWeeks",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "locale",
+      "type": {
+        "kind": "custom",
+        "name": "Partial<Locale>"
+      },
+      "description": "date-fns locale used for month and weekday names. Example: locale={vi}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "today",
+      "type": {
+        "kind": "custom",
+        "name": "Date"
+      },
+      "description": "Date treated as today, useful for deterministic tests. Example: today={new Date(2026, 0, 1)}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "classNames",
+      "type": {
+        "kind": "custom",
+        "name": "Partial<ClassNames>"
+      },
+      "description": "Per-element class overrides for the internal day-picker parts. Example: classNames={{ day: \"rounded-md\" }}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "components",
+      "type": {
+        "kind": "custom",
+        "name": "Partial<CustomComponents>"
+      },
+      "description": "Replace internal parts such as the month chevrons. Example: components={{ Chevron: MyChevron }}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "className",
+      "type": {
+        "kind": "primitive",
+        "name": "string"
+      },
+      "description": "CSS class names for the calendar root. Example: className=\"p-3\"",
+      "frameworks": [
+        "react"
+      ]
+    }
+  ],
   "children": [],
   "frameworks": {
     "react": {
@@ -14,7 +284,214 @@
       "entry": "index.ts",
       "exports": ["Calendar"],
       "dependencies": ["react-day-picker", "lucide-react"],
-      "props": []
+      "props": [
+        {
+          "name": "mode",
+          "type": {
+            "kind": "union",
+            "values": [
+              {
+                "kind": "literal",
+                "value": "single"
+              },
+              {
+                "kind": "literal",
+                "value": "multiple"
+              },
+              {
+                "kind": "literal",
+                "value": "range"
+              },
+              {
+                "kind": "literal",
+                "value": "default"
+              }
+            ]
+          },
+          "description": "Selection mode: single picks one day, range a start/end pair, multiple several days. Required when the calendar tracks a selection. Example: mode=\"single\""
+        },
+        {
+          "name": "selected",
+          "type": {
+            "kind": "custom",
+            "name": "Date | Date[] | DateRange | undefined"
+          },
+          "description": "Controlled selection, matching the shape implied by mode. Example: selected={date}"
+        },
+        {
+          "name": "onSelect",
+          "type": {
+            "kind": "function",
+            "signature": "(date: Date | Date[] | DateRange | undefined) => void"
+          },
+          "description": "Called with the new selection when the user picks a day. Example: onSelect={setDate}"
+        },
+        {
+          "name": "month",
+          "type": {
+            "kind": "custom",
+            "name": "Date"
+          },
+          "description": "Controlled month displayed in the grid. Example: month={new Date(2026, 0, 1)}"
+        },
+        {
+          "name": "onMonthChange",
+          "type": {
+            "kind": "function",
+            "signature": "(month: Date) => void"
+          },
+          "description": "Called when the user navigates to another month. Example: onMonthChange={setMonth}"
+        },
+        {
+          "name": "defaultMonth",
+          "type": {
+            "kind": "custom",
+            "name": "Date"
+          },
+          "description": "Month shown on first render when the month is uncontrolled. Example: defaultMonth={new Date()}"
+        },
+        {
+          "name": "numberOfMonths",
+          "type": {
+            "kind": "primitive",
+            "name": "number"
+          },
+          "default": 1,
+          "description": "Number of months rendered side by side. Example: numberOfMonths={2}"
+        },
+        {
+          "name": "showOutsideDays",
+          "type": {
+            "kind": "primitive",
+            "name": "boolean"
+          },
+          "default": true,
+          "description": "Render the trailing and leading days that belong to the neighbouring months. Example: showOutsideDays={false}"
+        },
+        {
+          "name": "disabled",
+          "type": {
+            "kind": "custom",
+            "name": "Matcher | Matcher[]"
+          },
+          "description": "Dates the user cannot select, for example weekends or dates before today. Example: disabled={{ before: new Date() }}"
+        },
+        {
+          "name": "fromDate",
+          "type": {
+            "kind": "custom",
+            "name": "Date"
+          },
+          "description": "Earliest selectable date. Example: fromDate={new Date(2026, 0, 1)}"
+        },
+        {
+          "name": "toDate",
+          "type": {
+            "kind": "custom",
+            "name": "Date"
+          },
+          "description": "Latest selectable date. Example: toDate={new Date(2026, 11, 31)}"
+        },
+        {
+          "name": "hidden",
+          "type": {
+            "kind": "custom",
+            "name": "Matcher | Matcher[]"
+          },
+          "description": "Dates removed from the grid entirely. Example: hidden={{ dayOfWeek: [0, 6] }}"
+        },
+        {
+          "name": "modifiers",
+          "type": {
+            "kind": "custom",
+            "name": "Record<string, Matcher | Matcher[]>"
+          },
+          "description": "Named date sets used for custom styling. Example: modifiers={{ booked: bookedDays }}"
+        },
+        {
+          "name": "captionLayout",
+          "type": {
+            "kind": "union",
+            "values": [
+              {
+                "kind": "literal",
+                "value": "label"
+              },
+              {
+                "kind": "literal",
+                "value": "dropdown"
+              },
+              {
+                "kind": "literal",
+                "value": "dropdown-months"
+              },
+              {
+                "kind": "literal",
+                "value": "dropdown-years"
+              }
+            ]
+          },
+          "default": "label",
+          "description": "Caption style: a static label or month/year dropdowns. Example: captionLayout=\"dropdown\""
+        },
+        {
+          "name": "weekStartsOn",
+          "type": {
+            "kind": "primitive",
+            "name": "number"
+          },
+          "description": "Index of the first day of the week, 0 = Sunday. Example: weekStartsOn={1}"
+        },
+        {
+          "name": "fixedWeeks",
+          "type": {
+            "kind": "primitive",
+            "name": "boolean"
+          },
+          "default": false,
+          "description": "Always render six weeks so the calendar height never jumps. Example: fixedWeeks"
+        },
+        {
+          "name": "locale",
+          "type": {
+            "kind": "custom",
+            "name": "Partial<Locale>"
+          },
+          "description": "date-fns locale used for month and weekday names. Example: locale={vi}"
+        },
+        {
+          "name": "today",
+          "type": {
+            "kind": "custom",
+            "name": "Date"
+          },
+          "description": "Date treated as today, useful for deterministic tests. Example: today={new Date(2026, 0, 1)}"
+        },
+        {
+          "name": "classNames",
+          "type": {
+            "kind": "custom",
+            "name": "Partial<ClassNames>"
+          },
+          "description": "Per-element class overrides for the internal day-picker parts. Example: classNames={{ day: \"rounded-md\" }}"
+        },
+        {
+          "name": "components",
+          "type": {
+            "kind": "custom",
+            "name": "Partial<CustomComponents>"
+          },
+          "description": "Replace internal parts such as the month chevrons. Example: components={{ Chevron: MyChevron }}"
+        },
+        {
+          "name": "className",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "description": "CSS class names for the calendar root. Example: className=\"p-3\""
+        }
+      ]
     },
     "vue": {
       "status": "complete",

@@ -10,7 +10,7 @@
       "name": "accordion",
       "type": "other",
       "status": "complete",
-      "description": "accordion",
+      "description": "Vertically stacked headings that expand one at a time to reveal sections of content in long forms or FAQs.",
       "files": [
         "accordion.component.ts",
         "accordion.directive.ts",
@@ -106,7 +106,7 @@
       "name": "alert-dialog",
       "type": "other",
       "status": "complete",
-      "description": "alert-dialog",
+      "description": "Blocking modal that interrupts the user to confirm an irreversible action such as a delete before it happens.",
       "files": [
         "alert-dialog.component.ts",
         "index.ts"
@@ -157,7 +157,7 @@
       "name": "alert",
       "type": "other",
       "status": "complete",
-      "description": "alert",
+      "description": "Inline callout that draws attention to an important message or a destructive warning inside a page.",
       "files": [
         "alert.component.ts",
         "variants.ts",
@@ -213,7 +213,7 @@
       "name": "area-chart",
       "type": "other",
       "status": "complete",
-      "description": "area-chart",
+      "description": "Filled line chart that shows how one or more series accumulate over time.",
       "files": [
         "area-chart.component.ts",
         "types.ts",
@@ -447,7 +447,7 @@
       "name": "aspect-ratio",
       "type": "other",
       "status": "complete",
-      "description": "aspect-ratio",
+      "description": "Wrapper that keeps media or any other child at a fixed width-to-height ratio while the layout resizes.",
       "files": [
         "aspect-ratio.component.ts",
         "index.ts"
@@ -491,7 +491,7 @@
       "name": "avatar",
       "type": "other",
       "status": "complete",
-      "description": "avatar",
+      "description": "Circular user image that falls back to initials or an icon when the picture is missing.",
       "files": [
         "avatar.component.ts",
         "avatar-image.component.ts",
@@ -528,7 +528,7 @@
       "name": "badge",
       "type": "other",
       "status": "complete",
-      "description": "badge",
+      "description": "Small status label that marks an item with a count, category or state beside a title or inside a list.",
       "files": [
         "badge.component.ts",
         "variants.ts",
@@ -590,7 +590,7 @@
       "name": "bar-chart",
       "type": "other",
       "status": "complete",
-      "description": "bar-chart",
+      "description": "Chart that compares values across categories with bars, for monthly revenue, counts or rankings.",
       "files": [
         "bar-chart.component.ts",
         "types.ts",
@@ -786,7 +786,7 @@
       "name": "breadcrumb",
       "type": "other",
       "status": "complete",
-      "description": "breadcrumb",
+      "description": "Trail of links that shows the path to the current page and lets the user step back to a parent level.",
       "files": [
         "breadcrumb.component.ts",
         "index.ts"
@@ -911,7 +911,7 @@
       "name": "calendar-range",
       "type": "other",
       "status": "complete",
-      "description": "calendar-range",
+      "description": "Two-month grid in a popover for selecting a start and end date in one interaction.",
       "files": [
         "calendar-range.component.ts",
         "index.ts"
@@ -962,7 +962,7 @@
       "name": "Calendar",
       "type": "form",
       "status": "complete",
-      "description": "Full-featured date picker with month navigation and selection.",
+      "description": "Month grid for picking a single day, a date range or several days, with controlled month navigation.",
       "files": [
         "calendar.component.ts",
         "index.ts"
@@ -985,7 +985,7 @@
       "name": "card",
       "type": "other",
       "status": "complete",
-      "description": "card",
+      "description": "Bordered surface that groups related content such as a title, description, media and actions.",
       "files": [
         "card.component.ts",
         "index.ts"
@@ -1046,7 +1046,7 @@
       "name": "checkbox",
       "type": "other",
       "status": "complete",
-      "description": "checkbox",
+      "description": "Square control for toggling a single boolean option, with an indeterminate state for parent rows.",
       "files": [
         "checkbox.component.ts",
         "index.ts"
@@ -1169,7 +1169,7 @@
       "name": "collapsible",
       "type": "other",
       "status": "complete",
-      "description": "collapsible",
+      "description": "Single section that the user can expand or collapse to hide secondary content on demand.",
       "files": [
         "collapsible.component.ts",
         "collapsible.directive.ts",
@@ -1251,7 +1251,7 @@
       "name": "command",
       "type": "other",
       "status": "complete",
-      "description": "command",
+      "description": "Keyboard-first palette for searching and running actions without leaving the keyboard.",
       "files": [
         "command.component.ts",
         "index.ts"
@@ -1301,7 +1301,7 @@
       "name": "context-menu",
       "type": "other",
       "status": "complete",
-      "description": "context-menu",
+      "description": "Menu opened by right-click or the context-menu key, offering actions on the element under the pointer.",
       "files": [
         "context-menu.component.ts",
         "index.ts"
@@ -1405,7 +1405,7 @@
       "name": "date-range-picker",
       "type": "other",
       "status": "complete",
-      "description": "date-range-picker",
+      "description": "Input-like trigger that opens a dual-month grid to pick the start and end of a range.",
       "files": [
         "date-range-picker.component.ts",
         "index.ts"
@@ -1434,7 +1434,7 @@
       "name": "date-time-picker",
       "type": "other",
       "status": "complete",
-      "description": "date-time-picker",
+      "description": "Timestamp field that pairs a month grid with hour and minute lists so a date and time are chosen in one flow.",
       "files": [
         "date-time-picker.component.ts",
         "index.ts"
@@ -1524,7 +1524,7 @@
       "name": "donut-chart",
       "type": "other",
       "status": "complete",
-      "description": "donut-chart",
+      "description": "Ring chart that shows how parts make up a whole, with the total in the middle.",
       "files": [
         "donut-chart.component.ts",
         "types.ts",
@@ -1726,7 +1726,7 @@
       "name": "Drawer",
       "type": "overlay",
       "status": "complete",
-      "description": "Mobile-first bottom sheet drawer.",
+      "description": "Sheet that slides in from the side (or from the bottom on mobile) so a panel of details or actions opens without leaving the page.",
       "files": [
         "drawer.component.ts",
         "index.ts"
@@ -1749,7 +1749,7 @@
       "name": "dropdown-menu",
       "type": "other",
       "status": "complete",
-      "description": "dropdown-menu",
+      "description": "Menu of actions or options revealed by a trigger button, for row actions and toolbar overflow.",
       "files": [
         "dropdown-menu.component.ts",
         "index.ts"
@@ -1778,7 +1778,7 @@
       "name": "empty",
       "type": "other",
       "status": "complete",
-      "description": "empty",
+      "description": "Placeholder block shown when a list, grid or search has no data yet, with an icon, message and optional action.",
       "files": [
         "empty.component.ts",
         "index.ts"
@@ -1828,7 +1828,7 @@
       "name": "form",
       "type": "other",
       "status": "complete",
-      "description": "form",
+      "description": "Validation and field context provider built on react-hook-form, wiring labels, descriptions and error messages together.",
       "files": [
         "form.component.ts",
         "index.ts"
@@ -2077,7 +2077,7 @@
       "name": "hover-card",
       "type": "other",
       "status": "complete",
-      "description": "hover-card",
+      "description": "Rich preview that appears when the pointer rests on a link or avatar, without requiring a click.",
       "files": [
         "hover-card.component.ts",
         "index.ts"
@@ -2140,7 +2140,7 @@
       "name": "input",
       "type": "other",
       "status": "complete",
-      "description": "input",
+      "description": "Single-line text field for short free-form values such as names, emails and search terms.",
       "files": [
         "index.ts",
         "input.component.ts"
@@ -2297,7 +2297,7 @@
       "name": "kbd",
       "type": "other",
       "status": "complete",
-      "description": "kbd",
+      "description": "Inline key cap that renders a keyboard shortcut inside text or menus.",
       "files": [
         "kbd.component.ts",
         "index.ts"
@@ -2352,7 +2352,7 @@
       "name": "label",
       "type": "other",
       "status": "complete",
-      "description": "label",
+      "description": "Accessible caption bound to a form control through htmlFor, so clicking the text focuses the field.",
       "files": [
         "index.ts",
         "label.component.ts"
@@ -2403,7 +2403,7 @@
       "name": "line-chart",
       "type": "other",
       "status": "complete",
-      "description": "line-chart",
+      "description": "Chart that plots one or more series as connected points to show trends over time.",
       "files": [
         "line-chart.component.ts",
         "types.ts",
@@ -2660,7 +2660,7 @@
       "name": "menubar",
       "type": "other",
       "status": "complete",
-      "description": "menubar",
+      "description": "Horizontal bar of application menus, each opening a dropdown of commands.",
       "files": [
         "index.ts",
         "menubar.component.ts"
@@ -2687,7 +2687,7 @@
       "name": "mixed-chart",
       "type": "other",
       "status": "complete",
-      "description": "mixed-chart",
+      "description": "Combined chart that overlays bars, lines or areas so two measures with different scales can be compared.",
       "files": [
         "mixed-chart.component.ts",
         "types.ts",
@@ -2858,7 +2858,7 @@
       "name": "navigation-menu",
       "type": "other",
       "status": "complete",
-      "description": "navigation-menu",
+      "description": "Site navigation with rich dropdown panels for content-heavy menus and mega menus.",
       "files": [
         "index.ts",
         "navigation-menu.component.ts"
@@ -2923,7 +2923,7 @@
       "name": "pagination",
       "type": "other",
       "status": "complete",
-      "description": "pagination",
+      "description": "Page controls with previous, next and numbered pages for long lists and tables.",
       "files": [
         "pagination.component.ts",
         "index.ts"
@@ -2991,7 +2991,7 @@
       "name": "pie-chart",
       "type": "other",
       "status": "complete",
-      "description": "pie-chart",
+      "description": "Circular chart that splits a total into proportional slices for share-of-whole comparisons.",
       "files": [
         "pie-chart.component.ts",
         "types.ts",
@@ -3193,7 +3193,7 @@
       "name": "popover",
       "type": "other",
       "status": "complete",
-      "description": "popover",
+      "description": "Floating panel anchored to a trigger that holds rich content such as forms, filters or menus.",
       "files": [
         "index.ts",
         "popover.component.ts"
@@ -3262,7 +3262,7 @@
       "name": "progress",
       "type": "other",
       "status": "complete",
-      "description": "progress",
+      "description": "Bar that reports how far a determinate task has advanced toward completion.",
       "files": [
         "progress.component.ts",
         "index.ts"
@@ -3315,7 +3315,7 @@
       "name": "radar-chart",
       "type": "other",
       "status": "complete",
-      "description": "radar-chart",
+      "description": "Spider chart that compares several measures of one or more entities across axes.",
       "files": [
         "radar-chart.component.ts",
         "types.ts",
@@ -3512,7 +3512,7 @@
       "name": "radio-group",
       "type": "other",
       "status": "complete",
-      "description": "radio-group",
+      "description": "Set of mutually exclusive options where exactly one can be selected at a time.",
       "files": [
         "index.ts",
         "radio-group.component.ts"
@@ -3605,7 +3605,7 @@
       "name": "resizable",
       "type": "other",
       "status": "complete",
-      "description": "resizable",
+      "description": "Panel group whose dividers can be dragged to resize, collapse or restore the adjacent panels.",
       "files": [
         "resizable.component.ts",
         "index.ts"
@@ -3632,7 +3632,7 @@
       "name": "scatter-chart",
       "type": "other",
       "status": "complete",
-      "description": "scatter-chart",
+      "description": "Chart that plots individual points on two axes to reveal correlation, clusters and outliers.",
       "files": [
         "scatter-chart.component.ts",
         "types.ts",
@@ -3810,7 +3810,7 @@
       "name": "scroll-area",
       "type": "other",
       "status": "complete",
-      "description": "scroll-area",
+      "description": "Scrollable container with styled scrollbars for long content inside a fixed-height region.",
       "files": [
         "scroll-area.component.ts",
         "index.ts"
@@ -3979,7 +3979,7 @@
       "name": "separator",
       "type": "other",
       "status": "complete",
-      "description": "separator",
+      "description": "Thin divider that visually groups content, horizontally or vertically.",
       "files": [
         "index.ts",
         "separator.component.ts"
@@ -4041,7 +4041,7 @@
       "name": "sheet",
       "type": "other",
       "status": "complete",
-      "description": "sheet",
+      "description": "Overlay layer for secondary tasks such as details, filters or preferences, opened from any edge of the screen.",
       "files": [
         "sheet.component.ts",
         "index.ts"
@@ -4125,7 +4125,7 @@
       "name": "skeleton",
       "type": "other",
       "status": "complete",
-      "description": "skeleton",
+      "description": "Placeholder shapes that stand in for content while data loads, keeping the layout stable.",
       "files": [
         "skeleton.component.ts",
         "index.ts"
@@ -4180,7 +4180,7 @@
       "name": "slider",
       "type": "other",
       "status": "complete",
-      "description": "slider",
+      "description": "Track with a draggable thumb for choosing a number or range within fixed bounds.",
       "files": [
         "index.ts",
         "slider.component.ts"
@@ -4268,7 +4268,7 @@
       "name": "spinner",
       "type": "other",
       "status": "complete",
-      "description": "spinner",
+      "description": "Animated indicator shown while a request is in flight and no content is available yet.",
       "files": [
         "spinner.component.ts",
         "index.ts"
@@ -4332,7 +4332,7 @@
       "name": "switch",
       "type": "other",
       "status": "complete",
-      "description": "switch",
+      "description": "Toggle for turning a single setting on or off, applied immediately without a save step.",
       "files": [
         "index.ts",
         "switch.component.ts"
@@ -4442,7 +4442,7 @@
       "name": "table",
       "type": "other",
       "status": "complete",
-      "description": "table",
+      "description": "Semantic markup for tabular data, composed of header, body, footer, rows and cells.",
       "files": [
         "table.component.ts",
         "index.ts"
@@ -4482,7 +4482,7 @@
       "name": "tabs",
       "type": "other",
       "status": "complete",
-      "description": "tabs",
+      "description": "Layered panels where one is visible at a time and a tab list switches between them.",
       "files": [
         "index.ts",
         "tabs.component.ts",
@@ -4549,7 +4549,7 @@
       "name": "tags-input",
       "type": "other",
       "status": "complete",
-      "description": "tags-input",
+      "description": "Field that collects free-form values as removable chips, for labels, tags and recipients.",
       "files": [
         "tags-input.component.ts",
         "index.ts"
@@ -4624,7 +4624,7 @@
       "name": "textarea",
       "type": "other",
       "status": "complete",
-      "description": "textarea",
+      "description": "Multi-line text field for longer free-form input such as descriptions and comments.",
       "files": [
         "index.ts",
         "textarea.component.ts"
@@ -4761,7 +4761,7 @@
             ]
           },
           "default": "light",
-          "description": "Visual theme for the toaster."
+          "description": "Visual theme for the toaster. Example: <Toaster theme=\"dark\" />"
         }
       ],
       "selector": "ui-toast",
@@ -4772,7 +4772,7 @@
       "name": "toggle-group",
       "type": "other",
       "status": "complete",
-      "description": "toggle-group",
+      "description": "Row of related buttons where one or several can be pressed, for view switchers and formatting bars.",
       "files": [
         "toggle-group.component.ts",
         "index.ts"
@@ -4894,7 +4894,7 @@
       "name": "toggle",
       "type": "other",
       "status": "complete",
-      "description": "toggle",
+      "description": "Two-state button that stays pressed until it is pressed again, for bold, bookmark or mute actions.",
       "files": [
         "toggle.component.ts",
         "index.ts"
@@ -5017,7 +5017,7 @@
             "name": "string"
           },
           "default": "",
-          "description": "CSS class names for the toolbar root."
+          "description": "CSS class names for the toolbar root. Example: <Toolbar class=\"border rounded-md\">"
         }
       ],
       "selector": "ui-toolbar",
@@ -5028,7 +5028,7 @@
       "name": "tooltip",
       "type": "other",
       "status": "complete",
-      "description": "tooltip",
+      "description": "Short hint that appears on hover or keyboard focus to explain an icon or control.",
       "files": [
         "index.ts",
         "tooltip.component.ts",
@@ -5059,7 +5059,7 @@
       "name": "typography",
       "type": "other",
       "status": "complete",
-      "description": "typography",
+      "description": "Text primitive that applies heading, paragraph, list or code styles consistently across a page.",
       "files": [
         "typography.component.ts",
         "index.ts"

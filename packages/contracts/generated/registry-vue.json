@@ -10,7 +10,7 @@
       "name": "accordion",
       "type": "other",
       "status": "complete",
-      "description": "accordion",
+      "description": "Vertically stacked headings that expand one at a time to reveal sections of content in long forms or FAQs.",
       "files": [
         "Accordion.vue",
         "AccordionContent.vue",
@@ -194,7 +194,7 @@
       "name": "alert-dialog",
       "type": "other",
       "status": "complete",
-      "description": "alert-dialog",
+      "description": "Blocking modal that interrupts the user to confirm an irreversible action such as a delete before it happens.",
       "files": [
         "AlertDialog.vue",
         "AlertDialogContent.vue",
@@ -255,7 +255,7 @@
       "name": "alert",
       "type": "other",
       "status": "complete",
-      "description": "alert",
+      "description": "Inline callout that draws attention to an important message or a destructive warning inside a page.",
       "files": [
         "alert-description.vue",
         "alert-title.vue",
@@ -311,7 +311,7 @@
       "name": "area-chart",
       "type": "other",
       "status": "complete",
-      "description": "area-chart",
+      "description": "Filled line chart that shows how one or more series accumulate over time.",
       "files": [
         "areachart.vue",
         "index.ts",
@@ -544,7 +544,7 @@
       "name": "aspect-ratio",
       "type": "other",
       "status": "complete",
-      "description": "aspect-ratio",
+      "description": "Wrapper that keeps media or any other child at a fixed width-to-height ratio while the layout resizes.",
       "files": [
         "AspectRatio.vue",
         "index.ts"
@@ -596,7 +596,7 @@
       "name": "avatar",
       "type": "other",
       "status": "complete",
-      "description": "avatar",
+      "description": "Circular user image that falls back to initials or an icon when the picture is missing.",
       "files": [
         "Avatar.vue",
         "AvatarFallback.vue",
@@ -652,7 +652,7 @@
       "name": "badge",
       "type": "other",
       "status": "complete",
-      "description": "badge",
+      "description": "Small status label that marks an item with a count, category or state beside a title or inside a list.",
       "files": [
         "badge.vue",
         "index.ts"
@@ -712,7 +712,7 @@
       "name": "bar-chart",
       "type": "other",
       "status": "complete",
-      "description": "bar-chart",
+      "description": "Chart that compares values across categories with bars, for monthly revenue, counts or rankings.",
       "files": [
         "barchart.vue",
         "index.ts",
@@ -909,7 +909,7 @@
       "name": "breadcrumb",
       "type": "other",
       "status": "complete",
-      "description": "breadcrumb",
+      "description": "Trail of links that shows the path to the current page and lets the user step back to a parent level.",
       "files": [
         "breadcrumb-ellipsis.vue",
         "breadcrumb-item.vue",
@@ -1071,7 +1071,7 @@
       "name": "calendar-range",
       "type": "other",
       "status": "complete",
-      "description": "calendar-range",
+      "description": "Two-month grid in a popover for selecting a start and end date in one interaction.",
       "files": [
         "CalendarRange.vue",
         "index.ts"
@@ -1171,7 +1171,7 @@
       "name": "Calendar",
       "type": "form",
       "status": "complete",
-      "description": "Full-featured date picker with month navigation and selection.",
+      "description": "Month grid for picking a single day, a date range or several days, with controlled month navigation.",
       "files": [
         "Calendar.vue",
         "index.ts"
@@ -1196,7 +1196,7 @@
       "name": "card",
       "type": "other",
       "status": "complete",
-      "description": "card",
+      "description": "Bordered surface that groups related content such as a title, description, media and actions.",
       "files": [
         "card-content.vue",
         "card-description.vue",
@@ -1264,7 +1264,7 @@
       "name": "checkbox",
       "type": "other",
       "status": "complete",
-      "description": "checkbox",
+      "description": "Square control for toggling a single boolean option, with an indeterminate state for parent rows.",
       "files": [
         "Checkbox.vue",
         "index.ts"
@@ -1371,7 +1371,7 @@
       "name": "collapsible",
       "type": "other",
       "status": "complete",
-      "description": "collapsible",
+      "description": "Single section that the user can expand or collapse to hide secondary content on demand.",
       "files": [
         "Collapsible.vue",
         "index.ts"
@@ -1482,7 +1482,7 @@
       "name": "command",
       "type": "other",
       "status": "complete",
-      "description": "command",
+      "description": "Keyboard-first palette for searching and running actions without leaving the keyboard.",
       "files": [
         "Command.vue",
         "index.ts"
@@ -1525,7 +1525,7 @@
       "name": "context-menu",
       "type": "other",
       "status": "complete",
-      "description": "context-menu",
+      "description": "Menu opened by right-click or the context-menu key, offering actions on the element under the pointer.",
       "files": [
         "ContextMenu.vue",
         "ContextMenuContent.vue",
@@ -1658,7 +1658,7 @@
       "name": "date-range-picker",
       "type": "other",
       "status": "complete",
-      "description": "date-range-picker",
+      "description": "Input-like trigger that opens a dual-month grid to pick the start and end of a range.",
       "files": [
         "index.ts",
         "DateRangePicker.vue",
@@ -1690,7 +1690,7 @@
       "name": "date-time-picker",
       "type": "other",
       "status": "complete",
-      "description": "date-time-picker",
+      "description": "Timestamp field that pairs a month grid with hour and minute lists so a date and time are chosen in one flow.",
       "files": [
         "index.ts",
         "DateTimePicker.vue",
@@ -1790,7 +1790,7 @@
       "name": "donut-chart",
       "type": "other",
       "status": "complete",
-      "description": "donut-chart",
+      "description": "Ring chart that shows how parts make up a whole, with the total in the middle.",
       "files": [
         "donutchart.vue",
         "index.ts",
@@ -1991,7 +1991,7 @@
       "name": "Drawer",
       "type": "overlay",
       "status": "complete",
-      "description": "Mobile-first bottom sheet drawer.",
+      "description": "Sheet that slides in from the side (or from the bottom on mobile) so a panel of details or actions opens without leaving the page.",
       "files": [
         "Drawer.vue",
         "index.ts"
@@ -2016,7 +2016,7 @@
       "name": "dropdown-menu",
       "type": "other",
       "status": "complete",
-      "description": "dropdown-menu",
+      "description": "Menu of actions or options revealed by a trigger button, for row actions and toolbar overflow.",
       "files": [
         "DropdownMenu.vue",
         "DropdownMenuContent.vue",
@@ -2107,7 +2107,7 @@
       "name": "empty",
       "type": "other",
       "status": "complete",
-      "description": "empty",
+      "description": "Placeholder block shown when a list, grid or search has no data yet, with an icon, message and optional action.",
       "files": [
         "Empty.vue",
         "index.ts"
@@ -2156,7 +2156,7 @@
       "name": "form",
       "type": "other",
       "status": "complete",
-      "description": "form",
+      "description": "Validation and field context provider built on react-hook-form, wiring labels, descriptions and error messages together.",
       "files": [
         "form-description.vue",
         "form-item.vue",
@@ -2231,7 +2231,7 @@
       "name": "hover-card",
       "type": "other",
       "status": "complete",
-      "description": "hover-card",
+      "description": "Rich preview that appears when the pointer rests on a link or avatar, without requiring a click.",
       "files": [
         "HoverCard.vue",
         "HoverCardContent.vue",
@@ -2302,7 +2302,7 @@
       "name": "input",
       "type": "other",
       "status": "complete",
-      "description": "input",
+      "description": "Single-line text field for short free-form values such as names, emails and search terms.",
       "files": [
         "Input.vue",
         "index.ts"
@@ -2381,7 +2381,7 @@
       "name": "kbd",
       "type": "other",
       "status": "complete",
-      "description": "kbd",
+      "description": "Inline key cap that renders a keyboard shortcut inside text or menus.",
       "files": [
         "Kbd.vue",
         "index.ts"
@@ -2435,7 +2435,7 @@
       "name": "label",
       "type": "other",
       "status": "complete",
-      "description": "label",
+      "description": "Accessible caption bound to a form control through htmlFor, so clicking the text focuses the field.",
       "files": [
         "Label.vue",
         "index.ts"
@@ -2486,7 +2486,7 @@
       "name": "line-chart",
       "type": "other",
       "status": "complete",
-      "description": "line-chart",
+      "description": "Chart that plots one or more series as connected points to show trends over time.",
       "files": [
         "index.ts",
         "linechart.vue",
@@ -2741,7 +2741,7 @@
       "name": "menubar",
       "type": "other",
       "status": "complete",
-      "description": "menubar",
+      "description": "Horizontal bar of application menus, each opening a dropdown of commands.",
       "files": [
         "Menubar.vue",
         "index.ts"
@@ -2840,7 +2840,7 @@
       "name": "mixed-chart",
       "type": "other",
       "status": "complete",
-      "description": "mixed-chart",
+      "description": "Combined chart that overlays bars, lines or areas so two measures with different scales can be compared.",
       "files": [
         "index.ts",
         "mixedchart.vue",
@@ -3010,7 +3010,7 @@
       "name": "navigation-menu",
       "type": "other",
       "status": "complete",
-      "description": "navigation-menu",
+      "description": "Site navigation with rich dropdown panels for content-heavy menus and mega menus.",
       "files": [
         "NavigationMenu.vue",
         "index.ts"
@@ -3139,7 +3139,7 @@
       "name": "pagination",
       "type": "other",
       "status": "complete",
-      "description": "pagination",
+      "description": "Page controls with previous, next and numbered pages for long lists and tables.",
       "files": [
         "Pagination.vue",
         "index.ts"
@@ -3208,7 +3208,7 @@
       "name": "pie-chart",
       "type": "other",
       "status": "complete",
-      "description": "pie-chart",
+      "description": "Circular chart that splits a total into proportional slices for share-of-whole comparisons.",
       "files": [
         "index.ts",
         "piechart.vue",
@@ -3409,7 +3409,7 @@
       "name": "popover",
       "type": "other",
       "status": "complete",
-      "description": "popover",
+      "description": "Floating panel anchored to a trigger that holds rich content such as forms, filters or menus.",
       "files": [
         "Popover.vue",
         "PopoverContent.vue",
@@ -3493,7 +3493,7 @@
       "name": "progress",
       "type": "other",
       "status": "complete",
-      "description": "progress",
+      "description": "Bar that reports how far a determinate task has advanced toward completion.",
       "files": [
         "Progress.vue",
         "index.ts"
@@ -3571,7 +3571,7 @@
       "name": "radar-chart",
       "type": "other",
       "status": "complete",
-      "description": "radar-chart",
+      "description": "Spider chart that compares several measures of one or more entities across axes.",
       "files": [
         "index.ts",
         "radarchart.vue",
@@ -3767,7 +3767,7 @@
       "name": "radio-group",
       "type": "other",
       "status": "complete",
-      "description": "radio-group",
+      "description": "Set of mutually exclusive options where exactly one can be selected at a time.",
       "files": [
         "RadioGroup.vue",
         "RadioGroupItem.vue",
@@ -3864,7 +3864,7 @@
       "name": "resizable",
       "type": "other",
       "status": "complete",
-      "description": "resizable",
+      "description": "Panel group whose dividers can be dragged to resize, collapse or restore the adjacent panels.",
       "files": [
         "ResizableHandle.vue",
         "ResizablePanel.vue",
@@ -3893,7 +3893,7 @@
       "name": "scatter-chart",
       "type": "other",
       "status": "complete",
-      "description": "scatter-chart",
+      "description": "Chart that plots individual points on two axes to reveal correlation, clusters and outliers.",
       "files": [
         "index.ts",
         "scatterchart.vue",
@@ -4070,7 +4070,7 @@
       "name": "scroll-area",
       "type": "other",
       "status": "complete",
-      "description": "scroll-area",
+      "description": "Scrollable container with styled scrollbars for long content inside a fixed-height region.",
       "files": [
         "ScrollArea.vue",
         "ScrollBar.vue",
@@ -4304,7 +4304,7 @@
       "name": "separator",
       "type": "other",
       "status": "complete",
-      "description": "separator",
+      "description": "Thin divider that visually groups content, horizontally or vertically.",
       "files": [
         "Separator.vue",
         "index.ts"
@@ -4383,7 +4383,7 @@
       "name": "sheet",
       "type": "other",
       "status": "complete",
-      "description": "sheet",
+      "description": "Overlay layer for secondary tasks such as details, filters or preferences, opened from any edge of the screen.",
       "files": [
         "Sheet.vue",
         "index.ts"
@@ -4485,7 +4485,7 @@
       "name": "skeleton",
       "type": "other",
       "status": "complete",
-      "description": "skeleton",
+      "description": "Placeholder shapes that stand in for content while data loads, keeping the layout stable.",
       "files": [
         "Skeleton.vue",
         "index.ts"
@@ -4539,7 +4539,7 @@
       "name": "slider",
       "type": "other",
       "status": "complete",
-      "description": "slider",
+      "description": "Track with a draggable thumb for choosing a number or range within fixed bounds.",
       "files": [
         "Slider.vue",
         "index.ts"
@@ -4729,7 +4729,7 @@
       "name": "spinner",
       "type": "other",
       "status": "complete",
-      "description": "spinner",
+      "description": "Animated indicator shown while a request is in flight and no content is available yet.",
       "files": [
         "Spinner.vue",
         "index.ts"
@@ -4792,7 +4792,7 @@
       "name": "switch",
       "type": "other",
       "status": "complete",
-      "description": "switch",
+      "description": "Toggle for turning a single setting on or off, applied immediately without a save step.",
       "files": [
         "Switch.vue",
         "index.ts"
@@ -4884,7 +4884,7 @@
       "name": "table",
       "type": "other",
       "status": "complete",
-      "description": "table",
+      "description": "Semantic markup for tabular data, composed of header, body, footer, rows and cells.",
       "files": [
         "Table.vue",
         "index.ts"
@@ -4923,7 +4923,7 @@
       "name": "tabs",
       "type": "other",
       "status": "complete",
-      "description": "tabs",
+      "description": "Layered panels where one is visible at a time and a tab list switches between them.",
       "files": [
         "Tabs.vue",
         "TabsContent.vue",
@@ -5059,7 +5059,7 @@
       "name": "tags-input",
       "type": "other",
       "status": "complete",
-      "description": "tags-input",
+      "description": "Field that collects free-form values as removable chips, for labels, tags and recipients.",
       "files": [
         "TagsInput.vue",
         "index.ts"
@@ -5135,7 +5135,7 @@
       "name": "textarea",
       "type": "other",
       "status": "complete",
-      "description": "textarea",
+      "description": "Multi-line text field for longer free-form input such as descriptions and comments.",
       "files": [
         "Textarea.vue",
         "index.ts"
@@ -5282,7 +5282,7 @@
             ]
           },
           "default": "light",
-          "description": "Visual theme for the toaster."
+          "description": "Visual theme for the toaster. Example: <Toaster theme=\"dark\" />"
         },
         {
           "name": "position",
@@ -5315,7 +5315,7 @@
               }
             ]
           },
-          "description": "Screen position for toast notifications."
+          "description": "Screen position for toast notifications. Example: <Toaster position=\"top-right\" />"
         },
         {
           "name": "expand",
@@ -5323,7 +5323,7 @@
             "kind": "primitive",
             "name": "boolean"
           },
-          "description": "Whether stacked toasts can expand to show full content."
+          "description": "Whether stacked toasts can expand to show full content. Example: <Toaster expand />"
         },
         {
           "name": "richColors",
@@ -5331,7 +5331,7 @@
             "kind": "primitive",
             "name": "boolean"
           },
-          "description": "Enable richer semantic color styling."
+          "description": "Enable richer semantic color styling. Example: <Toaster richColors />"
         },
         {
           "name": "closeButton",
@@ -5339,7 +5339,7 @@
             "kind": "primitive",
             "name": "boolean"
           },
-          "description": "Show a close button on each toast."
+          "description": "Show a close button on each toast. Example: <Toaster closeButton />"
         },
         {
           "name": "duration",
@@ -5347,7 +5347,7 @@
             "kind": "primitive",
             "name": "number"
           },
-          "description": "Default duration in milliseconds."
+          "description": "Default duration in milliseconds. Example: <Toaster duration={6000} />"
         },
         {
           "name": "visibleToasts",
@@ -5355,7 +5355,7 @@
             "kind": "primitive",
             "name": "number"
           },
-          "description": "Maximum number of visible toasts."
+          "description": "Maximum number of visible toasts. Example: <Toaster visibleToasts={3} />"
         },
         {
           "name": "offset",
@@ -5363,7 +5363,7 @@
             "kind": "custom",
             "name": "string | number"
           },
-          "description": "Offset from the viewport edge."
+          "description": "Offset from the viewport edge. Example: <Toaster offset=\"24px\" />"
         },
         {
           "name": "dir",
@@ -5381,7 +5381,7 @@
             ]
           },
           "default": "ltr",
-          "description": "Reading direction."
+          "description": "Reading direction. Example: <Toaster dir=\"rtl\" />"
         }
       ],
       "manifestStatus": "complete"
@@ -5391,7 +5391,7 @@
       "name": "toggle-group",
       "type": "other",
       "status": "complete",
-      "description": "toggle-group",
+      "description": "Row of related buttons where one or several can be pressed, for view switchers and formatting bars.",
       "files": [
         "ToggleGroup.vue",
         "ToggleGroupItem.vue",
@@ -5598,7 +5598,7 @@
       "name": "toggle",
       "type": "other",
       "status": "complete",
-      "description": "toggle",
+      "description": "Two-state button that stays pressed until it is pressed again, for bold, bookmark or mute actions.",
       "files": [
         "Toggle.vue",
         "index.ts",
@@ -5760,7 +5760,7 @@
             ]
           },
           "default": "horizontal",
-          "description": "Toolbar orientation."
+          "description": "Toolbar orientation. Example: <Toolbar orientation=\"vertical\">"
         },
         {
           "name": "dir",
@@ -5778,7 +5778,7 @@
             ]
           },
           "default": "ltr",
-          "description": "Reading direction for roving focus."
+          "description": "Reading direction for roving focus. Example: <Toolbar dir=\"rtl\">"
         },
         {
           "name": "loop",
@@ -5787,7 +5787,7 @@
             "name": "boolean"
           },
           "default": true,
-          "description": "Loop keyboard focus from last item to first."
+          "description": "Loop keyboard focus from last item to first. Example: <Toolbar loop={false}>"
         },
         {
           "name": "as",
@@ -5796,7 +5796,7 @@
             "name": "AsTag | Component"
           },
           "default": "div",
-          "description": "Element or component to render."
+          "description": "Element or component to render. Example: <Toolbar as=\"nav\">"
         },
         {
           "name": "class",
@@ -5805,7 +5805,7 @@
             "name": "string"
           },
           "default": "",
-          "description": "CSS class names for the toolbar root."
+          "description": "CSS class names for the toolbar root. Example: <Toolbar class=\"border rounded-md\">"
         }
       ],
       "manifestStatus": "complete"
@@ -5815,7 +5815,7 @@
       "name": "tooltip",
       "type": "other",
       "status": "complete",
-      "description": "tooltip",
+      "description": "Short hint that appears on hover or keyboard focus to explain an icon or control.",
       "files": [
         "Tooltip.vue",
         "TooltipContent.vue",
@@ -5905,7 +5905,7 @@
       "name": "typography",
       "type": "other",
       "status": "complete",
-      "description": "typography",
+      "description": "Text primitive that applies heading, paragraph, list or code styles consistently across a page.",
       "files": [
         "Typography.vue",
         "index.ts"

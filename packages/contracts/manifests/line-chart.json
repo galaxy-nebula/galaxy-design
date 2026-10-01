@@ -4,7 +4,7 @@
   "name": "line-chart",
   "category": "other",
   "status": "complete",
-  "description": "line-chart",
+  "description": "Chart that plots one or more series as connected points to show trends over time.",
   "props": [
     {
       "name": "data",

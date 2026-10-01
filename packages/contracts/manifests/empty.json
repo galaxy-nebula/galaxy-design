@@ -4,7 +4,7 @@
   "name": "empty",
   "category": "other",
   "status": "complete",
-  "description": "empty",
+  "description": "Placeholder block shown when a list, grid or search has no data yet, with an icon, message and optional action.",
   "props": [
     {
       "name": "description",

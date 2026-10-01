@@ -6,7 +6,87 @@
   "type": "block",
   "status": "complete",
   "description": "Full dashboard page with collapsible sidebar, stat cards, recent activity table, and navigation.",
-  "props": [],
+  "props": [
+    {
+      "name": "navItems",
+      "type": {
+        "kind": "array",
+        "of": {
+          "kind": "custom",
+          "name": "{ label: string; href: string; active?: boolean }"
+        }
+      },
+      "description": "Required. Sidebar entries; the item flagged active is highlighted. Example: navItems={[{ label: \"Home\", href: \"/\", active: true }]}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "stats",
+      "type": {
+        "kind": "array",
+        "of": {
+          "kind": "custom",
+          "name": "DashboardStatCard"
+        }
+      },
+      "description": "Required. Stat cards with label, value, trend and change text, e.g. { label: \"Revenue\", value: \"$12k\", trend: \"up\", change: \"+8%\" }. Example: stats={[{ label: \"Revenue\", value: \"$12k\", trend: \"up\", change: \"+8%\" }]}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "columns",
+      "type": {
+        "kind": "array",
+        "of": {
+          "kind": "custom",
+          "name": "{ key: string; header: string }"
+        }
+      },
+      "description": "Required. Header cells of the recent activity table. Example: columns={[{ key: \"user\", header: \"User\" }]}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "tableData",
+      "type": {
+        "kind": "array",
+        "of": {
+          "kind": "custom",
+          "name": "Record<string, unknown>"
+        }
+      },
+      "description": "Required. Rows of the activity table; the first five are rendered. Example: tableData={rows}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "title",
+      "type": {
+        "kind": "primitive",
+        "name": "string"
+      },
+      "default": "Dashboard",
+      "description": "Heading used in the sidebar and the page header. Example: title=\"Ops\"",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "className",
+      "type": {
+        "kind": "primitive",
+        "name": "string"
+      },
+      "description": "CSS class names for the page wrapper. Example: className=\"bg-muted/30\"",
+      "frameworks": [
+        "react"
+      ]
+    }
+  ],
   "children": [],
   "frameworks": {
     "react": {
@@ -24,7 +104,69 @@
       "registryDependencies": [
         "button"
       ],
-      "props": []
+      "props": [
+        {
+          "name": "navItems",
+          "type": {
+            "kind": "array",
+            "of": {
+              "kind": "custom",
+              "name": "{ label: string; href: string; active?: boolean }"
+            }
+          },
+          "description": "Required. Sidebar entries; the item flagged active is highlighted. Example: navItems={[{ label: \"Home\", href: \"/\", active: true }]}"
+        },
+        {
+          "name": "stats",
+          "type": {
+            "kind": "array",
+            "of": {
+              "kind": "custom",
+              "name": "DashboardStatCard"
+            }
+          },
+          "description": "Required. Stat cards with label, value, trend and change text, e.g. { label: \"Revenue\", value: \"$12k\", trend: \"up\", change: \"+8%\" }. Example: stats={[{ label: \"Revenue\", value: \"$12k\", trend: \"up\", change: \"+8%\" }]}"
+        },
+        {
+          "name": "columns",
+          "type": {
+            "kind": "array",
+            "of": {
+              "kind": "custom",
+              "name": "{ key: string; header: string }"
+            }
+          },
+          "description": "Required. Header cells of the recent activity table. Example: columns={[{ key: \"user\", header: \"User\" }]}"
+        },
+        {
+          "name": "tableData",
+          "type": {
+            "kind": "array",
+            "of": {
+              "kind": "custom",
+              "name": "Record<string, unknown>"
+            }
+          },
+          "description": "Required. Rows of the activity table; the first five are rendered. Example: tableData={rows}"
+        },
+        {
+          "name": "title",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "default": "Dashboard",
+          "description": "Heading used in the sidebar and the page header. Example: title=\"Ops\""
+        },
+        {
+          "name": "className",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "description": "CSS class names for the page wrapper. Example: className=\"bg-muted/30\""
+        }
+      ]
     },
     "vue": {
       "status": "complete",

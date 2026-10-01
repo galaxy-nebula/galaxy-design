@@ -4,7 +4,7 @@
   "name": "switch",
   "category": "other",
   "status": "complete",
-  "description": "switch",
+  "description": "Toggle for turning a single setting on or off, applied immediately without a save step.",
   "props": [
     {
       "name": "checked",

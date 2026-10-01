@@ -54,19 +54,27 @@
     },
     "agent-activity": {
       "status": "complete",
-      "available": []
+      "available": [
+        "react"
+      ]
     },
     "chat-panel": {
       "status": "complete",
-      "available": []
+      "available": [
+        "react"
+      ]
     },
     "diff-review": {
       "status": "complete",
-      "available": []
+      "available": [
+        "react"
+      ]
     },
     "prompt-box": {
       "status": "complete",
-      "available": []
+      "available": [
+        "react"
+      ]
     },
     "avatar": {
       "status": "complete",
@@ -684,6 +692,10 @@
         "alert",
         "area-chart",
         "aspect-ratio",
+        "agent-activity",
+        "chat-panel",
+        "diff-review",
+        "prompt-box",
         "avatar",
         "badge",
         "bar-chart",
@@ -749,12 +761,7 @@
         "tooltip",
         "typography"
       ],
-      "missing": [
-        "agent-activity",
-        "chat-panel",
-        "diff-review",
-        "prompt-box"
-      ]
+      "missing": []
     },
     "vue": {
       "available": [

@@ -4,11 +4,99 @@
   "category": "assistant",
   "status": "complete",
   "description": "Codex-style agent progress panel with task checklist, status badges, progress bar, and timestamped tool call log.",
-  "props": [],
+  "props": [
+    {
+      "name": "tasks",
+      "type": {
+        "kind": "array",
+        "of": {
+          "kind": "custom",
+          "name": "AgentTask[]"
+        }
+      },
+      "description": "Required. Checklist entries with id, label, status (pending, running, completed, error) and optional detail. Example: tasks={[{ id: \"1\", label: \"Read files\", status: \"completed\" }]}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "agentName",
+      "type": {
+        "kind": "primitive",
+        "name": "string"
+      },
+      "default": "Agent",
+      "description": "Name shown in the panel header. Example: agentName=\"Codex\"",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "status",
+      "type": {
+        "kind": "union",
+        "values": [
+          {
+            "kind": "literal",
+            "value": "idle"
+          },
+          {
+            "kind": "literal",
+            "value": "thinking"
+          },
+          {
+            "kind": "literal",
+            "value": "working"
+          }
+        ]
+      },
+      "default": "idle",
+      "description": "Agent state rendered as a status badge and used for the header colour. Example: status=\"working\"",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "toolEvents",
+      "type": {
+        "kind": "array",
+        "of": {
+          "kind": "custom",
+          "name": "AgentToolEvent[]"
+        }
+      },
+      "description": "Timestamped tool call log rendered under the checklist. Example: toolEvents={[{ id: \"t1\", name: \"read_file\", summary: \"src/index.ts\" }]}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "elapsedLabel",
+      "type": {
+        "kind": "primitive",
+        "name": "string"
+      },
+      "description": "Elapsed time text shown on the right of the header. Example: elapsedLabel=\"1m 12s\"",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "className",
+      "type": {
+        "kind": "primitive",
+        "name": "string"
+      },
+      "description": "CSS class names for the panel. Example: className=\"max-w-lg\"",
+      "frameworks": [
+        "react"
+      ]
+    }
+  ],
   "children": [],
   "frameworks": {
     "react": {
-      "status": "missing",
+      "status": "complete",
       "files": [
         "AgentActivity.tsx",
         "AgentTaskItem.tsx",
@@ -25,7 +113,77 @@
       ],
       "dependencies": [],
       "registryDependencies": [],
-      "props": []
+      "props": [
+        {
+          "name": "tasks",
+          "type": {
+            "kind": "array",
+            "of": {
+              "kind": "custom",
+              "name": "AgentTask[]"
+            }
+          },
+          "description": "Required. Checklist entries with id, label, status (pending, running, completed, error) and optional detail. Example: tasks={[{ id: \"1\", label: \"Read files\", status: \"completed\" }]}"
+        },
+        {
+          "name": "agentName",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "default": "Agent",
+          "description": "Name shown in the panel header. Example: agentName=\"Codex\""
+        },
+        {
+          "name": "status",
+          "type": {
+            "kind": "union",
+            "values": [
+              {
+                "kind": "literal",
+                "value": "idle"
+              },
+              {
+                "kind": "literal",
+                "value": "thinking"
+              },
+              {
+                "kind": "literal",
+                "value": "working"
+              }
+            ]
+          },
+          "default": "idle",
+          "description": "Agent state rendered as a status badge and used for the header colour. Example: status=\"working\""
+        },
+        {
+          "name": "toolEvents",
+          "type": {
+            "kind": "array",
+            "of": {
+              "kind": "custom",
+              "name": "AgentToolEvent[]"
+            }
+          },
+          "description": "Timestamped tool call log rendered under the checklist. Example: toolEvents={[{ id: \"t1\", name: \"read_file\", summary: \"src/index.ts\" }]}"
+        },
+        {
+          "name": "elapsedLabel",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "description": "Elapsed time text shown on the right of the header. Example: elapsedLabel=\"1m 12s\""
+        },
+        {
+          "name": "className",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "description": "CSS class names for the panel. Example: className=\"max-w-lg\""
+        }
+      ]
     },
     "vue": {
       "status": "missing",

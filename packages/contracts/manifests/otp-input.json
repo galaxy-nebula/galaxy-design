@@ -5,7 +5,76 @@
   "category": "form",
   "status": "complete",
   "description": "One-time password input with auto-focus, paste support, and completion callback.",
-  "props": [],
+  "props": [
+    {
+      "name": "length",
+      "type": {
+        "kind": "primitive",
+        "name": "number"
+      },
+      "default": 6,
+      "description": "Number of digit boxes rendered and accepted. Example: length={4}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "value",
+      "type": {
+        "kind": "primitive",
+        "name": "string"
+      },
+      "description": "Controlled one-time code; digits fill the boxes left to right. Example: value={code}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "onValueChange",
+      "type": {
+        "kind": "function",
+        "signature": "(value: string) => void"
+      },
+      "description": "Called with the accumulated code after every keystroke, paste or delete. Example: onValueChange={setCode}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "onComplete",
+      "type": {
+        "kind": "function",
+        "signature": "(value: string) => void"
+      },
+      "description": "Called once all boxes are filled, for auto-submit. Example: onComplete={verify}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "disabled",
+      "type": {
+        "kind": "primitive",
+        "name": "boolean"
+      },
+      "default": false,
+      "description": "Disable every digit box while the code is being verified. Example: disabled={isVerifying}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "className",
+      "type": {
+        "kind": "primitive",
+        "name": "string"
+      },
+      "description": "CSS class names for the digit row. Example: className=\"justify-center\"",
+      "frameworks": [
+        "react"
+      ]
+    }
+  ],
   "children": [],
   "frameworks": {
     "react": {
@@ -20,7 +89,58 @@
         "OTPInputProps"
       ],
       "dependencies": [],
-      "props": []
+      "props": [
+        {
+          "name": "length",
+          "type": {
+            "kind": "primitive",
+            "name": "number"
+          },
+          "default": 6,
+          "description": "Number of digit boxes rendered and accepted. Example: length={4}"
+        },
+        {
+          "name": "value",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "description": "Controlled one-time code; digits fill the boxes left to right. Example: value={code}"
+        },
+        {
+          "name": "onValueChange",
+          "type": {
+            "kind": "function",
+            "signature": "(value: string) => void"
+          },
+          "description": "Called with the accumulated code after every keystroke, paste or delete. Example: onValueChange={setCode}"
+        },
+        {
+          "name": "onComplete",
+          "type": {
+            "kind": "function",
+            "signature": "(value: string) => void"
+          },
+          "description": "Called once all boxes are filled, for auto-submit. Example: onComplete={verify}"
+        },
+        {
+          "name": "disabled",
+          "type": {
+            "kind": "primitive",
+            "name": "boolean"
+          },
+          "default": false,
+          "description": "Disable every digit box while the code is being verified. Example: disabled={isVerifying}"
+        },
+        {
+          "name": "className",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "description": "CSS class names for the digit row. Example: className=\"justify-center\""
+        }
+      ]
     },
     "vue": {
       "status": "complete",

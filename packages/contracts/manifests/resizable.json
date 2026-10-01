@@ -4,8 +4,231 @@
   "name": "resizable",
   "category": "other",
   "status": "complete",
-  "description": "resizable",
-  "props": [],
+  "description": "Panel group whose dividers can be dragged to resize, collapse or restore the adjacent panels.",
+  "props": [
+    {
+      "name": "direction",
+      "type": {
+        "kind": "union",
+        "values": [
+          {
+            "kind": "literal",
+            "value": "horizontal"
+          },
+          {
+            "kind": "literal",
+            "value": "vertical"
+          }
+        ]
+      },
+      "default": "horizontal",
+      "description": "Required. Split axis of the panel group; vertical stacks the panels. Example: direction=\"horizontal\"",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "defaultSize",
+      "type": {
+        "kind": "primitive",
+        "name": "number"
+      },
+      "description": "Initial size of a panel as a percentage of the group. Example: defaultSize={30}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "minSize",
+      "type": {
+        "kind": "primitive",
+        "name": "number"
+      },
+      "description": "Smallest size a panel can be dragged to, as a percentage. Example: minSize={15}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "maxSize",
+      "type": {
+        "kind": "primitive",
+        "name": "number"
+      },
+      "description": "Largest size a panel can be dragged to, as a percentage. Example: maxSize={70}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "collapsible",
+      "type": {
+        "kind": "primitive",
+        "name": "boolean"
+      },
+      "default": false,
+      "description": "Allow the panel to collapse to collapsedSize when dragged past minSize. Example: collapsible",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "collapsedSize",
+      "type": {
+        "kind": "primitive",
+        "name": "number"
+      },
+      "description": "Size the panel snaps to while collapsed. Example: collapsedSize={0}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "order",
+      "type": {
+        "kind": "primitive",
+        "name": "number"
+      },
+      "description": "Explicit panel order inside the group. Example: order={1}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "onCollapse",
+      "type": {
+        "kind": "function",
+        "signature": "() => void"
+      },
+      "description": "Called when a collapsible panel collapses. Example: onCollapse={() => setOpen(false)}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "onExpand",
+      "type": {
+        "kind": "function",
+        "signature": "() => void"
+      },
+      "description": "Called when a collapsible panel expands again. Example: onExpand={() => setOpen(true)}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "onResize",
+      "type": {
+        "kind": "function",
+        "signature": "(size: number) => void"
+      },
+      "description": "Called while the panel is dragged, with the new percentage. Example: onResize={(size) => save(size)}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "onLayout",
+      "type": {
+        "kind": "function",
+        "signature": "(sizes: number[]) => void"
+      },
+      "description": "Called with every panel size whenever the group layout changes. Example: onLayout={(sizes) => persist(sizes)}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "autoSaveId",
+      "type": {
+        "kind": "custom",
+        "name": "string | null"
+      },
+      "description": "Persist the group layout in localStorage under this key. Example: autoSaveId=\"editor-layout\"",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "keyboardResizeBy",
+      "type": {
+        "kind": "custom",
+        "name": "number | null"
+      },
+      "description": "Percentage a handle moves per arrow-key press. Example: keyboardResizeBy={10}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "withHandle",
+      "type": {
+        "kind": "primitive",
+        "name": "boolean"
+      },
+      "default": false,
+      "description": "Render a visible grip on the drag handle; the user drags it to resize. Example: <ResizableHandle withHandle />",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "disabled",
+      "type": {
+        "kind": "primitive",
+        "name": "boolean"
+      },
+      "default": false,
+      "description": "Prevent the handle from being dragged or focused. Example: <ResizableHandle disabled />",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "hitAreaMargins",
+      "type": {
+        "kind": "custom",
+        "name": "PointerHitAreaMargins"
+      },
+      "description": "Extra pointer tolerance around a handle so it is easier to grab. Example: hitAreaMargins={{ coarse: 15, fine: 5 }}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "onDragging",
+      "type": {
+        "kind": "function",
+        "signature": "(isDragging: boolean) => void"
+      },
+      "description": "Called when a drag on the handle starts and ends. Example: onDragging={setDragging}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "className",
+      "type": {
+        "kind": "primitive",
+        "name": "string"
+      },
+      "description": "CSS class names for the group, panel or handle. Example: className=\"rounded-md border\"",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "children",
+      "type": {
+        "kind": "custom",
+        "name": "ReactNode"
+      },
+      "description": "Required. ResizablePanel and ResizableHandle children of the group. Example: <ResizablePanel />",
+      "frameworks": [
+        "react"
+      ]
+    }
+  ],
   "children": [],
   "frameworks": {
     "react": {
@@ -26,7 +249,173 @@
       "devDependencies": [],
       "peerDependencies": [],
       "registryDependencies": [],
-      "props": [],
+      "props": [
+        {
+          "name": "direction",
+          "type": {
+            "kind": "union",
+            "values": [
+              {
+                "kind": "literal",
+                "value": "horizontal"
+              },
+              {
+                "kind": "literal",
+                "value": "vertical"
+              }
+            ]
+          },
+          "default": "horizontal",
+          "description": "Required. Split axis of the panel group; vertical stacks the panels. Example: direction=\"horizontal\""
+        },
+        {
+          "name": "defaultSize",
+          "type": {
+            "kind": "primitive",
+            "name": "number"
+          },
+          "description": "Initial size of a panel as a percentage of the group. Example: defaultSize={30}"
+        },
+        {
+          "name": "minSize",
+          "type": {
+            "kind": "primitive",
+            "name": "number"
+          },
+          "description": "Smallest size a panel can be dragged to, as a percentage. Example: minSize={15}"
+        },
+        {
+          "name": "maxSize",
+          "type": {
+            "kind": "primitive",
+            "name": "number"
+          },
+          "description": "Largest size a panel can be dragged to, as a percentage. Example: maxSize={70}"
+        },
+        {
+          "name": "collapsible",
+          "type": {
+            "kind": "primitive",
+            "name": "boolean"
+          },
+          "default": false,
+          "description": "Allow the panel to collapse to collapsedSize when dragged past minSize. Example: collapsible"
+        },
+        {
+          "name": "collapsedSize",
+          "type": {
+            "kind": "primitive",
+            "name": "number"
+          },
+          "description": "Size the panel snaps to while collapsed. Example: collapsedSize={0}"
+        },
+        {
+          "name": "order",
+          "type": {
+            "kind": "primitive",
+            "name": "number"
+          },
+          "description": "Explicit panel order inside the group. Example: order={1}"
+        },
+        {
+          "name": "onCollapse",
+          "type": {
+            "kind": "function",
+            "signature": "() => void"
+          },
+          "description": "Called when a collapsible panel collapses. Example: onCollapse={() => setOpen(false)}"
+        },
+        {
+          "name": "onExpand",
+          "type": {
+            "kind": "function",
+            "signature": "() => void"
+          },
+          "description": "Called when a collapsible panel expands again. Example: onExpand={() => setOpen(true)}"
+        },
+        {
+          "name": "onResize",
+          "type": {
+            "kind": "function",
+            "signature": "(size: number) => void"
+          },
+          "description": "Called while the panel is dragged, with the new percentage. Example: onResize={(size) => save(size)}"
+        },
+        {
+          "name": "onLayout",
+          "type": {
+            "kind": "function",
+            "signature": "(sizes: number[]) => void"
+          },
+          "description": "Called with every panel size whenever the group layout changes. Example: onLayout={(sizes) => persist(sizes)}"
+        },
+        {
+          "name": "autoSaveId",
+          "type": {
+            "kind": "custom",
+            "name": "string | null"
+          },
+          "description": "Persist the group layout in localStorage under this key. Example: autoSaveId=\"editor-layout\""
+        },
+        {
+          "name": "keyboardResizeBy",
+          "type": {
+            "kind": "custom",
+            "name": "number | null"
+          },
+          "description": "Percentage a handle moves per arrow-key press. Example: keyboardResizeBy={10}"
+        },
+        {
+          "name": "withHandle",
+          "type": {
+            "kind": "primitive",
+            "name": "boolean"
+          },
+          "default": false,
+          "description": "Render a visible grip on the drag handle; the user drags it to resize. Example: <ResizableHandle withHandle />"
+        },
+        {
+          "name": "disabled",
+          "type": {
+            "kind": "primitive",
+            "name": "boolean"
+          },
+          "default": false,
+          "description": "Prevent the handle from being dragged or focused. Example: <ResizableHandle disabled />"
+        },
+        {
+          "name": "hitAreaMargins",
+          "type": {
+            "kind": "custom",
+            "name": "PointerHitAreaMargins"
+          },
+          "description": "Extra pointer tolerance around a handle so it is easier to grab. Example: hitAreaMargins={{ coarse: 15, fine: 5 }}"
+        },
+        {
+          "name": "onDragging",
+          "type": {
+            "kind": "function",
+            "signature": "(isDragging: boolean) => void"
+          },
+          "description": "Called when a drag on the handle starts and ends. Example: onDragging={setDragging}"
+        },
+        {
+          "name": "className",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "description": "CSS class names for the group, panel or handle. Example: className=\"rounded-md border\""
+        },
+        {
+          "name": "children",
+          "type": {
+            "kind": "custom",
+            "name": "ReactNode"
+          },
+          "description": "Required. ResizablePanel and ResizableHandle children of the group. Example: <ResizablePanel />"
+        }
+      ],
       "entry": "index.ts"
     },
     "vue": {

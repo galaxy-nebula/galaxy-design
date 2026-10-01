@@ -4,7 +4,7 @@
   "name": "spinner",
   "category": "other",
   "status": "complete",
-  "description": "spinner",
+  "description": "Animated indicator shown while a request is in flight and no content is available yet.",
   "props": [
     {
       "name": "size",

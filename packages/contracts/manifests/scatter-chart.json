@@ -4,7 +4,7 @@
   "name": "scatter-chart",
   "category": "other",
   "status": "complete",
-  "description": "scatter-chart",
+  "description": "Chart that plots individual points on two axes to reveal correlation, clusters and outliers.",
   "props": [
     {
       "name": "data",

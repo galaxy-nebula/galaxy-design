@@ -4,7 +4,7 @@
   "name": "date-time-picker",
   "category": "other",
   "status": "complete",
-  "description": "date-time-picker",
+  "description": "Timestamp field that pairs a month grid with hour and minute lists so a date and time are chosen in one flow.",
   "props": [
     {
       "name": "dateTime",

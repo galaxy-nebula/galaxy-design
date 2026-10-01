@@ -4,7 +4,7 @@
  */
 
 import { createHash } from 'node:crypto';
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, readdirSync, statSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { execSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
@@ -12,6 +12,7 @@ import { fileURLToPath } from 'node:url';
 const contractsRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const repoRoot = resolve(contractsRoot, '..', '..');
 const generatedRoot = join(contractsRoot, 'generated');
+const manifestsRoot = join(contractsRoot, 'manifests');
 
 function sha256(content) {
   return createHash('sha256').update(content, 'utf-8').digest('hex');
@@ -68,6 +69,22 @@ const assistantRoots = {
 const BLOCK_CATEGORY = new Set(['blocks', 'mobile-blocks', 'block', 'assistant']);
 
 const sources = {};
+const skippedFiles = [];
+
+function bundleFile(framework, componentId, root, dirName, file) {
+  const abs = join(root, dirName, file);
+  if (!existsSync(abs)) {
+    skippedFiles.push(`${framework}/${componentId}/${file}`);
+    return;
+  }
+  const content = readFileSync(abs, 'utf-8');
+  const key = `${framework}/${componentId}/${file}`;
+  sources[key] = { checksum: sha256(content), size: Buffer.byteLength(content, 'utf-8') };
+  const outPath = join(versionDir, 'sources', framework, componentId, file);
+  mkdirSync(dirname(outPath), { recursive: true });
+  writeFileSync(outPath, content);
+}
+
 for (const framework of ['react', 'vue', 'angular', 'react-native', 'flutter']) {
   const registry = JSON.parse(readFileSync(join(generatedRoot, `registry-${framework}.json`), 'utf-8'));
   for (const [componentId, component] of Object.entries(registry.components)) {
@@ -78,19 +95,38 @@ for (const framework of ['react', 'vue', 'angular', 'react-native', 'flutter']) 
       : isBlock
         ? join(repoRoot, blockRoots[framework])
         : join(repoRoot, sourceRoots[framework]);
-    const componentDirName = isBlock ? componentId.replace(/-block$/, '') : componentId;
+    // Blocks keep the `-block` suffix in their directory name (src/blocks/pricing-block), while the
+    // assistant sources drop the `assistant-` id prefix (src/assistant/agent-activity). Stripping
+    // `-block` from every block id silently skipped every block source.
+    const componentDirName = isAssistant
+      ? componentId.replace(/^assistant-/, '')
+      : componentId;
     if (!Array.isArray(component.files) || component.files.length === 0) continue;
     for (const file of component.files) {
-      const abs = join(root, componentDirName, file);
-      if (!existsSync(abs)) continue;
-      const content = readFileSync(abs, 'utf-8');
-      const key = `${framework}/${componentId}/${file}`;
-      sources[key] = { checksum: sha256(content), size: Buffer.byteLength(content, 'utf-8') };
-      const outPath = join(versionDir, 'sources', framework, componentId, file);
-      mkdirSync(dirname(outPath), { recursive: true });
-      writeFileSync(outPath, content);
+      bundleFile(framework, componentId, root, componentDirName, file);
     }
   }
+}
+
+// Assistant panels are not part of the CLI registry yet, so no registry entry lists their files.
+// Sweep the source trees and attach them to the `assistant-<dir>` manifests instead of dropping them.
+for (const framework of ['react', 'vue', 'angular', 'react-native', 'flutter']) {
+  const root = join(repoRoot, assistantRoots[framework]);
+  if (!existsSync(root)) continue;
+  for (const dirName of readdirSync(root)) {
+    const componentId = `assistant-${dirName}`;
+    if (!existsSync(join(manifestsRoot, `${componentId}.json`))) continue;
+    const abs = join(root, dirName);
+    for (const file of readdirSync(abs)) {
+      if (!statSync(join(abs, file)).isFile()) continue;
+      bundleFile(framework, componentId, root, dirName, file);
+    }
+  }
+}
+
+if (skippedFiles.length > 0) {
+  console.error(`WARNING: ${skippedFiles.length} declared source file(s) were not found on disk:`);
+  for (const file of skippedFiles.slice(0, 20)) console.error(`  ${file}`);
 }
 
 const checksumList = Object.entries(files).map(([f, m]) => `${f} ${m.checksum}`).sort().join('\n');

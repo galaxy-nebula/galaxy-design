@@ -5,7 +5,107 @@
   "category": "data-display",
   "status": "complete",
   "description": "Toolbar component with section grouping and separators for grouped actions.",
-  "props": [],
+  "props": [
+    {
+      "name": "orientation",
+      "type": {
+        "kind": "union",
+        "values": [
+          {
+            "kind": "literal",
+            "value": "horizontal"
+          },
+          {
+            "kind": "literal",
+            "value": "vertical"
+          }
+        ]
+      },
+      "default": "horizontal",
+      "description": "Toolbar orientation. Example: <Toolbar orientation=\"vertical\">",
+      "frameworks": [
+        "react",
+        "vue"
+      ]
+    },
+    {
+      "name": "dir",
+      "type": {
+        "kind": "union",
+        "values": [
+          {
+            "kind": "literal",
+            "value": "ltr"
+          },
+          {
+            "kind": "literal",
+            "value": "rtl"
+          }
+        ]
+      },
+      "default": "ltr",
+      "description": "Reading direction for roving focus. Example: <Toolbar dir=\"rtl\">",
+      "frameworks": [
+        "react",
+        "vue"
+      ]
+    },
+    {
+      "name": "loop",
+      "type": {
+        "kind": "primitive",
+        "name": "boolean"
+      },
+      "default": true,
+      "description": "Loop keyboard focus from last item to first. Example: <Toolbar loop={false}>",
+      "frameworks": [
+        "react",
+        "vue"
+      ]
+    },
+    {
+      "name": "class",
+      "type": {
+        "kind": "primitive",
+        "name": "string"
+      },
+      "default": "",
+      "description": "CSS class names for the toolbar root. Example: <Toolbar class=\"border rounded-md\">",
+      "frameworks": [
+        "vue",
+        "angular",
+        "react"
+      ],
+      "overrides": {
+        "react": {
+          "name": "className"
+        }
+      }
+    },
+    {
+      "name": "children",
+      "type": {
+        "kind": "custom",
+        "name": "ReactNode"
+      },
+      "description": "Toolbar content. Example: <Toolbar><ToolbarButton>Bold</ToolbarButton></Toolbar>",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "as",
+      "type": {
+        "kind": "custom",
+        "name": "AsTag | Component"
+      },
+      "default": "div",
+      "description": "Element or component to render. Example: <Toolbar as=\"nav\">",
+      "frameworks": [
+        "vue"
+      ]
+    }
+  ],
   "children": [],
   "frameworks": {
     "react": {
@@ -43,7 +143,7 @@
             ]
           },
           "default": "horizontal",
-          "description": "Toolbar orientation."
+          "description": "Toolbar orientation. Example: <Toolbar orientation=\"vertical\">"
         },
         {
           "name": "dir",
@@ -61,7 +161,7 @@
             ]
           },
           "default": "ltr",
-          "description": "Reading direction for roving focus."
+          "description": "Reading direction for roving focus. Example: <Toolbar dir=\"rtl\">"
         },
         {
           "name": "loop",
@@ -70,7 +170,7 @@
             "name": "boolean"
           },
           "default": true,
-          "description": "Loop keyboard focus from last item to first."
+          "description": "Loop keyboard focus from last item to first. Example: <Toolbar loop={false}>"
         },
         {
           "name": "className",
@@ -79,7 +179,7 @@
             "name": "string"
           },
           "default": "",
-          "description": "CSS class names for the toolbar root."
+          "description": "CSS class names for the toolbar root. Example: <Toolbar className=\"border rounded-md\">"
         },
         {
           "name": "children",
@@ -87,7 +187,7 @@
             "kind": "custom",
             "name": "ReactNode"
           },
-          "description": "Toolbar content."
+          "description": "Toolbar content. Example: <Toolbar><ToolbarButton>Bold</ToolbarButton></Toolbar>"
         }
       ]
     },
@@ -122,7 +222,7 @@
             ]
           },
           "default": "horizontal",
-          "description": "Toolbar orientation."
+          "description": "Toolbar orientation. Example: <Toolbar orientation=\"vertical\">"
         },
         {
           "name": "dir",
@@ -140,7 +240,7 @@
             ]
           },
           "default": "ltr",
-          "description": "Reading direction for roving focus."
+          "description": "Reading direction for roving focus. Example: <Toolbar dir=\"rtl\">"
         },
         {
           "name": "loop",
@@ -149,7 +249,7 @@
             "name": "boolean"
           },
           "default": true,
-          "description": "Loop keyboard focus from last item to first."
+          "description": "Loop keyboard focus from last item to first. Example: <Toolbar loop={false}>"
         },
         {
           "name": "as",
@@ -158,7 +258,7 @@
             "name": "AsTag | Component"
           },
           "default": "div",
-          "description": "Element or component to render."
+          "description": "Element or component to render. Example: <Toolbar as=\"nav\">"
         },
         {
           "name": "class",
@@ -167,7 +267,7 @@
             "name": "string"
           },
           "default": "",
-          "description": "CSS class names for the toolbar root."
+          "description": "CSS class names for the toolbar root. Example: <Toolbar class=\"border rounded-md\">"
         }
       ]
     },
@@ -191,7 +291,7 @@
             "name": "string"
           },
           "default": "",
-          "description": "CSS class names for the toolbar root."
+          "description": "CSS class names for the toolbar root. Example: <Toolbar class=\"border rounded-md\">"
         }
       ]
     },

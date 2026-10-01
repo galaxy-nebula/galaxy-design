@@ -4,7 +4,7 @@
   "name": "collapsible",
   "category": "other",
   "status": "complete",
-  "description": "collapsible",
+  "description": "Single section that the user can expand or collapse to hide secondary content on demand.",
   "props": [
     {
       "name": "open",

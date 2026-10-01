@@ -5,7 +5,166 @@
   "category": "feedback",
   "status": "complete",
   "description": "Brief, auto-dismissing notification surfaced at the edge of the screen.",
-  "props": [],
+  "props": [
+    {
+      "name": "theme",
+      "type": {
+        "kind": "union",
+        "values": [
+          {
+            "kind": "literal",
+            "value": "light"
+          },
+          {
+            "kind": "literal",
+            "value": "dark"
+          },
+          {
+            "kind": "literal",
+            "value": "system"
+          }
+        ]
+      },
+      "default": "light",
+      "description": "Visual theme for the toaster. Example: <Toaster theme=\"dark\" />",
+      "frameworks": [
+        "react",
+        "vue",
+        "angular"
+      ]
+    },
+    {
+      "name": "position",
+      "type": {
+        "kind": "union",
+        "values": [
+          {
+            "kind": "literal",
+            "value": "top-left"
+          },
+          {
+            "kind": "literal",
+            "value": "top-center"
+          },
+          {
+            "kind": "literal",
+            "value": "top-right"
+          },
+          {
+            "kind": "literal",
+            "value": "bottom-left"
+          },
+          {
+            "kind": "literal",
+            "value": "bottom-center"
+          },
+          {
+            "kind": "literal",
+            "value": "bottom-right"
+          }
+        ]
+      },
+      "description": "Screen position for toast notifications. Example: <Toaster position=\"top-right\" />",
+      "frameworks": [
+        "react",
+        "vue"
+      ]
+    },
+    {
+      "name": "expand",
+      "type": {
+        "kind": "primitive",
+        "name": "boolean"
+      },
+      "description": "Whether stacked toasts can expand to show full content. Example: <Toaster expand />",
+      "frameworks": [
+        "react",
+        "vue"
+      ]
+    },
+    {
+      "name": "richColors",
+      "type": {
+        "kind": "primitive",
+        "name": "boolean"
+      },
+      "description": "Enable richer semantic color styling. Example: <Toaster richColors />",
+      "frameworks": [
+        "react",
+        "vue"
+      ]
+    },
+    {
+      "name": "closeButton",
+      "type": {
+        "kind": "primitive",
+        "name": "boolean"
+      },
+      "description": "Show a close button on each toast. Example: <Toaster closeButton />",
+      "frameworks": [
+        "react",
+        "vue"
+      ]
+    },
+    {
+      "name": "duration",
+      "type": {
+        "kind": "primitive",
+        "name": "number"
+      },
+      "description": "Default duration in milliseconds. Example: <Toaster duration={6000} />",
+      "frameworks": [
+        "react",
+        "vue"
+      ]
+    },
+    {
+      "name": "visibleToasts",
+      "type": {
+        "kind": "primitive",
+        "name": "number"
+      },
+      "description": "Maximum number of visible toasts. Example: <Toaster visibleToasts={3} />",
+      "frameworks": [
+        "react",
+        "vue"
+      ]
+    },
+    {
+      "name": "offset",
+      "type": {
+        "kind": "custom",
+        "name": "string | number"
+      },
+      "description": "Offset from the viewport edge. Example: <Toaster offset=\"24px\" />",
+      "frameworks": [
+        "react",
+        "vue"
+      ]
+    },
+    {
+      "name": "dir",
+      "type": {
+        "kind": "union",
+        "values": [
+          {
+            "kind": "literal",
+            "value": "ltr"
+          },
+          {
+            "kind": "literal",
+            "value": "rtl"
+          }
+        ]
+      },
+      "default": "ltr",
+      "description": "Reading direction. Example: <Toaster dir=\"rtl\" />",
+      "frameworks": [
+        "react",
+        "vue"
+      ]
+    }
+  ],
   "children": [],
   "frameworks": {
     "react": {
@@ -45,7 +204,7 @@
             ]
           },
           "default": "light",
-          "description": "Visual theme for the toaster."
+          "description": "Visual theme for the toaster. Example: <Toaster theme=\"dark\" />"
         },
         {
           "name": "position",
@@ -78,7 +237,7 @@
               }
             ]
           },
-          "description": "Screen position for toast notifications."
+          "description": "Screen position for toast notifications. Example: <Toaster position=\"top-right\" />"
         },
         {
           "name": "expand",
@@ -86,7 +245,7 @@
             "kind": "primitive",
             "name": "boolean"
           },
-          "description": "Whether stacked toasts can expand to show full content."
+          "description": "Whether stacked toasts can expand to show full content. Example: <Toaster expand />"
         },
         {
           "name": "richColors",
@@ -94,7 +253,7 @@
             "kind": "primitive",
             "name": "boolean"
           },
-          "description": "Enable richer semantic color styling."
+          "description": "Enable richer semantic color styling. Example: <Toaster richColors />"
         },
         {
           "name": "closeButton",
@@ -102,7 +261,7 @@
             "kind": "primitive",
             "name": "boolean"
           },
-          "description": "Show a close button on each toast."
+          "description": "Show a close button on each toast. Example: <Toaster closeButton />"
         },
         {
           "name": "duration",
@@ -110,7 +269,7 @@
             "kind": "primitive",
             "name": "number"
           },
-          "description": "Default duration in milliseconds."
+          "description": "Default duration in milliseconds. Example: <Toaster duration={6000} />"
         },
         {
           "name": "visibleToasts",
@@ -118,7 +277,7 @@
             "kind": "primitive",
             "name": "number"
           },
-          "description": "Maximum number of visible toasts."
+          "description": "Maximum number of visible toasts. Example: <Toaster visibleToasts={3} />"
         },
         {
           "name": "offset",
@@ -126,7 +285,7 @@
             "kind": "custom",
             "name": "string | number"
           },
-          "description": "Offset from the viewport edge."
+          "description": "Offset from the viewport edge. Example: <Toaster offset=\"24px\" />"
         },
         {
           "name": "dir",
@@ -144,7 +303,7 @@
             ]
           },
           "default": "ltr",
-          "description": "Reading direction."
+          "description": "Reading direction. Example: <Toaster dir=\"rtl\" />"
         }
       ]
     },
@@ -184,7 +343,7 @@
             ]
           },
           "default": "light",
-          "description": "Visual theme for the toaster."
+          "description": "Visual theme for the toaster. Example: <Toaster theme=\"dark\" />"
         },
         {
           "name": "position",
@@ -217,7 +376,7 @@
               }
             ]
           },
-          "description": "Screen position for toast notifications."
+          "description": "Screen position for toast notifications. Example: <Toaster position=\"top-right\" />"
         },
         {
           "name": "expand",
@@ -225,7 +384,7 @@
             "kind": "primitive",
             "name": "boolean"
           },
-          "description": "Whether stacked toasts can expand to show full content."
+          "description": "Whether stacked toasts can expand to show full content. Example: <Toaster expand />"
         },
         {
           "name": "richColors",
@@ -233,7 +392,7 @@
             "kind": "primitive",
             "name": "boolean"
           },
-          "description": "Enable richer semantic color styling."
+          "description": "Enable richer semantic color styling. Example: <Toaster richColors />"
         },
         {
           "name": "closeButton",
@@ -241,7 +400,7 @@
             "kind": "primitive",
             "name": "boolean"
           },
-          "description": "Show a close button on each toast."
+          "description": "Show a close button on each toast. Example: <Toaster closeButton />"
         },
         {
           "name": "duration",
@@ -249,7 +408,7 @@
             "kind": "primitive",
             "name": "number"
           },
-          "description": "Default duration in milliseconds."
+          "description": "Default duration in milliseconds. Example: <Toaster duration={6000} />"
         },
         {
           "name": "visibleToasts",
@@ -257,7 +416,7 @@
             "kind": "primitive",
             "name": "number"
           },
-          "description": "Maximum number of visible toasts."
+          "description": "Maximum number of visible toasts. Example: <Toaster visibleToasts={3} />"
         },
         {
           "name": "offset",
@@ -265,7 +424,7 @@
             "kind": "custom",
             "name": "string | number"
           },
-          "description": "Offset from the viewport edge."
+          "description": "Offset from the viewport edge. Example: <Toaster offset=\"24px\" />"
         },
         {
           "name": "dir",
@@ -283,7 +442,7 @@
             ]
           },
           "default": "ltr",
-          "description": "Reading direction."
+          "description": "Reading direction. Example: <Toaster dir=\"rtl\" />"
         }
       ]
     },
@@ -324,7 +483,7 @@
             ]
           },
           "default": "light",
-          "description": "Visual theme for the toaster."
+          "description": "Visual theme for the toaster. Example: <Toaster theme=\"dark\" />"
         }
       ]
     },

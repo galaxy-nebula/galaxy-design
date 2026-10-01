@@ -4,7 +4,7 @@
   "name": "typography",
   "category": "other",
   "status": "complete",
-  "description": "typography",
+  "description": "Text primitive that applies heading, paragraph, list or code styles consistently across a page.",
   "props": [
     {
       "name": "variant",

@@ -5,7 +5,94 @@
   "category": "data-display",
   "status": "complete",
   "description": "Sortable, filterable, paginated data table.",
-  "props": [],
+  "props": [
+    {
+      "name": "columns",
+      "type": {
+        "kind": "array",
+        "of": {
+          "kind": "custom",
+          "name": "DataTableColumn<T>"
+        }
+      },
+      "description": "Required. Column definitions: key, header, optional sortable flag, className and a cell renderer. Example: columns={[{ key: \"email\", header: \"Email\", sortable: true }]}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "data",
+      "type": {
+        "kind": "array",
+        "of": {
+          "kind": "custom",
+          "name": "T"
+        }
+      },
+      "description": "Required. Rows rendered by the table; each column key is read from every row. Example: data={users}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "searchable",
+      "type": {
+        "kind": "primitive",
+        "name": "boolean"
+      },
+      "default": true,
+      "description": "Render the search box that filters rows across all columns. Example: searchable={false}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "pageSize",
+      "type": {
+        "kind": "primitive",
+        "name": "number"
+      },
+      "default": 10,
+      "description": "Rows per page before the previous/next footer appears. Example: pageSize={25}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "emptyText",
+      "type": {
+        "kind": "primitive",
+        "name": "string"
+      },
+      "default": "No results.",
+      "description": "Message shown in place of rows when no row matches the filter. Example: emptyText=\"No users yet.\"",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "onRowClick",
+      "type": {
+        "kind": "function",
+        "signature": "(row: T) => void"
+      },
+      "description": "Called with the clicked row, which also makes rows show a pointer cursor. Example: onRowClick={(row) => open(row.id)}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "className",
+      "type": {
+        "kind": "primitive",
+        "name": "string"
+      },
+      "description": "CSS class names for the table wrapper. Example: className=\"mt-4\"",
+      "frameworks": [
+        "react"
+      ]
+    }
+  ],
   "children": [],
   "frameworks": {
     "react": {
@@ -20,7 +107,73 @@
         "DataTable"
       ],
       "dependencies": [],
-      "props": []
+      "props": [
+        {
+          "name": "columns",
+          "type": {
+            "kind": "array",
+            "of": {
+              "kind": "custom",
+              "name": "DataTableColumn<T>"
+            }
+          },
+          "description": "Required. Column definitions: key, header, optional sortable flag, className and a cell renderer. Example: columns={[{ key: \"email\", header: \"Email\", sortable: true }]}"
+        },
+        {
+          "name": "data",
+          "type": {
+            "kind": "array",
+            "of": {
+              "kind": "custom",
+              "name": "T"
+            }
+          },
+          "description": "Required. Rows rendered by the table; each column key is read from every row. Example: data={users}"
+        },
+        {
+          "name": "searchable",
+          "type": {
+            "kind": "primitive",
+            "name": "boolean"
+          },
+          "default": true,
+          "description": "Render the search box that filters rows across all columns. Example: searchable={false}"
+        },
+        {
+          "name": "pageSize",
+          "type": {
+            "kind": "primitive",
+            "name": "number"
+          },
+          "default": 10,
+          "description": "Rows per page before the previous/next footer appears. Example: pageSize={25}"
+        },
+        {
+          "name": "emptyText",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "default": "No results.",
+          "description": "Message shown in place of rows when no row matches the filter. Example: emptyText=\"No users yet.\""
+        },
+        {
+          "name": "onRowClick",
+          "type": {
+            "kind": "function",
+            "signature": "(row: T) => void"
+          },
+          "description": "Called with the clicked row, which also makes rows show a pointer cursor. Example: onRowClick={(row) => open(row.id)}"
+        },
+        {
+          "name": "className",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "description": "CSS class names for the table wrapper. Example: className=\"mt-4\""
+        }
+      ]
     },
     "vue": {
       "status": "complete",

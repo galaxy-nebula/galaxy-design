@@ -4,7 +4,7 @@
   "name": "popover",
   "category": "other",
   "status": "complete",
-  "description": "popover",
+  "description": "Floating panel anchored to a trigger that holds rich content such as forms, filters or menus.",
   "props": [
     {
       "name": "open",

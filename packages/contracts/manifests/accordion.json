@@ -4,7 +4,7 @@
   "name": "accordion",
   "category": "other",
   "status": "complete",
-  "description": "accordion",
+  "description": "Vertically stacked headings that expand one at a time to reveal sections of content in long forms or FAQs.",
   "props": [
     {
       "name": "type",

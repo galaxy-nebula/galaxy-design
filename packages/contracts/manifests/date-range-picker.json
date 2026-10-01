@@ -4,7 +4,7 @@
   "name": "date-range-picker",
   "category": "other",
   "status": "complete",
-  "description": "date-range-picker",
+  "description": "Input-like trigger that opens a dual-month grid to pick the start and end of a range.",
   "props": [
     {
       "name": "dateRange",

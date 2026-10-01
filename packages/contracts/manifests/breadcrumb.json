@@ -4,7 +4,7 @@
   "name": "breadcrumb",
   "category": "other",
   "status": "complete",
-  "description": "breadcrumb",
+  "description": "Trail of links that shows the path to the current page and lets the user step back to a parent level.",
   "props": [
     {
       "name": "separator",

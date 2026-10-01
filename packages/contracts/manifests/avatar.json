@@ -4,7 +4,7 @@
   "name": "avatar",
   "category": "other",
   "status": "complete",
-  "description": "avatar",
+  "description": "Circular user image that falls back to initials or an icon when the picture is missing.",
   "props": [
     {
       "name": "asChild",

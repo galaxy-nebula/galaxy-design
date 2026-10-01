@@ -4,7 +4,7 @@
   "name": "card",
   "category": "other",
   "status": "complete",
-  "description": "card",
+  "description": "Bordered surface that groups related content such as a title, description, media and actions.",
   "props": [
     {
       "name": "className",

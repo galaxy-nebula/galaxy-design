@@ -4,7 +4,7 @@
   "name": "badge",
   "category": "other",
   "status": "complete",
-  "description": "badge",
+  "description": "Small status label that marks an item with a count, category or state beside a title or inside a list.",
   "props": [
     {
       "name": "variant",

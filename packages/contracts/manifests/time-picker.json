@@ -5,7 +5,111 @@
   "category": "form",
   "status": "complete",
   "description": "Hour/minute selection with 12h/24h format.",
-  "props": [],
+  "props": [
+    {
+      "name": "time",
+      "type": {
+        "kind": "primitive",
+        "name": "string"
+      },
+      "description": "Controlled time as \"HH:mm\" (24h) or \"hh:mm AM/PM\" (12h). Example: time=\"14:30\"",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "onTimeChange",
+      "type": {
+        "kind": "function",
+        "signature": "(time: string | undefined) => void"
+      },
+      "description": "Called with the formatted time, or undefined when a field is cleared. Example: onTimeChange={setTime}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "placeholder",
+      "type": {
+        "kind": "primitive",
+        "name": "string"
+      },
+      "default": "Pick a time",
+      "description": "Text shown on the trigger before a time is chosen. Example: placeholder=\"Select time\"",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "format",
+      "type": {
+        "kind": "union",
+        "values": [
+          {
+            "kind": "literal",
+            "value": "12h"
+          },
+          {
+            "kind": "literal",
+            "value": "24h"
+          }
+        ]
+      },
+      "default": "24h",
+      "description": "Hour list and output format of the picker. Example: format=\"12h\"",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "align",
+      "type": {
+        "kind": "union",
+        "values": [
+          {
+            "kind": "literal",
+            "value": "start"
+          },
+          {
+            "kind": "literal",
+            "value": "center"
+          },
+          {
+            "kind": "literal",
+            "value": "end"
+          }
+        ]
+      },
+      "default": "start",
+      "description": "Alignment of the popover relative to the trigger. Example: align=\"end\"",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "disabled",
+      "type": {
+        "kind": "primitive",
+        "name": "boolean"
+      },
+      "default": false,
+      "description": "Disable the trigger button. Example: disabled",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "className",
+      "type": {
+        "kind": "primitive",
+        "name": "string"
+      },
+      "description": "CSS class names for the trigger button. Example: className=\"w-full\"",
+      "frameworks": [
+        "react"
+      ]
+    }
+  ],
   "children": [],
   "frameworks": {
     "react": {
@@ -21,7 +125,90 @@
       "dependencies": [
         "lucide-react"
       ],
-      "props": []
+      "props": [
+        {
+          "name": "time",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "description": "Controlled time as \"HH:mm\" (24h) or \"hh:mm AM/PM\" (12h). Example: time=\"14:30\""
+        },
+        {
+          "name": "onTimeChange",
+          "type": {
+            "kind": "function",
+            "signature": "(time: string | undefined) => void"
+          },
+          "description": "Called with the formatted time, or undefined when a field is cleared. Example: onTimeChange={setTime}"
+        },
+        {
+          "name": "placeholder",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "default": "Pick a time",
+          "description": "Text shown on the trigger before a time is chosen. Example: placeholder=\"Select time\""
+        },
+        {
+          "name": "format",
+          "type": {
+            "kind": "union",
+            "values": [
+              {
+                "kind": "literal",
+                "value": "12h"
+              },
+              {
+                "kind": "literal",
+                "value": "24h"
+              }
+            ]
+          },
+          "default": "24h",
+          "description": "Hour list and output format of the picker. Example: format=\"12h\""
+        },
+        {
+          "name": "align",
+          "type": {
+            "kind": "union",
+            "values": [
+              {
+                "kind": "literal",
+                "value": "start"
+              },
+              {
+                "kind": "literal",
+                "value": "center"
+              },
+              {
+                "kind": "literal",
+                "value": "end"
+              }
+            ]
+          },
+          "default": "start",
+          "description": "Alignment of the popover relative to the trigger. Example: align=\"end\""
+        },
+        {
+          "name": "disabled",
+          "type": {
+            "kind": "primitive",
+            "name": "boolean"
+          },
+          "default": false,
+          "description": "Disable the trigger button. Example: disabled"
+        },
+        {
+          "name": "className",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "description": "CSS class names for the trigger button. Example: className=\"w-full\""
+        }
+      ]
     },
     "vue": {
       "status": "complete",

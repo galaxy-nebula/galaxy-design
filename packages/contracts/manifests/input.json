@@ -4,7 +4,7 @@
   "name": "input",
   "category": "other",
   "status": "complete",
-  "description": "input",
+  "description": "Single-line text field for short free-form values such as names, emails and search terms.",
   "props": [
     {
       "name": "type",

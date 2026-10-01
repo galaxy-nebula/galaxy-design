@@ -4,7 +4,7 @@
   "name": "pagination",
   "category": "other",
   "status": "complete",
-  "description": "pagination",
+  "description": "Page controls with previous, next and numbered pages for long lists and tables.",
   "props": [
     {
       "name": "currentPage",

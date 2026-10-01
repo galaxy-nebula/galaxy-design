@@ -10,7 +10,7 @@
       "name": "accordion",
       "type": "other",
       "status": "complete",
-      "description": "accordion",
+      "description": "Vertically stacked headings that expand one at a time to reveal sections of content in long forms or FAQs.",
       "files": [
         "Accordion.tsx",
         "index.ts"
@@ -177,7 +177,7 @@
       "name": "alert-dialog",
       "type": "other",
       "status": "complete",
-      "description": "alert-dialog",
+      "description": "Blocking modal that interrupts the user to confirm an irreversible action such as a delete before it happens.",
       "files": [
         "AlertDialog.tsx",
         "index.ts"
@@ -243,7 +243,7 @@
       "name": "alert",
       "type": "other",
       "status": "complete",
-      "description": "alert",
+      "description": "Inline callout that draws attention to an important message or a destructive warning inside a page.",
       "files": [
         "Alert.tsx",
         "index.ts"
@@ -305,7 +305,7 @@
       "name": "area-chart",
       "type": "other",
       "status": "complete",
-      "description": "area-chart",
+      "description": "Filled line chart that shows how one or more series accumulate over time.",
       "files": [
         "AreaChart.tsx",
         "types.ts",
@@ -538,7 +538,7 @@
       "name": "aspect-ratio",
       "type": "other",
       "status": "complete",
-      "description": "aspect-ratio",
+      "description": "Wrapper that keeps media or any other child at a fixed width-to-height ratio while the layout resizes.",
       "files": [
         "AspectRatio.tsx",
         "index.ts"
@@ -584,12 +584,390 @@
       ],
       "manifestStatus": "complete"
     },
+    "agent-activity": {
+      "id": "agent-activity",
+      "name": "Agent Activity",
+      "type": "assistant",
+      "status": "complete",
+      "description": "Codex-style agent progress panel with task checklist, status badges, progress bar, and timestamped tool call log.",
+      "files": [
+        "AgentActivity.tsx",
+        "AgentTaskItem.tsx",
+        "ToolCallLog.tsx",
+        "types.ts",
+        "index.ts"
+      ],
+      "entry": "index.ts",
+      "exports": [
+        "AgentActivity",
+        "AgentTaskItem",
+        "ToolCallLog"
+      ],
+      "dependencies": [],
+      "devDependencies": [],
+      "peerDependencies": [],
+      "registryDependencies": [],
+      "category": "assistant",
+      "props": [
+        {
+          "name": "tasks",
+          "type": {
+            "kind": "array",
+            "of": {
+              "kind": "custom",
+              "name": "AgentTask[]"
+            }
+          },
+          "description": "Required. Checklist entries with id, label, status (pending, running, completed, error) and optional detail. Example: tasks={[{ id: \"1\", label: \"Read files\", status: \"completed\" }]}"
+        },
+        {
+          "name": "agentName",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "default": "Agent",
+          "description": "Name shown in the panel header. Example: agentName=\"Codex\""
+        },
+        {
+          "name": "status",
+          "type": {
+            "kind": "union",
+            "values": [
+              {
+                "kind": "literal",
+                "value": "idle"
+              },
+              {
+                "kind": "literal",
+                "value": "thinking"
+              },
+              {
+                "kind": "literal",
+                "value": "working"
+              }
+            ]
+          },
+          "default": "idle",
+          "description": "Agent state rendered as a status badge and used for the header colour. Example: status=\"working\""
+        },
+        {
+          "name": "toolEvents",
+          "type": {
+            "kind": "array",
+            "of": {
+              "kind": "custom",
+              "name": "AgentToolEvent[]"
+            }
+          },
+          "description": "Timestamped tool call log rendered under the checklist. Example: toolEvents={[{ id: \"t1\", name: \"read_file\", summary: \"src/index.ts\" }]}"
+        },
+        {
+          "name": "elapsedLabel",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "description": "Elapsed time text shown on the right of the header. Example: elapsedLabel=\"1m 12s\""
+        },
+        {
+          "name": "className",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "description": "CSS class names for the panel. Example: className=\"max-w-lg\""
+        }
+      ],
+      "manifestStatus": "complete"
+    },
+    "chat-panel": {
+      "id": "chat-panel",
+      "name": "Chat Panel",
+      "type": "assistant",
+      "status": "complete",
+      "description": "Copilot-style assistant side panel with message list, tool call cards, model badge, and composer with send/stop states.",
+      "files": [
+        "ChatPanel.tsx",
+        "ChatMessage.tsx",
+        "ChatComposer.tsx",
+        "ToolCallCard.tsx",
+        "types.ts",
+        "index.ts"
+      ],
+      "entry": "index.ts",
+      "exports": [
+        "ChatPanel",
+        "ChatMessage",
+        "ChatComposer",
+        "ToolCallCard"
+      ],
+      "dependencies": [],
+      "devDependencies": [],
+      "peerDependencies": [],
+      "registryDependencies": [],
+      "category": "assistant",
+      "props": [
+        {
+          "name": "messages",
+          "type": {
+            "kind": "array",
+            "of": {
+              "kind": "custom",
+              "name": "AssistantChatMessage[]"
+            }
+          },
+          "description": "Required. Conversation turns with id, role, content and optional timestamp, toolCalls and streaming flag. Example: messages={[{ id: \"1\", role: \"user\", content: \"Hi\" }]}"
+        },
+        {
+          "name": "title",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "default": "Assistant",
+          "description": "Header label of the panel. Example: title=\"Copilot\""
+        },
+        {
+          "name": "model",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "description": "Model badge shown next to the title. Example: model=\"gpt-5\""
+        },
+        {
+          "name": "placeholder",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "description": "Placeholder text of the composer input. Example: placeholder=\"Ask anything\""
+        },
+        {
+          "name": "disabled",
+          "type": {
+            "kind": "primitive",
+            "name": "boolean"
+          },
+          "default": false,
+          "description": "Disable the composer while the panel is read-only. Example: disabled={!connected}"
+        },
+        {
+          "name": "onSendMessage",
+          "type": {
+            "kind": "function",
+            "signature": "(content: string) => void"
+          },
+          "description": "Called with the trimmed composer text when the user sends. Example: onSendMessage={(text) => send(text)}"
+        },
+        {
+          "name": "onStop",
+          "type": {
+            "kind": "function",
+            "signature": "() => void"
+          },
+          "description": "Called when the user stops a streaming answer. Example: onStop={abort}"
+        },
+        {
+          "name": "className",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "description": "CSS class names for the panel. Example: className=\"h-[600px]\""
+        }
+      ],
+      "manifestStatus": "complete"
+    },
+    "diff-review": {
+      "id": "diff-review",
+      "name": "Diff Review",
+      "type": "assistant",
+      "status": "complete",
+      "description": "AI code review panel with file-level accept/reject, per-file unified diff view, and summary stats for additions and deletions.",
+      "files": [
+        "DiffReview.tsx",
+        "FileDiffCard.tsx",
+        "types.ts",
+        "index.ts"
+      ],
+      "entry": "index.ts",
+      "exports": [
+        "DiffReview",
+        "FileDiffCard"
+      ],
+      "dependencies": [],
+      "devDependencies": [],
+      "peerDependencies": [],
+      "registryDependencies": [],
+      "category": "assistant",
+      "props": [
+        {
+          "name": "files",
+          "type": {
+            "kind": "array",
+            "of": {
+              "kind": "custom",
+              "name": "DiffFile[]"
+            }
+          },
+          "description": "Required. Changed files with path, additions, deletions, unified diff lines and a pending, accepted or rejected status. Example: files={[{ path: \"a.ts\", additions: 2, deletions: 1, lines: [], status: \"pending\" }]}"
+        },
+        {
+          "name": "onAccept",
+          "type": {
+            "kind": "function",
+            "signature": "(path: string) => void"
+          },
+          "description": "Called with the file path when one diff is accepted. Example: onAccept={(path) => accept(path)}"
+        },
+        {
+          "name": "onReject",
+          "type": {
+            "kind": "function",
+            "signature": "(path: string) => void"
+          },
+          "description": "Called with the file path when one diff is rejected. Example: onReject={(path) => reject(path)}"
+        },
+        {
+          "name": "onAcceptAll",
+          "type": {
+            "kind": "function",
+            "signature": "() => void"
+          },
+          "description": "Called by the Accept all button. Example: onAcceptAll={acceptEverything}"
+        },
+        {
+          "name": "onRejectAll",
+          "type": {
+            "kind": "function",
+            "signature": "() => void"
+          },
+          "description": "Called by the Reject all button. Example: onRejectAll={rejectEverything}"
+        },
+        {
+          "name": "className",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "description": "CSS class names for the review card. Example: className=\"max-w-2xl\""
+        }
+      ],
+      "manifestStatus": "complete"
+    },
+    "prompt-box": {
+      "id": "prompt-box",
+      "name": "Prompt Box",
+      "type": "assistant",
+      "status": "complete",
+      "description": "Standalone assistant composer with auto-resizing textarea, attachments row, model pill, slash-command hints, and send/stop states.",
+      "files": [
+        "PromptBox.tsx",
+        "types.ts",
+        "index.ts"
+      ],
+      "entry": "index.ts",
+      "exports": [
+        "PromptBox"
+      ],
+      "dependencies": [],
+      "devDependencies": [],
+      "peerDependencies": [],
+      "registryDependencies": [],
+      "category": "assistant",
+      "props": [
+        {
+          "name": "onSubmit",
+          "type": {
+            "kind": "function",
+            "signature": "(content: string) => void"
+          },
+          "description": "Called with the trimmed prompt when the user presses Enter or Send. Example: onSubmit={(text) => run(text)}"
+        },
+        {
+          "name": "placeholder",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "default": "Type a message…",
+          "description": "Placeholder of the auto-growing textarea. Example: placeholder=\"Describe the change\""
+        },
+        {
+          "name": "model",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "description": "Model badge shown in the footer. Example: model=\"gpt-5\""
+        },
+        {
+          "name": "disabled",
+          "type": {
+            "kind": "primitive",
+            "name": "boolean"
+          },
+          "default": false,
+          "description": "Disable the textarea and the send button. Example: disabled={busy}"
+        },
+        {
+          "name": "busy",
+          "type": {
+            "kind": "primitive",
+            "name": "boolean"
+          },
+          "default": false,
+          "description": "Turn the send button into Stop while a request is in flight. Example: busy={isStreaming}"
+        },
+        {
+          "name": "attachments",
+          "type": {
+            "kind": "array",
+            "of": {
+              "kind": "custom",
+              "name": "PromptAttachment[]"
+            }
+          },
+          "description": "Chips rendered above the textarea: id, name and optional size. Example: attachments={[{ id: \"1\", name: \"spec.pdf\" }]}"
+        },
+        {
+          "name": "commands",
+          "type": {
+            "kind": "array",
+            "of": {
+              "kind": "custom",
+              "name": "SlashCommand[]"
+            }
+          },
+          "description": "Slash commands offered while the prompt starts with \"/\". Example: commands={[{ name: \"review\", description: \"Review a diff\" }]}"
+        },
+        {
+          "name": "onStop",
+          "type": {
+            "kind": "function",
+            "signature": "() => void"
+          },
+          "description": "Called when the user stops the running request. Example: onStop={abort}"
+        },
+        {
+          "name": "className",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "description": "CSS class names for the prompt card. Example: className=\"max-w-xl\""
+        }
+      ],
+      "manifestStatus": "complete"
+    },
     "avatar": {
       "id": "avatar",
       "name": "avatar",
       "type": "other",
       "status": "complete",
-      "description": "avatar",
+      "description": "Circular user image that falls back to initials or an icon when the picture is missing.",
       "files": [
         "Avatar.tsx",
         "index.ts"
@@ -642,7 +1020,7 @@
       "name": "badge",
       "type": "other",
       "status": "complete",
-      "description": "badge",
+      "description": "Small status label that marks an item with a count, category or state beside a title or inside a list.",
       "files": [
         "Badge.tsx",
         "variants.ts",
@@ -713,7 +1091,7 @@
       "name": "bar-chart",
       "type": "other",
       "status": "complete",
-      "description": "bar-chart",
+      "description": "Chart that compares values across categories with bars, for monthly revenue, counts or rankings.",
       "files": [
         "BarChart.tsx",
         "types.ts",
@@ -910,7 +1288,7 @@
       "name": "breadcrumb",
       "type": "other",
       "status": "complete",
-      "description": "breadcrumb",
+      "description": "Trail of links that shows the path to the current page and lets the user step back to a parent level.",
       "files": [
         "Breadcrumb.tsx",
         "index.ts"
@@ -1074,7 +1452,7 @@
       "name": "calendar-range",
       "type": "other",
       "status": "complete",
-      "description": "calendar-range",
+      "description": "Two-month grid in a popover for selecting a start and end date in one interaction.",
       "files": [
         "CalendarRange.tsx",
         "index.ts"
@@ -1207,7 +1585,7 @@
       "name": "Calendar",
       "type": "form",
       "status": "complete",
-      "description": "Full-featured date picker with month navigation and selection.",
+      "description": "Month grid for picking a single day, a date range or several days, with controlled month navigation.",
       "files": [
         "Calendar.tsx",
         "index.ts"
@@ -1224,7 +1602,214 @@
       "peerDependencies": [],
       "registryDependencies": [],
       "category": "form",
-      "props": [],
+      "props": [
+        {
+          "name": "mode",
+          "type": {
+            "kind": "union",
+            "values": [
+              {
+                "kind": "literal",
+                "value": "single"
+              },
+              {
+                "kind": "literal",
+                "value": "multiple"
+              },
+              {
+                "kind": "literal",
+                "value": "range"
+              },
+              {
+                "kind": "literal",
+                "value": "default"
+              }
+            ]
+          },
+          "description": "Selection mode: single picks one day, range a start/end pair, multiple several days. Required when the calendar tracks a selection. Example: mode=\"single\""
+        },
+        {
+          "name": "selected",
+          "type": {
+            "kind": "custom",
+            "name": "Date | Date[] | DateRange | undefined"
+          },
+          "description": "Controlled selection, matching the shape implied by mode. Example: selected={date}"
+        },
+        {
+          "name": "onSelect",
+          "type": {
+            "kind": "function",
+            "signature": "(date: Date | Date[] | DateRange | undefined) => void"
+          },
+          "description": "Called with the new selection when the user picks a day. Example: onSelect={setDate}"
+        },
+        {
+          "name": "month",
+          "type": {
+            "kind": "custom",
+            "name": "Date"
+          },
+          "description": "Controlled month displayed in the grid. Example: month={new Date(2026, 0, 1)}"
+        },
+        {
+          "name": "onMonthChange",
+          "type": {
+            "kind": "function",
+            "signature": "(month: Date) => void"
+          },
+          "description": "Called when the user navigates to another month. Example: onMonthChange={setMonth}"
+        },
+        {
+          "name": "defaultMonth",
+          "type": {
+            "kind": "custom",
+            "name": "Date"
+          },
+          "description": "Month shown on first render when the month is uncontrolled. Example: defaultMonth={new Date()}"
+        },
+        {
+          "name": "numberOfMonths",
+          "type": {
+            "kind": "primitive",
+            "name": "number"
+          },
+          "default": 1,
+          "description": "Number of months rendered side by side. Example: numberOfMonths={2}"
+        },
+        {
+          "name": "showOutsideDays",
+          "type": {
+            "kind": "primitive",
+            "name": "boolean"
+          },
+          "default": true,
+          "description": "Render the trailing and leading days that belong to the neighbouring months. Example: showOutsideDays={false}"
+        },
+        {
+          "name": "disabled",
+          "type": {
+            "kind": "custom",
+            "name": "Matcher | Matcher[]"
+          },
+          "description": "Dates the user cannot select, for example weekends or dates before today. Example: disabled={{ before: new Date() }}"
+        },
+        {
+          "name": "fromDate",
+          "type": {
+            "kind": "custom",
+            "name": "Date"
+          },
+          "description": "Earliest selectable date. Example: fromDate={new Date(2026, 0, 1)}"
+        },
+        {
+          "name": "toDate",
+          "type": {
+            "kind": "custom",
+            "name": "Date"
+          },
+          "description": "Latest selectable date. Example: toDate={new Date(2026, 11, 31)}"
+        },
+        {
+          "name": "hidden",
+          "type": {
+            "kind": "custom",
+            "name": "Matcher | Matcher[]"
+          },
+          "description": "Dates removed from the grid entirely. Example: hidden={{ dayOfWeek: [0, 6] }}"
+        },
+        {
+          "name": "modifiers",
+          "type": {
+            "kind": "custom",
+            "name": "Record<string, Matcher | Matcher[]>"
+          },
+          "description": "Named date sets used for custom styling. Example: modifiers={{ booked: bookedDays }}"
+        },
+        {
+          "name": "captionLayout",
+          "type": {
+            "kind": "union",
+            "values": [
+              {
+                "kind": "literal",
+                "value": "label"
+              },
+              {
+                "kind": "literal",
+                "value": "dropdown"
+              },
+              {
+                "kind": "literal",
+                "value": "dropdown-months"
+              },
+              {
+                "kind": "literal",
+                "value": "dropdown-years"
+              }
+            ]
+          },
+          "default": "label",
+          "description": "Caption style: a static label or month/year dropdowns. Example: captionLayout=\"dropdown\""
+        },
+        {
+          "name": "weekStartsOn",
+          "type": {
+            "kind": "primitive",
+            "name": "number"
+          },
+          "description": "Index of the first day of the week, 0 = Sunday. Example: weekStartsOn={1}"
+        },
+        {
+          "name": "fixedWeeks",
+          "type": {
+            "kind": "primitive",
+            "name": "boolean"
+          },
+          "default": false,
+          "description": "Always render six weeks so the calendar height never jumps. Example: fixedWeeks"
+        },
+        {
+          "name": "locale",
+          "type": {
+            "kind": "custom",
+            "name": "Partial<Locale>"
+          },
+          "description": "date-fns locale used for month and weekday names. Example: locale={vi}"
+        },
+        {
+          "name": "today",
+          "type": {
+            "kind": "custom",
+            "name": "Date"
+          },
+          "description": "Date treated as today, useful for deterministic tests. Example: today={new Date(2026, 0, 1)}"
+        },
+        {
+          "name": "classNames",
+          "type": {
+            "kind": "custom",
+            "name": "Partial<ClassNames>"
+          },
+          "description": "Per-element class overrides for the internal day-picker parts. Example: classNames={{ day: \"rounded-md\" }}"
+        },
+        {
+          "name": "components",
+          "type": {
+            "kind": "custom",
+            "name": "Partial<CustomComponents>"
+          },
+          "description": "Replace internal parts such as the month chevrons. Example: components={{ Chevron: MyChevron }}"
+        },
+        {
+          "name": "className",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "description": "CSS class names for the calendar root. Example: className=\"p-3\""
+        }
+      ],
       "manifestStatus": "complete"
     },
     "card": {
@@ -1232,7 +1817,7 @@
       "name": "card",
       "type": "other",
       "status": "complete",
-      "description": "card",
+      "description": "Bordered surface that groups related content such as a title, description, media and actions.",
       "files": [
         "Card.tsx",
         "index.ts"
@@ -1299,7 +1884,66 @@
       "peerDependencies": [],
       "registryDependencies": [],
       "category": "data-display",
-      "props": [],
+      "props": [
+        {
+          "name": "opts",
+          "type": {
+            "kind": "custom",
+            "name": "EmblaOptionsType"
+          },
+          "description": "Embla options that drive the swipe behaviour, for example loop, align, dragFree or containScroll. Example: opts={{ loop: true, align: \"start\" }}"
+        },
+        {
+          "name": "plugins",
+          "type": {
+            "kind": "custom",
+            "name": "EmblaPluginType[]"
+          },
+          "description": "Embla plugins such as autoplay or wheel gestures. Example: plugins={[Autoplay()]}"
+        },
+        {
+          "name": "orientation",
+          "type": {
+            "kind": "union",
+            "values": [
+              {
+                "kind": "literal",
+                "value": "horizontal"
+              },
+              {
+                "kind": "literal",
+                "value": "vertical"
+              }
+            ]
+          },
+          "default": "horizontal",
+          "description": "Scroll axis of the slide track; keyboard arrows follow it. Example: orientation=\"vertical\""
+        },
+        {
+          "name": "setApi",
+          "type": {
+            "kind": "function",
+            "signature": "(api: CarouselApi) => void"
+          },
+          "description": "Receives the Embla API so the caller can scroll programmatically. Example: setApi={setApi}"
+        },
+        {
+          "name": "className",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "description": "CSS class names for the carousel viewport wrapper. Example: className=\"max-w-xl\""
+        },
+        {
+          "name": "children",
+          "type": {
+            "kind": "custom",
+            "name": "ReactNode"
+          },
+          "description": "Required. CarouselContent, CarouselItem and the prev/next controls. Example: <CarouselContent />"
+        }
+      ],
       "manifestStatus": "complete"
     },
     "checkbox": {
@@ -1307,7 +1951,7 @@
       "name": "checkbox",
       "type": "other",
       "status": "complete",
-      "description": "checkbox",
+      "description": "Square control for toggling a single boolean option, with an indeterminate state for parent rows.",
       "files": [
         "Checkbox.tsx",
         "index.ts"
@@ -1406,7 +2050,7 @@
       "name": "collapsible",
       "type": "other",
       "status": "complete",
-      "description": "collapsible",
+      "description": "Single section that the user can expand or collapse to hide secondary content on demand.",
       "files": [
         "Collapsible.tsx",
         "index.ts"
@@ -1505,7 +2149,7 @@
       "name": "command",
       "type": "other",
       "status": "complete",
-      "description": "command",
+      "description": "Keyboard-first palette for searching and running actions without leaving the keyboard.",
       "files": [
         "Command.tsx",
         "index.ts"
@@ -1590,7 +2234,7 @@
       "name": "context-menu",
       "type": "other",
       "status": "complete",
-      "description": "context-menu",
+      "description": "Menu opened by right-click or the context-menu key, offering actions on the element under the pointer.",
       "files": [
         "ContextMenu.tsx",
         "index.ts"
@@ -1656,7 +2300,69 @@
         "button"
       ],
       "category": "blocks",
-      "props": [],
+      "props": [
+        {
+          "name": "navItems",
+          "type": {
+            "kind": "array",
+            "of": {
+              "kind": "custom",
+              "name": "{ label: string; href: string; active?: boolean }"
+            }
+          },
+          "description": "Required. Sidebar entries; the item flagged active is highlighted. Example: navItems={[{ label: \"Home\", href: \"/\", active: true }]}"
+        },
+        {
+          "name": "stats",
+          "type": {
+            "kind": "array",
+            "of": {
+              "kind": "custom",
+              "name": "DashboardStatCard"
+            }
+          },
+          "description": "Required. Stat cards with label, value, trend and change text, e.g. { label: \"Revenue\", value: \"$12k\", trend: \"up\", change: \"+8%\" }. Example: stats={[{ label: \"Revenue\", value: \"$12k\", trend: \"up\", change: \"+8%\" }]}"
+        },
+        {
+          "name": "columns",
+          "type": {
+            "kind": "array",
+            "of": {
+              "kind": "custom",
+              "name": "{ key: string; header: string }"
+            }
+          },
+          "description": "Required. Header cells of the recent activity table. Example: columns={[{ key: \"user\", header: \"User\" }]}"
+        },
+        {
+          "name": "tableData",
+          "type": {
+            "kind": "array",
+            "of": {
+              "kind": "custom",
+              "name": "Record<string, unknown>"
+            }
+          },
+          "description": "Required. Rows of the activity table; the first five are rendered. Example: tableData={rows}"
+        },
+        {
+          "name": "title",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "default": "Dashboard",
+          "description": "Heading used in the sidebar and the page header. Example: title=\"Ops\""
+        },
+        {
+          "name": "className",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "description": "CSS class names for the page wrapper. Example: className=\"bg-muted/30\""
+        }
+      ],
       "manifestStatus": "complete"
     },
     "data-table": {
@@ -1679,7 +2385,73 @@
       "peerDependencies": [],
       "registryDependencies": [],
       "category": "data-display",
-      "props": [],
+      "props": [
+        {
+          "name": "columns",
+          "type": {
+            "kind": "array",
+            "of": {
+              "kind": "custom",
+              "name": "DataTableColumn<T>"
+            }
+          },
+          "description": "Required. Column definitions: key, header, optional sortable flag, className and a cell renderer. Example: columns={[{ key: \"email\", header: \"Email\", sortable: true }]}"
+        },
+        {
+          "name": "data",
+          "type": {
+            "kind": "array",
+            "of": {
+              "kind": "custom",
+              "name": "T"
+            }
+          },
+          "description": "Required. Rows rendered by the table; each column key is read from every row. Example: data={users}"
+        },
+        {
+          "name": "searchable",
+          "type": {
+            "kind": "primitive",
+            "name": "boolean"
+          },
+          "default": true,
+          "description": "Render the search box that filters rows across all columns. Example: searchable={false}"
+        },
+        {
+          "name": "pageSize",
+          "type": {
+            "kind": "primitive",
+            "name": "number"
+          },
+          "default": 10,
+          "description": "Rows per page before the previous/next footer appears. Example: pageSize={25}"
+        },
+        {
+          "name": "emptyText",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "default": "No results.",
+          "description": "Message shown in place of rows when no row matches the filter. Example: emptyText=\"No users yet.\""
+        },
+        {
+          "name": "onRowClick",
+          "type": {
+            "kind": "function",
+            "signature": "(row: T) => void"
+          },
+          "description": "Called with the clicked row, which also makes rows show a pointer cursor. Example: onRowClick={(row) => open(row.id)}"
+        },
+        {
+          "name": "className",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "description": "CSS class names for the table wrapper. Example: className=\"mt-4\""
+        }
+      ],
       "manifestStatus": "complete"
     },
     "date-picker": {
@@ -1792,7 +2564,7 @@
       "name": "date-range-picker",
       "type": "other",
       "status": "complete",
-      "description": "date-range-picker",
+      "description": "Input-like trigger that opens a dual-month grid to pick the start and end of a range.",
       "files": [
         "DateRangePicker.tsx",
         "index.ts"
@@ -1906,7 +2678,7 @@
       "name": "date-time-picker",
       "type": "other",
       "status": "complete",
-      "description": "date-time-picker",
+      "description": "Timestamp field that pairs a month grid with hour and minute lists so a date and time are chosen in one flow.",
       "files": [
         "DateTimePicker.tsx",
         "index.ts"
@@ -2088,7 +2860,7 @@
       "name": "donut-chart",
       "type": "other",
       "status": "complete",
-      "description": "donut-chart",
+      "description": "Ring chart that shows how parts make up a whole, with the total in the middle.",
       "files": [
         "DonutChart.tsx",
         "types.ts",
@@ -2289,7 +3061,7 @@
       "name": "Drawer",
       "type": "overlay",
       "status": "complete",
-      "description": "Mobile-first bottom sheet drawer.",
+      "description": "Sheet that slides in from the side (or from the bottom on mobile) so a panel of details or actions opens without leaving the page.",
       "files": [
         "Drawer.tsx",
         "index.ts"
@@ -2315,7 +3087,207 @@
       "peerDependencies": [],
       "registryDependencies": [],
       "category": "overlay",
-      "props": [],
+      "props": [
+        {
+          "name": "open",
+          "type": {
+            "kind": "primitive",
+            "name": "boolean"
+          },
+          "description": "Controlled open state of the sheet. Example: open={open}"
+        },
+        {
+          "name": "defaultOpen",
+          "type": {
+            "kind": "primitive",
+            "name": "boolean"
+          },
+          "default": false,
+          "description": "Open the drawer on first render, skipping the enter animation. Example: defaultOpen"
+        },
+        {
+          "name": "onOpenChange",
+          "type": {
+            "kind": "function",
+            "signature": "(open: boolean) => void"
+          },
+          "description": "Called when the drawer opens or closes, including swipe and overlay dismissals. Example: onOpenChange={setOpen}"
+        },
+        {
+          "name": "direction",
+          "type": {
+            "kind": "union",
+            "values": [
+              {
+                "kind": "literal",
+                "value": "top"
+              },
+              {
+                "kind": "literal",
+                "value": "bottom"
+              },
+              {
+                "kind": "literal",
+                "value": "left"
+              },
+              {
+                "kind": "literal",
+                "value": "right"
+              }
+            ]
+          },
+          "default": "bottom",
+          "description": "Edge the panel slides in from, and the side it is dragged towards to dismiss. Example: direction=\"right\""
+        },
+        {
+          "name": "modal",
+          "type": {
+            "kind": "primitive",
+            "name": "boolean"
+          },
+          "default": true,
+          "description": "Block interaction with the page behind the drawer. Example: modal={false}"
+        },
+        {
+          "name": "dismissible",
+          "type": {
+            "kind": "primitive",
+            "name": "boolean"
+          },
+          "default": true,
+          "description": "Allow drag, outside click and Escape to close the drawer. Example: dismissible={false}"
+        },
+        {
+          "name": "shouldScaleBackground",
+          "type": {
+            "kind": "primitive",
+            "name": "boolean"
+          },
+          "default": true,
+          "description": "Scale the page behind the drawer while it is open. Example: shouldScaleBackground={false}"
+        },
+        {
+          "name": "snapPoints",
+          "type": {
+            "kind": "array",
+            "of": {
+              "kind": "custom",
+              "name": "number | string"
+            }
+          },
+          "description": "Detent heights the drawer can rest at, from least to most visible. Example: snapPoints={[0.3, 0.6, 1]}"
+        },
+        {
+          "name": "activeSnapPoint",
+          "type": {
+            "kind": "custom",
+            "name": "number | string | null"
+          },
+          "description": "Controlled resting snap point. Example: activeSnapPoint={0.6}"
+        },
+        {
+          "name": "setActiveSnapPoint",
+          "type": {
+            "kind": "function",
+            "signature": "(snapPoint: number | string | null) => void"
+          },
+          "description": "Called when the drawer settles on another snap point. Example: setActiveSnapPoint={setSnap}"
+        },
+        {
+          "name": "closeThreshold",
+          "type": {
+            "kind": "primitive",
+            "name": "number"
+          },
+          "default": 0.25,
+          "description": "Fraction of the drawer height the user must drag before it closes. Example: closeThreshold={0.5}"
+        },
+        {
+          "name": "handleOnly",
+          "type": {
+            "kind": "primitive",
+            "name": "boolean"
+          },
+          "default": false,
+          "description": "Only the drag handle can move the drawer, not its content. Example: handleOnly"
+        },
+        {
+          "name": "nested",
+          "type": {
+            "kind": "primitive",
+            "name": "boolean"
+          },
+          "default": false,
+          "description": "Mark the drawer as opened from another drawer so the parent stays mounted. Example: nested"
+        },
+        {
+          "name": "fixed",
+          "type": {
+            "kind": "primitive",
+            "name": "boolean"
+          },
+          "default": false,
+          "description": "Keep the drawer height fixed and scroll its content when the keyboard opens. Example: fixed"
+        },
+        {
+          "name": "scrollLockTimeout",
+          "type": {
+            "kind": "primitive",
+            "name": "number"
+          },
+          "default": 500,
+          "description": "Milliseconds the drawer ignores drags after its content was scrolled. Example: scrollLockTimeout={1000}"
+        },
+        {
+          "name": "repositionInputs",
+          "type": {
+            "kind": "primitive",
+            "name": "boolean"
+          },
+          "default": true,
+          "description": "Move focused inputs above the on-screen keyboard instead of scrolling them into view. Example: repositionInputs={false}"
+        },
+        {
+          "name": "container",
+          "type": {
+            "kind": "custom",
+            "name": "HTMLElement | null"
+          },
+          "description": "Element the drawer portal is rendered into. Example: container={portalRef.current}"
+        },
+        {
+          "name": "onDrag",
+          "type": {
+            "kind": "function",
+            "signature": "(event: PointerEvent, percentageDragged: number) => void"
+          },
+          "description": "Called continuously while the user drags the drawer. Example: onDrag={(_, p) => setProgress(p)}"
+        },
+        {
+          "name": "onClose",
+          "type": {
+            "kind": "function",
+            "signature": "() => void"
+          },
+          "description": "Called after the drawer finished closing. Example: onClose={resetForm}"
+        },
+        {
+          "name": "className",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "description": "CSS class names for the drawer content. Example: className=\"max-h-[80vh]\""
+        },
+        {
+          "name": "children",
+          "type": {
+            "kind": "custom",
+            "name": "ReactNode"
+          },
+          "description": "Required. DrawerTrigger, DrawerContent and the header/footer parts. Example: <DrawerContent />"
+        }
+      ],
       "manifestStatus": "complete"
     },
     "dropdown-menu": {
@@ -2323,7 +3295,7 @@
       "name": "dropdown-menu",
       "type": "other",
       "status": "complete",
-      "description": "dropdown-menu",
+      "description": "Menu of actions or options revealed by a trigger button, for row actions and toolbar overflow.",
       "files": [
         "DropdownMenu.tsx",
         "index.ts"
@@ -2417,7 +3389,7 @@
       "name": "empty",
       "type": "other",
       "status": "complete",
-      "description": "empty",
+      "description": "Placeholder block shown when a list, grid or search has no data yet, with an icon, message and optional action.",
       "files": [
         "Empty.tsx",
         "index.ts"
@@ -2482,7 +3454,7 @@
       "name": "form",
       "type": "other",
       "status": "complete",
-      "description": "form",
+      "description": "Validation and field context provider built on react-hook-form, wiring labels, descriptions and error messages together.",
       "files": [
         "Form.tsx",
         "index.ts"
@@ -2552,7 +3524,7 @@
       "name": "hover-card",
       "type": "other",
       "status": "complete",
-      "description": "hover-card",
+      "description": "Rich preview that appears when the pointer rests on a link or avatar, without requiring a click.",
       "files": [
         "HoverCard.tsx",
         "index.ts"
@@ -2630,7 +3602,7 @@
       "name": "input",
       "type": "other",
       "status": "complete",
-      "description": "input",
+      "description": "Single-line text field for short free-form values such as names, emails and search terms.",
       "files": [
         "Input.tsx",
         "index.ts"
@@ -2769,7 +3741,7 @@
       "name": "kbd",
       "type": "other",
       "status": "complete",
-      "description": "kbd",
+      "description": "Inline key cap that renders a keyboard shortcut inside text or menus.",
       "files": [
         "Kbd.tsx",
         "index.ts"
@@ -2831,7 +3803,7 @@
       "name": "label",
       "type": "other",
       "status": "complete",
-      "description": "label",
+      "description": "Accessible caption bound to a form control through htmlFor, so clicking the text focuses the field.",
       "files": [
         "Label.tsx",
         "index.ts"
@@ -2881,7 +3853,7 @@
       "name": "line-chart",
       "type": "other",
       "status": "complete",
-      "description": "line-chart",
+      "description": "Chart that plots one or more series as connected points to show trends over time.",
       "files": [
         "LineChart.tsx",
         "types.ts",
@@ -3128,7 +4100,51 @@
       "peerDependencies": [],
       "registryDependencies": [],
       "category": "blocks",
-      "props": [],
+      "props": [
+        {
+          "name": "title",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "default": "Welcome back",
+          "description": "Heading above the form. Example: title=\"Sign in\""
+        },
+        {
+          "name": "subtitle",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "default": "Enter your email to sign in to your account",
+          "description": "Supporting line under the heading. Example: subtitle=\"Use your work email\""
+        },
+        {
+          "name": "onSubmit",
+          "type": {
+            "kind": "function",
+            "signature": "(data: { email: string; password: string; remember: boolean }) => void"
+          },
+          "description": "Called with the collected credentials when the form is submitted. Example: onSubmit={({ email, password }) => signIn(email, password)}"
+        },
+        {
+          "name": "showSocial",
+          "type": {
+            "kind": "primitive",
+            "name": "boolean"
+          },
+          "default": true,
+          "description": "Render the \"Or continue with\" social sign-in section. Example: showSocial={false}"
+        },
+        {
+          "name": "className",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "description": "CSS class names for the full-page wrapper. Example: className=\"bg-card\""
+        }
+      ],
       "manifestStatus": "complete"
     },
     "menubar": {
@@ -3136,7 +4152,7 @@
       "name": "menubar",
       "type": "other",
       "status": "complete",
-      "description": "menubar",
+      "description": "Horizontal bar of application menus, each opening a dropdown of commands.",
       "files": [
         "Menubar.tsx",
         "index.ts"
@@ -3234,7 +4250,7 @@
       "name": "mixed-chart",
       "type": "other",
       "status": "complete",
-      "description": "mixed-chart",
+      "description": "Combined chart that overlays bars, lines or areas so two measures with different scales can be compared.",
       "files": [
         "MixedChart.tsx",
         "types.ts",
@@ -3404,7 +4420,7 @@
       "name": "navigation-menu",
       "type": "other",
       "status": "complete",
-      "description": "navigation-menu",
+      "description": "Site navigation with rich dropdown panels for content-heavy menus and mega menus.",
       "files": [
         "NavigationMenu.tsx",
         "index.ts"
@@ -3542,7 +4558,58 @@
       "peerDependencies": [],
       "registryDependencies": [],
       "category": "form",
-      "props": [],
+      "props": [
+        {
+          "name": "length",
+          "type": {
+            "kind": "primitive",
+            "name": "number"
+          },
+          "default": 6,
+          "description": "Number of digit boxes rendered and accepted. Example: length={4}"
+        },
+        {
+          "name": "value",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "description": "Controlled one-time code; digits fill the boxes left to right. Example: value={code}"
+        },
+        {
+          "name": "onValueChange",
+          "type": {
+            "kind": "function",
+            "signature": "(value: string) => void"
+          },
+          "description": "Called with the accumulated code after every keystroke, paste or delete. Example: onValueChange={setCode}"
+        },
+        {
+          "name": "onComplete",
+          "type": {
+            "kind": "function",
+            "signature": "(value: string) => void"
+          },
+          "description": "Called once all boxes are filled, for auto-submit. Example: onComplete={verify}"
+        },
+        {
+          "name": "disabled",
+          "type": {
+            "kind": "primitive",
+            "name": "boolean"
+          },
+          "default": false,
+          "description": "Disable every digit box while the code is being verified. Example: disabled={isVerifying}"
+        },
+        {
+          "name": "className",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "description": "CSS class names for the digit row. Example: className=\"justify-center\""
+        }
+      ],
       "manifestStatus": "complete"
     },
     "pagination": {
@@ -3550,7 +4617,7 @@
       "name": "pagination",
       "type": "other",
       "status": "complete",
-      "description": "pagination",
+      "description": "Page controls with previous, next and numbered pages for long lists and tables.",
       "files": [
         "Pagination.tsx",
         "index.ts"
@@ -3619,7 +4686,7 @@
       "name": "pie-chart",
       "type": "other",
       "status": "complete",
-      "description": "pie-chart",
+      "description": "Circular chart that splits a total into proportional slices for share-of-whole comparisons.",
       "files": [
         "PieChart.tsx",
         "types.ts",
@@ -3820,7 +4887,7 @@
       "name": "popover",
       "type": "other",
       "status": "complete",
-      "description": "popover",
+      "description": "Floating panel anchored to a trigger that holds rich content such as forms, filters or menus.",
       "files": [
         "Popover.tsx",
         "index.ts"
@@ -3902,7 +4969,45 @@
       "peerDependencies": [],
       "registryDependencies": [],
       "category": "blocks",
-      "props": [],
+      "props": [
+        {
+          "name": "tiers",
+          "type": {
+            "kind": "array",
+            "of": {
+              "kind": "custom",
+              "name": "PricingTier"
+            }
+          },
+          "description": "Required. Plan cards: name, price, description, features and optional highlighted flag and ctaText. Example: tiers={[{ name: \"Pro\", price: \"$29\", description: \"For teams\", features: [\"SSO\"] }]}"
+        },
+        {
+          "name": "title",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "default": "Pricing",
+          "description": "Section heading above the plan grid. Example: title=\"Plans\""
+        },
+        {
+          "name": "subtitle",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "default": "Choose a plan that works for you",
+          "description": "Supporting line under the heading. Example: subtitle=\"Cancel anytime\""
+        },
+        {
+          "name": "className",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "description": "CSS class names for the section wrapper. Example: className=\"bg-muted/20\""
+        }
+      ],
       "manifestStatus": "complete"
     },
     "progress": {
@@ -3910,7 +5015,7 @@
       "name": "progress",
       "type": "other",
       "status": "complete",
-      "description": "progress",
+      "description": "Bar that reports how far a determinate task has advanced toward completion.",
       "files": [
         "Progress.tsx",
         "index.ts"
@@ -3980,7 +5085,7 @@
       "name": "radar-chart",
       "type": "other",
       "status": "complete",
-      "description": "radar-chart",
+      "description": "Spider chart that compares several measures of one or more entities across axes.",
       "files": [
         "RadarChart.tsx",
         "types.ts",
@@ -4176,7 +5281,7 @@
       "name": "radio-group",
       "type": "other",
       "status": "complete",
-      "description": "radio-group",
+      "description": "Set of mutually exclusive options where exactly one can be selected at a time.",
       "files": [
         "RadioGroup.tsx",
         "index.ts"
@@ -4272,7 +5377,7 @@
       "name": "resizable",
       "type": "other",
       "status": "complete",
-      "description": "resizable",
+      "description": "Panel group whose dividers can be dragged to resize, collapse or restore the adjacent panels.",
       "files": [
         "Resizable.tsx",
         "index.ts"
@@ -4291,7 +5396,173 @@
       "peerDependencies": [],
       "registryDependencies": [],
       "category": "other",
-      "props": [],
+      "props": [
+        {
+          "name": "direction",
+          "type": {
+            "kind": "union",
+            "values": [
+              {
+                "kind": "literal",
+                "value": "horizontal"
+              },
+              {
+                "kind": "literal",
+                "value": "vertical"
+              }
+            ]
+          },
+          "default": "horizontal",
+          "description": "Required. Split axis of the panel group; vertical stacks the panels. Example: direction=\"horizontal\""
+        },
+        {
+          "name": "defaultSize",
+          "type": {
+            "kind": "primitive",
+            "name": "number"
+          },
+          "description": "Initial size of a panel as a percentage of the group. Example: defaultSize={30}"
+        },
+        {
+          "name": "minSize",
+          "type": {
+            "kind": "primitive",
+            "name": "number"
+          },
+          "description": "Smallest size a panel can be dragged to, as a percentage. Example: minSize={15}"
+        },
+        {
+          "name": "maxSize",
+          "type": {
+            "kind": "primitive",
+            "name": "number"
+          },
+          "description": "Largest size a panel can be dragged to, as a percentage. Example: maxSize={70}"
+        },
+        {
+          "name": "collapsible",
+          "type": {
+            "kind": "primitive",
+            "name": "boolean"
+          },
+          "default": false,
+          "description": "Allow the panel to collapse to collapsedSize when dragged past minSize. Example: collapsible"
+        },
+        {
+          "name": "collapsedSize",
+          "type": {
+            "kind": "primitive",
+            "name": "number"
+          },
+          "description": "Size the panel snaps to while collapsed. Example: collapsedSize={0}"
+        },
+        {
+          "name": "order",
+          "type": {
+            "kind": "primitive",
+            "name": "number"
+          },
+          "description": "Explicit panel order inside the group. Example: order={1}"
+        },
+        {
+          "name": "onCollapse",
+          "type": {
+            "kind": "function",
+            "signature": "() => void"
+          },
+          "description": "Called when a collapsible panel collapses. Example: onCollapse={() => setOpen(false)}"
+        },
+        {
+          "name": "onExpand",
+          "type": {
+            "kind": "function",
+            "signature": "() => void"
+          },
+          "description": "Called when a collapsible panel expands again. Example: onExpand={() => setOpen(true)}"
+        },
+        {
+          "name": "onResize",
+          "type": {
+            "kind": "function",
+            "signature": "(size: number) => void"
+          },
+          "description": "Called while the panel is dragged, with the new percentage. Example: onResize={(size) => save(size)}"
+        },
+        {
+          "name": "onLayout",
+          "type": {
+            "kind": "function",
+            "signature": "(sizes: number[]) => void"
+          },
+          "description": "Called with every panel size whenever the group layout changes. Example: onLayout={(sizes) => persist(sizes)}"
+        },
+        {
+          "name": "autoSaveId",
+          "type": {
+            "kind": "custom",
+            "name": "string | null"
+          },
+          "description": "Persist the group layout in localStorage under this key. Example: autoSaveId=\"editor-layout\""
+        },
+        {
+          "name": "keyboardResizeBy",
+          "type": {
+            "kind": "custom",
+            "name": "number | null"
+          },
+          "description": "Percentage a handle moves per arrow-key press. Example: keyboardResizeBy={10}"
+        },
+        {
+          "name": "withHandle",
+          "type": {
+            "kind": "primitive",
+            "name": "boolean"
+          },
+          "default": false,
+          "description": "Render a visible grip on the drag handle; the user drags it to resize. Example: <ResizableHandle withHandle />"
+        },
+        {
+          "name": "disabled",
+          "type": {
+            "kind": "primitive",
+            "name": "boolean"
+          },
+          "default": false,
+          "description": "Prevent the handle from being dragged or focused. Example: <ResizableHandle disabled />"
+        },
+        {
+          "name": "hitAreaMargins",
+          "type": {
+            "kind": "custom",
+            "name": "PointerHitAreaMargins"
+          },
+          "description": "Extra pointer tolerance around a handle so it is easier to grab. Example: hitAreaMargins={{ coarse: 15, fine: 5 }}"
+        },
+        {
+          "name": "onDragging",
+          "type": {
+            "kind": "function",
+            "signature": "(isDragging: boolean) => void"
+          },
+          "description": "Called when a drag on the handle starts and ends. Example: onDragging={setDragging}"
+        },
+        {
+          "name": "className",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "description": "CSS class names for the group, panel or handle. Example: className=\"rounded-md border\""
+        },
+        {
+          "name": "children",
+          "type": {
+            "kind": "custom",
+            "name": "ReactNode"
+          },
+          "description": "Required. ResizablePanel and ResizableHandle children of the group. Example: <ResizablePanel />"
+        }
+      ],
       "manifestStatus": "complete"
     },
     "scatter-chart": {
@@ -4299,7 +5570,7 @@
       "name": "scatter-chart",
       "type": "other",
       "status": "complete",
-      "description": "scatter-chart",
+      "description": "Chart that plots individual points on two axes to reveal correlation, clusters and outliers.",
       "files": [
         "ScatterChart.tsx",
         "types.ts",
@@ -4476,7 +5747,7 @@
       "name": "scroll-area",
       "type": "other",
       "status": "complete",
-      "description": "scroll-area",
+      "description": "Scrollable container with styled scrollbars for long content inside a fixed-height region.",
       "files": [
         "ScrollArea.tsx",
         "index.ts"
@@ -4697,7 +5968,7 @@
       "name": "separator",
       "type": "other",
       "status": "complete",
-      "description": "separator",
+      "description": "Thin divider that visually groups content, horizontally or vertically.",
       "files": [
         "Separator.tsx",
         "index.ts"
@@ -4767,7 +6038,7 @@
       "name": "sheet",
       "type": "other",
       "status": "complete",
-      "description": "sheet",
+      "description": "Overlay layer for secondary tasks such as details, filters or preferences, opened from any edge of the screen.",
       "files": [
         "Sheet.tsx",
         "index.ts"
@@ -4834,7 +6105,7 @@
       "name": "skeleton",
       "type": "other",
       "status": "complete",
-      "description": "skeleton",
+      "description": "Placeholder shapes that stand in for content while data loads, keeping the layout stable.",
       "files": [
         "Skeleton.tsx",
         "index.ts"
@@ -4888,7 +6159,7 @@
       "name": "slider",
       "type": "other",
       "status": "complete",
-      "description": "slider",
+      "description": "Track with a draggable thumb for choosing a number or range within fixed bounds.",
       "files": [
         "Slider.tsx",
         "index.ts"
@@ -5074,7 +6345,7 @@
       "name": "spinner",
       "type": "other",
       "status": "complete",
-      "description": "spinner",
+      "description": "Animated indicator shown while a request is in flight and no content is available yet.",
       "files": [
         "Spinner.tsx",
         "index.ts"
@@ -5137,7 +6408,7 @@
       "name": "switch",
       "type": "other",
       "status": "complete",
-      "description": "switch",
+      "description": "Toggle for turning a single setting on or off, applied immediately without a save step.",
       "files": [
         "Switch.tsx",
         "index.ts"
@@ -5229,7 +6500,7 @@
       "name": "table",
       "type": "other",
       "status": "complete",
-      "description": "table",
+      "description": "Semantic markup for tabular data, composed of header, body, footer, rows and cells.",
       "files": [
         "Table.tsx",
         "index.ts"
@@ -5267,7 +6538,7 @@
       "name": "tabs",
       "type": "other",
       "status": "complete",
-      "description": "tabs",
+      "description": "Layered panels where one is visible at a time and a tab list switches between them.",
       "files": [
         "Tabs.tsx",
         "index.ts"
@@ -5381,7 +6652,7 @@
       "name": "tags-input",
       "type": "other",
       "status": "complete",
-      "description": "tags-input",
+      "description": "Field that collects free-form values as removable chips, for labels, tags and recipients.",
       "files": [
         "TagsInput.tsx",
         "index.ts"
@@ -5466,7 +6737,7 @@
       "name": "textarea",
       "type": "other",
       "status": "complete",
-      "description": "textarea",
+      "description": "Multi-line text field for longer free-form input such as descriptions and comments.",
       "files": [
         "Textarea.tsx",
         "index.ts"
@@ -5623,7 +6894,90 @@
       "peerDependencies": [],
       "registryDependencies": [],
       "category": "form",
-      "props": [],
+      "props": [
+        {
+          "name": "time",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "description": "Controlled time as \"HH:mm\" (24h) or \"hh:mm AM/PM\" (12h). Example: time=\"14:30\""
+        },
+        {
+          "name": "onTimeChange",
+          "type": {
+            "kind": "function",
+            "signature": "(time: string | undefined) => void"
+          },
+          "description": "Called with the formatted time, or undefined when a field is cleared. Example: onTimeChange={setTime}"
+        },
+        {
+          "name": "placeholder",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "default": "Pick a time",
+          "description": "Text shown on the trigger before a time is chosen. Example: placeholder=\"Select time\""
+        },
+        {
+          "name": "format",
+          "type": {
+            "kind": "union",
+            "values": [
+              {
+                "kind": "literal",
+                "value": "12h"
+              },
+              {
+                "kind": "literal",
+                "value": "24h"
+              }
+            ]
+          },
+          "default": "24h",
+          "description": "Hour list and output format of the picker. Example: format=\"12h\""
+        },
+        {
+          "name": "align",
+          "type": {
+            "kind": "union",
+            "values": [
+              {
+                "kind": "literal",
+                "value": "start"
+              },
+              {
+                "kind": "literal",
+                "value": "center"
+              },
+              {
+                "kind": "literal",
+                "value": "end"
+              }
+            ]
+          },
+          "default": "start",
+          "description": "Alignment of the popover relative to the trigger. Example: align=\"end\""
+        },
+        {
+          "name": "disabled",
+          "type": {
+            "kind": "primitive",
+            "name": "boolean"
+          },
+          "default": false,
+          "description": "Disable the trigger button. Example: disabled"
+        },
+        {
+          "name": "className",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "description": "CSS class names for the trigger button. Example: className=\"w-full\""
+        }
+      ],
       "manifestStatus": "complete"
     },
     "toast": {
@@ -5670,7 +7024,7 @@
             ]
           },
           "default": "light",
-          "description": "Visual theme for the toaster."
+          "description": "Visual theme for the toaster. Example: <Toaster theme=\"dark\" />"
         },
         {
           "name": "position",
@@ -5703,7 +7057,7 @@
               }
             ]
           },
-          "description": "Screen position for toast notifications."
+          "description": "Screen position for toast notifications. Example: <Toaster position=\"top-right\" />"
         },
         {
           "name": "expand",
@@ -5711,7 +7065,7 @@
             "kind": "primitive",
             "name": "boolean"
           },
-          "description": "Whether stacked toasts can expand to show full content."
+          "description": "Whether stacked toasts can expand to show full content. Example: <Toaster expand />"
         },
         {
           "name": "richColors",
@@ -5719,7 +7073,7 @@
             "kind": "primitive",
             "name": "boolean"
           },
-          "description": "Enable richer semantic color styling."
+          "description": "Enable richer semantic color styling. Example: <Toaster richColors />"
         },
         {
           "name": "closeButton",
@@ -5727,7 +7081,7 @@
             "kind": "primitive",
             "name": "boolean"
           },
-          "description": "Show a close button on each toast."
+          "description": "Show a close button on each toast. Example: <Toaster closeButton />"
         },
         {
           "name": "duration",
@@ -5735,7 +7089,7 @@
             "kind": "primitive",
             "name": "number"
           },
-          "description": "Default duration in milliseconds."
+          "description": "Default duration in milliseconds. Example: <Toaster duration={6000} />"
         },
         {
           "name": "visibleToasts",
@@ -5743,7 +7097,7 @@
             "kind": "primitive",
             "name": "number"
           },
-          "description": "Maximum number of visible toasts."
+          "description": "Maximum number of visible toasts. Example: <Toaster visibleToasts={3} />"
         },
         {
           "name": "offset",
@@ -5751,7 +7105,7 @@
             "kind": "custom",
             "name": "string | number"
           },
-          "description": "Offset from the viewport edge."
+          "description": "Offset from the viewport edge. Example: <Toaster offset=\"24px\" />"
         },
         {
           "name": "dir",
@@ -5769,7 +7123,7 @@
             ]
           },
           "default": "ltr",
-          "description": "Reading direction."
+          "description": "Reading direction. Example: <Toaster dir=\"rtl\" />"
         }
       ],
       "manifestStatus": "complete"
@@ -5779,7 +7133,7 @@
       "name": "toggle-group",
       "type": "other",
       "status": "complete",
-      "description": "toggle-group",
+      "description": "Row of related buttons where one or several can be pressed, for view switchers and formatting bars.",
       "files": [
         "ToggleGroup.tsx",
         "index.ts"
@@ -5994,7 +7348,7 @@
       "name": "toggle",
       "type": "other",
       "status": "complete",
-      "description": "toggle",
+      "description": "Two-state button that stays pressed until it is pressed again, for bold, bookmark or mute actions.",
       "files": [
         "Toggle.tsx",
         "variants.ts",
@@ -6160,7 +7514,7 @@
             ]
           },
           "default": "horizontal",
-          "description": "Toolbar orientation."
+          "description": "Toolbar orientation. Example: <Toolbar orientation=\"vertical\">"
         },
         {
           "name": "dir",
@@ -6178,7 +7532,7 @@
             ]
           },
           "default": "ltr",
-          "description": "Reading direction for roving focus."
+          "description": "Reading direction for roving focus. Example: <Toolbar dir=\"rtl\">"
         },
         {
           "name": "loop",
@@ -6187,7 +7541,7 @@
             "name": "boolean"
           },
           "default": true,
-          "description": "Loop keyboard focus from last item to first."
+          "description": "Loop keyboard focus from last item to first. Example: <Toolbar loop={false}>"
         },
         {
           "name": "className",
@@ -6196,7 +7550,7 @@
             "name": "string"
           },
           "default": "",
-          "description": "CSS class names for the toolbar root."
+          "description": "CSS class names for the toolbar root. Example: <Toolbar className=\"border rounded-md\">"
         },
         {
           "name": "children",
@@ -6204,7 +7558,7 @@
             "kind": "custom",
             "name": "ReactNode"
           },
-          "description": "Toolbar content."
+          "description": "Toolbar content. Example: <Toolbar><ToolbarButton>Bold</ToolbarButton></Toolbar>"
         }
       ],
       "manifestStatus": "complete"
@@ -6214,7 +7568,7 @@
       "name": "tooltip",
       "type": "other",
       "status": "complete",
-      "description": "tooltip",
+      "description": "Short hint that appears on hover or keyboard focus to explain an icon or control.",
       "files": [
         "Tooltip.tsx",
         "index.ts"
@@ -6293,7 +7647,7 @@
       "name": "typography",
       "type": "other",
       "status": "complete",
-      "description": "typography",
+      "description": "Text primitive that applies heading, paragraph, list or code styles consistently across a page.",
       "files": [
         "Typography.tsx",
         "index.ts"

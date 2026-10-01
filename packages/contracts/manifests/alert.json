@@ -4,7 +4,7 @@
   "name": "alert",
   "category": "other",
   "status": "complete",
-  "description": "alert",
+  "description": "Inline callout that draws attention to an important message or a destructive warning inside a page.",
   "props": [
     {
       "name": "variant",

@@ -4,7 +4,7 @@
   "name": "toggle",
   "category": "other",
   "status": "complete",
-  "description": "toggle",
+  "description": "Two-state button that stays pressed until it is pressed again, for bold, bookmark or mute actions.",
   "props": [
     {
       "name": "pressed",

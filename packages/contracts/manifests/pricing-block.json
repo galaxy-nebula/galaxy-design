@@ -6,7 +6,57 @@
   "type": "block",
   "status": "complete",
   "description": "Pricing cards with tiers, feature lists, and highlighted plan.",
-  "props": [],
+  "props": [
+    {
+      "name": "tiers",
+      "type": {
+        "kind": "array",
+        "of": {
+          "kind": "custom",
+          "name": "PricingTier"
+        }
+      },
+      "description": "Required. Plan cards: name, price, description, features and optional highlighted flag and ctaText. Example: tiers={[{ name: \"Pro\", price: \"$29\", description: \"For teams\", features: [\"SSO\"] }]}",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "title",
+      "type": {
+        "kind": "primitive",
+        "name": "string"
+      },
+      "default": "Pricing",
+      "description": "Section heading above the plan grid. Example: title=\"Plans\"",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "subtitle",
+      "type": {
+        "kind": "primitive",
+        "name": "string"
+      },
+      "default": "Choose a plan that works for you",
+      "description": "Supporting line under the heading. Example: subtitle=\"Cancel anytime\"",
+      "frameworks": [
+        "react"
+      ]
+    },
+    {
+      "name": "className",
+      "type": {
+        "kind": "primitive",
+        "name": "string"
+      },
+      "description": "CSS class names for the section wrapper. Example: className=\"bg-muted/20\"",
+      "frameworks": [
+        "react"
+      ]
+    }
+  ],
   "children": [],
   "frameworks": {
     "react": {
@@ -20,7 +70,45 @@
         "PricingBlock"
       ],
       "dependencies": [],
-      "props": []
+      "props": [
+        {
+          "name": "tiers",
+          "type": {
+            "kind": "array",
+            "of": {
+              "kind": "custom",
+              "name": "PricingTier"
+            }
+          },
+          "description": "Required. Plan cards: name, price, description, features and optional highlighted flag and ctaText. Example: tiers={[{ name: \"Pro\", price: \"$29\", description: \"For teams\", features: [\"SSO\"] }]}"
+        },
+        {
+          "name": "title",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "default": "Pricing",
+          "description": "Section heading above the plan grid. Example: title=\"Plans\""
+        },
+        {
+          "name": "subtitle",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "default": "Choose a plan that works for you",
+          "description": "Supporting line under the heading. Example: subtitle=\"Cancel anytime\""
+        },
+        {
+          "name": "className",
+          "type": {
+            "kind": "primitive",
+            "name": "string"
+          },
+          "description": "CSS class names for the section wrapper. Example: className=\"bg-muted/20\""
+        }
+      ]
     },
     "vue": {
       "status": "complete",
