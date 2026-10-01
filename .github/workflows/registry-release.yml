@@ -65,8 +65,11 @@ jobs:
 
       - name: Commit and push
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          # The sibling checkouts are separate repositories, so the identity has to be global:
+          # a repo-local config only applies to the main checkout and the first commit here
+          # died with "Author identity unknown" on every run.
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
           cd docs-nebula
           git add public/registry/
           git diff --cached --quiet || git commit -m "chore: update registry artifacts for $GITHUB_SHA"
