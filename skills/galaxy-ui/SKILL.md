@@ -1,7 +1,12 @@
 ---
 name: galaxy-ui
 description: Guide for building UIs with Galaxy UI components across React, Vue, Angular, React Native, and Flutter. Use when the user asks to create UIs, add components, scaffold projects with the Nebula CLI, style with Tailwind v3/v4, or asks about Galaxy component APIs and patterns. Requires using the Nebula CLI for installation and referencing real component APIs (via MCP tools or docs) before writing code.
-version: 1.0.0
+version: 1.1.0
+# The companion MCP is installed separately and answers the props lookups this skill routes to;
+# get_component { id, section } with real per-component props arrives with nebula-mcp 1.1.0, and
+# older servers answer an empty manifest for a component that exists.
+requires:
+  nebula: ">=1.1.0"
 ---
 
 # Galaxy UI
